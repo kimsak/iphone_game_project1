@@ -1,0 +1,22 @@
+//
+//  Texture.cpp
+//  iOS_Sample2
+//
+//  Created by 木村 裕作 on 2013/03/30.
+//  Copyright (c) 2013年 木村 裕作. All rights reserved.
+//
+
+#include "Texture.h"
+#include "_useGL.h"
+
+CTexture::CTexture(int w, int h) : textureID(0), width(w), height(h) {
+    // テクスチャオブジェクトの作成
+    glGenTextures(1, &textureID);
+}
+
+CTexture::~CTexture() {
+    // テクスチャオブジェクトの解放
+    glDeleteTextures(1, &textureID);
+}
+
+

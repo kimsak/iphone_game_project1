@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9410BD341775F046003E6E16 /* ShaderManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9410BD321775F045003E6E16 /* ShaderManager.mm */; };
+		941EB6C01776F394005EAD1A /* src_loader_objc.mm in Sources */ = {isa = PBXBuildFile; fileRef = 941EB6BE1776F394005EAD1A /* src_loader_objc.mm */; };
+		941FFE4B177F241200253CC0 /* SampleScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 941FFE49177F241200253CC0 /* SampleScene.mm */; };
+		94261CA3176F472500A123A8 /* sampleImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 94261CA2176F472500A123A8 /* sampleImage.png */; };
+		94261CA5176F4D3700A123A8 /* Basic.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 942E8970176E06C700FEAF15 /* Basic.fsh */; };
+		94261CA6176F4D3700A123A8 /* Basic.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 942E8971176E06C700FEAF15 /* Basic.vsh */; };
+		94261CA7176F4D3700A123A8 /* Basic3D.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 942E8972176E06C700FEAF15 /* Basic3D.fsh */; };
+		94261CA8176F4D3700A123A8 /* Basic3D.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 942E8973176E06C700FEAF15 /* Basic3D.vsh */; };
+		942E8924176C806400FEAF15 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942E8923176C806400FEAF15 /* UIKit.framework */; };
+		942E8926176C806400FEAF15 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942E8925176C806400FEAF15 /* Foundation.framework */; };
+		942E8928176C806400FEAF15 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942E8927176C806400FEAF15 /* CoreGraphics.framework */; };
+		942E892E176C806400FEAF15 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 942E892C176C806400FEAF15 /* InfoPlist.strings */; };
+		942E8930176C806400FEAF15 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 942E892F176C806400FEAF15 /* main.m */; };
+		942E8934176C806400FEAF15 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 942E8933176C806400FEAF15 /* AppDelegate.m */; };
+		942E8936176C806400FEAF15 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 942E8935176C806400FEAF15 /* Default.png */; };
+		942E8938176C806400FEAF15 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 942E8937176C806400FEAF15 /* Default@2x.png */; };
+		942E893A176C806400FEAF15 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 942E8939176C806400FEAF15 /* Default-568h@2x.png */; };
+		942E8941176C80A300FEAF15 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942E8940176C80A300FEAF15 /* OpenGLES.framework */; };
+		942E8943176C80B100FEAF15 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942E8942176C80B100FEAF15 /* QuartzCore.framework */; };
+		942E8945176C825700FEAF15 /* GameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 942E8944176C825700FEAF15 /* GameController.xib */; };
+		942E8948176C82E600FEAF15 /* GameController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 942E8947176C82E600FEAF15 /* GameController.mm */; };
+		942E894B176C98D000FEAF15 /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 942E894A176C98D000FEAF15 /* GameView.m */; };
+		942E8960176D78E400FEAF15 /* Sprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 942E895A176D78E400FEAF15 /* Sprite.mm */; };
+		942E8961176D78E400FEAF15 /* Texture.mm in Sources */ = {isa = PBXBuildFile; fileRef = 942E895C176D78E400FEAF15 /* Texture.mm */; };
+		942E896E176DBAB800FEAF15 /* KandataGame.mm in Sources */ = {isa = PBXBuildFile; fileRef = 942E896C176DBAB800FEAF15 /* KandataGame.mm */; };
+		942F405D17787D91002A63D9 /* TextureManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 942F405B17787D91002A63D9 /* TextureManager.mm */; };
+		942F4064177889C3002A63D9 /* PixelData_objc.mm in Sources */ = {isa = PBXBuildFile; fileRef = 942F4062177889C3002A63D9 /* PixelData_objc.mm */; };
+		949738CC1783071E00578545 /* SampleObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 949738CA1783071E00578545 /* SampleObject.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9410BD321775F045003E6E16 /* ShaderManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ShaderManager.mm; sourceTree = "<group>"; };
+		9410BD331775F045003E6E16 /* ShaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderManager.h; sourceTree = "<group>"; };
+		941EB6BC1776F10D005EAD1A /* source_loader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = source_loader.h; sourceTree = "<group>"; };
+		941EB6BE1776F394005EAD1A /* src_loader_objc.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = src_loader_objc.mm; sourceTree = "<group>"; };
+		941FFE49177F241200253CC0 /* SampleScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SampleScene.mm; sourceTree = "<group>"; };
+		941FFE4A177F241200253CC0 /* SampleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleScene.h; sourceTree = "<group>"; };
+		94261CA2176F472500A123A8 /* sampleImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sampleImage.png; sourceTree = "<group>"; };
+		942E8920176C806400FEAF15 /* KandataGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KandataGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		942E8923176C806400FEAF15 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		942E8925176C806400FEAF15 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		942E8927176C806400FEAF15 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		942E892B176C806400FEAF15 /* KandataGame-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KandataGame-Info.plist"; sourceTree = "<group>"; };
+		942E892D176C806400FEAF15 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		942E892F176C806400FEAF15 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		942E8931176C806400FEAF15 /* KandataGame-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KandataGame-Prefix.pch"; sourceTree = "<group>"; };
+		942E8932176C806400FEAF15 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		942E8933176C806400FEAF15 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		942E8935176C806400FEAF15 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		942E8937176C806400FEAF15 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		942E8939176C806400FEAF15 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		942E8940176C80A300FEAF15 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		942E8942176C80B100FEAF15 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		942E8944176C825700FEAF15 /* GameController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameController.xib; sourceTree = "<group>"; };
+		942E8946176C82E600FEAF15 /* GameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
+		942E8947176C82E600FEAF15 /* GameController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameController.mm; sourceTree = "<group>"; };
+		942E8949176C98D000FEAF15 /* GameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameView.h; sourceTree = "<group>"; };
+		942E894A176C98D000FEAF15 /* GameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameView.m; sourceTree = "<group>"; };
+		942E894E176D78E400FEAF15 /* _useGL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _useGL.h; sourceTree = "<group>"; };
+		942E894F176D78E400FEAF15 /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
+		942E8950176D78E400FEAF15 /* Game2DObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game2DObject.h; sourceTree = "<group>"; };
+		942E8951176D78E400FEAF15 /* Game3DObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game3DObject.h; sourceTree = "<group>"; };
+		942E8952176D78E400FEAF15 /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
+		942E8953176D78E400FEAF15 /* GameObjList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObjList.h; sourceTree = "<group>"; };
+		942E8954176D78E400FEAF15 /* Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Math.h; sourceTree = "<group>"; };
+		942E8956176D78E400FEAF15 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		942E8959176D78E400FEAF15 /* Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sprite.h; sourceTree = "<group>"; };
+		942E895A176D78E400FEAF15 /* Sprite.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Sprite.mm; sourceTree = "<group>"; };
+		942E895B176D78E400FEAF15 /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Texture.h; sourceTree = "<group>"; };
+		942E895C176D78E400FEAF15 /* Texture.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Texture.mm; sourceTree = "<group>"; };
+		942E896B176D9BF600FEAF15 /* BaseGame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseGame.h; sourceTree = "<group>"; };
+		942E896C176DBAB800FEAF15 /* KandataGame.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KandataGame.mm; sourceTree = "<group>"; };
+		942E896D176DBAB800FEAF15 /* KandataGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KandataGame.h; sourceTree = "<group>"; };
+		942E8970176E06C700FEAF15 /* Basic.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Basic.fsh; sourceTree = "<group>"; };
+		942E8971176E06C700FEAF15 /* Basic.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Basic.vsh; sourceTree = "<group>"; };
+		942E8972176E06C700FEAF15 /* Basic3D.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Basic3D.fsh; sourceTree = "<group>"; };
+		942E8973176E06C700FEAF15 /* Basic3D.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Basic3D.vsh; sourceTree = "<group>"; };
+		942F405B17787D91002A63D9 /* TextureManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TextureManager.mm; sourceTree = "<group>"; };
+		942F405C17787D91002A63D9 /* TextureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureManager.h; sourceTree = "<group>"; };
+		942F405E17788116002A63D9 /* PixelData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PixelData.h; sourceTree = "<group>"; };
+		942F4062177889C3002A63D9 /* PixelData_objc.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PixelData_objc.mm; sourceTree = "<group>"; };
+		949738CA1783071E00578545 /* SampleObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SampleObject.mm; sourceTree = "<group>"; };
+		949738CB1783071E00578545 /* SampleObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleObject.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		942E891D176C806400FEAF15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				942E8943176C80B100FEAF15 /* QuartzCore.framework in Frameworks */,
+				942E8941176C80A300FEAF15 /* OpenGLES.framework in Frameworks */,
+				942E8924176C806400FEAF15 /* UIKit.framework in Frameworks */,
+				942E8926176C806400FEAF15 /* Foundation.framework in Frameworks */,
+				942E8928176C806400FEAF15 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		941EB6BD1776F342005EAD1A /* objC */ = {
+			isa = PBXGroup;
+			children = (
+				941EB6BE1776F394005EAD1A /* src_loader_objc.mm */,
+				942F4062177889C3002A63D9 /* PixelData_objc.mm */,
+			);
+			path = objC;
+			sourceTree = "<group>";
+		};
+		94261CA1176F471400A123A8 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				94261CA2176F472500A123A8 /* sampleImage.png */,
+			);
+			name = res;
+			sourceTree = "<group>";
+		};
+		942E8917176C806400FEAF15 = {
+			isa = PBXGroup;
+			children = (
+				94261CA1176F471400A123A8 /* res */,
+				942E896F176E069500FEAF15 /* shaders */,
+				942E894D176D785100FEAF15 /* lib */,
+				942E8929176C806400FEAF15 /* KandataGame */,
+				942E8922176C806400FEAF15 /* Frameworks */,
+				942E8921176C806400FEAF15 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		942E8921176C806400FEAF15 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				942E8920176C806400FEAF15 /* KandataGame.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		942E8922176C806400FEAF15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				942E8942176C80B100FEAF15 /* QuartzCore.framework */,
+				942E8940176C80A300FEAF15 /* OpenGLES.framework */,
+				942E8923176C806400FEAF15 /* UIKit.framework */,
+				942E8925176C806400FEAF15 /* Foundation.framework */,
+				942E8927176C806400FEAF15 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		942E8929176C806400FEAF15 /* KandataGame */ = {
+			isa = PBXGroup;
+			children = (
+				942E896A176D9BA800FEAF15 /* main */,
+				942E894C176D781200FEAF15 /* entry */,
+				942E892A176C806400FEAF15 /* Supporting Files */,
+			);
+			path = KandataGame;
+			sourceTree = "<group>";
+		};
+		942E892A176C806400FEAF15 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				942E892B176C806400FEAF15 /* KandataGame-Info.plist */,
+				942E892C176C806400FEAF15 /* InfoPlist.strings */,
+				942E892F176C806400FEAF15 /* main.m */,
+				942E8931176C806400FEAF15 /* KandataGame-Prefix.pch */,
+				942E8935176C806400FEAF15 /* Default.png */,
+				942E8937176C806400FEAF15 /* Default@2x.png */,
+				942E8939176C806400FEAF15 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		942E894C176D781200FEAF15 /* entry */ = {
+			isa = PBXGroup;
+			children = (
+				942E8932176C806400FEAF15 /* AppDelegate.h */,
+				942E8933176C806400FEAF15 /* AppDelegate.m */,
+				942E8949176C98D000FEAF15 /* GameView.h */,
+				942E894A176C98D000FEAF15 /* GameView.m */,
+				942E8944176C825700FEAF15 /* GameController.xib */,
+				942E8946176C82E600FEAF15 /* GameController.h */,
+				942E8947176C82E600FEAF15 /* GameController.mm */,
+			);
+			name = entry;
+			sourceTree = "<group>";
+		};
+		942E894D176D785100FEAF15 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				941EB6BD1776F342005EAD1A /* objC */,
+				942E896B176D9BF600FEAF15 /* BaseGame.h */,
+				942E894E176D78E400FEAF15 /* _useGL.h */,
+				942E894F176D78E400FEAF15 /* Color.h */,
+				942E8952176D78E400FEAF15 /* GameObject.h */,
+				942E8950176D78E400FEAF15 /* Game2DObject.h */,
+				942E8951176D78E400FEAF15 /* Game3DObject.h */,
+				942E8953176D78E400FEAF15 /* GameObjList.h */,
+				942E8954176D78E400FEAF15 /* Math.h */,
+				942E8956176D78E400FEAF15 /* Scene.h */,
+				942E8959176D78E400FEAF15 /* Sprite.h */,
+				942E895A176D78E400FEAF15 /* Sprite.mm */,
+				942E895B176D78E400FEAF15 /* Texture.h */,
+				942E895C176D78E400FEAF15 /* Texture.mm */,
+				9410BD331775F045003E6E16 /* ShaderManager.h */,
+				9410BD321775F045003E6E16 /* ShaderManager.mm */,
+				941EB6BC1776F10D005EAD1A /* source_loader.h */,
+				942F405C17787D91002A63D9 /* TextureManager.h */,
+				942F405B17787D91002A63D9 /* TextureManager.mm */,
+				942F405E17788116002A63D9 /* PixelData.h */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		942E896A176D9BA800FEAF15 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				949738C91783070A00578545 /* objects */,
+				949738C81783047500578545 /* scenes */,
+				942E896C176DBAB800FEAF15 /* KandataGame.mm */,
+				942E896D176DBAB800FEAF15 /* KandataGame.h */,
+			);
+			name = main;
+			sourceTree = "<group>";
+		};
+		942E896F176E069500FEAF15 /* shaders */ = {
+			isa = PBXGroup;
+			children = (
+				942E8970176E06C700FEAF15 /* Basic.fsh */,
+				942E8971176E06C700FEAF15 /* Basic.vsh */,
+				942E8972176E06C700FEAF15 /* Basic3D.fsh */,
+				942E8973176E06C700FEAF15 /* Basic3D.vsh */,
+			);
+			path = shaders;
+			sourceTree = "<group>";
+		};
+		949738C81783047500578545 /* scenes */ = {
+			isa = PBXGroup;
+			children = (
+				941FFE49177F241200253CC0 /* SampleScene.mm */,
+				941FFE4A177F241200253CC0 /* SampleScene.h */,
+			);
+			name = scenes;
+			sourceTree = "<group>";
+		};
+		949738C91783070A00578545 /* objects */ = {
+			isa = PBXGroup;
+			children = (
+				949738CA1783071E00578545 /* SampleObject.mm */,
+				949738CB1783071E00578545 /* SampleObject.h */,
+			);
+			name = objects;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		942E891F176C806400FEAF15 /* KandataGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 942E893D176C806400FEAF15 /* Build configuration list for PBXNativeTarget "KandataGame" */;
+			buildPhases = (
+				942E891C176C806400FEAF15 /* Sources */,
+				942E891D176C806400FEAF15 /* Frameworks */,
+				942E891E176C806400FEAF15 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KandataGame;
+			productName = KandataGame;
+			productReference = 942E8920176C806400FEAF15 /* KandataGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		942E8918176C806400FEAF15 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "木村 裕作";
+			};
+			buildConfigurationList = 942E891B176C806400FEAF15 /* Build configuration list for PBXProject "KandataGame" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 942E8917176C806400FEAF15;
+			productRefGroup = 942E8921176C806400FEAF15 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				942E891F176C806400FEAF15 /* KandataGame */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		942E891E176C806400FEAF15 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94261CA5176F4D3700A123A8 /* Basic.fsh in Resources */,
+				94261CA6176F4D3700A123A8 /* Basic.vsh in Resources */,
+				94261CA7176F4D3700A123A8 /* Basic3D.fsh in Resources */,
+				94261CA8176F4D3700A123A8 /* Basic3D.vsh in Resources */,
+				942E892E176C806400FEAF15 /* InfoPlist.strings in Resources */,
+				942E8936176C806400FEAF15 /* Default.png in Resources */,
+				942E8938176C806400FEAF15 /* Default@2x.png in Resources */,
+				942E893A176C806400FEAF15 /* Default-568h@2x.png in Resources */,
+				942E8945176C825700FEAF15 /* GameController.xib in Resources */,
+				94261CA3176F472500A123A8 /* sampleImage.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		942E891C176C806400FEAF15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				942E8930176C806400FEAF15 /* main.m in Sources */,
+				942E8934176C806400FEAF15 /* AppDelegate.m in Sources */,
+				942E8948176C82E600FEAF15 /* GameController.mm in Sources */,
+				942E894B176C98D000FEAF15 /* GameView.m in Sources */,
+				942E8960176D78E400FEAF15 /* Sprite.mm in Sources */,
+				942E8961176D78E400FEAF15 /* Texture.mm in Sources */,
+				942E896E176DBAB800FEAF15 /* KandataGame.mm in Sources */,
+				9410BD341775F046003E6E16 /* ShaderManager.mm in Sources */,
+				941EB6C01776F394005EAD1A /* src_loader_objc.mm in Sources */,
+				942F405D17787D91002A63D9 /* TextureManager.mm in Sources */,
+				942F4064177889C3002A63D9 /* PixelData_objc.mm in Sources */,
+				941FFE4B177F241200253CC0 /* SampleScene.mm in Sources */,
+				949738CC1783071E00578545 /* SampleObject.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		942E892C176C806400FEAF15 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				942E892D176C806400FEAF15 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		942E893B176C806400FEAF15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		942E893C176C806400FEAF15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		942E893E176C806400FEAF15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LIBRARY = "libstdc++";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KandataGame/KandataGame-Prefix.pch";
+				INFOPLIST_FILE = "KandataGame/KandataGame-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		942E893F176C806400FEAF15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LIBRARY = "libstdc++";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KandataGame/KandataGame-Prefix.pch";
+				INFOPLIST_FILE = "KandataGame/KandataGame-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		942E891B176C806400FEAF15 /* Build configuration list for PBXProject "KandataGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				942E893B176C806400FEAF15 /* Debug */,
+				942E893C176C806400FEAF15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		942E893D176C806400FEAF15 /* Build configuration list for PBXNativeTarget "KandataGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				942E893E176C806400FEAF15 /* Debug */,
+				942E893F176C806400FEAF15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 942E8918176C806400FEAF15 /* Project object */;
+}
