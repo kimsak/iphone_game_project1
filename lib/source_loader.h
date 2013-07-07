@@ -9,6 +9,7 @@
 #ifndef SOURCE_LOADER_H_
 #define SOURCE_LOADER_H_
 
-bool LoadSourceData(const char *vertex_name, const char *fragment_name, const char **pp_vSrcData, const char **pp_fSrcData);
+bool LoadSourceData(const char *vertex_name, const char *fragment_name,
+                    const char **pp_vSrcData, const char **pp_fSrcData);
 
 #endif  /*SOURCE_LOADER_H_*/

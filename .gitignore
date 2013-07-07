@@ -12,5 +12,5 @@
 *.la
 *.a
 
-KandataGame.xcodeproj/xcuserdata/kimurayuusaku.xcuserdatad/UserInterfaceState.xcuserstate
+*.xcuserstate
 .DS_Store
