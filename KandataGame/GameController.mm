@@ -15,6 +15,7 @@
 @interface GameController ()
 {
     id mpDisplayLink;
+    BaseGame *pMainGame;
 }
 @end
 

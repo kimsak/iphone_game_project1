@@ -227,8 +227,8 @@
 			children = (
 				949738C91783070A00578545 /* objects */,
 				949738C81783047500578545 /* scenes */,
-				942E896C176DBAB800FEAF15 /* KandataGame.mm */,
 				942E896D176DBAB800FEAF15 /* KandataGame.h */,
+				942E896C176DBAB800FEAF15 /* KandataGame.mm */,
 			);
 			name = main;
 			sourceTree = "<group>";

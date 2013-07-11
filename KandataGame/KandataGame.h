@@ -20,12 +20,10 @@ public:
     // コンストラクタ
     KandataGame(int w, int h) : BaseGame(w, h), pScene(NULL) {}
     
-    void Initialize();
-    void Update();
-    void Draw();
+    virtual void Initialize();
+    virtual void Update();
+    virtual void Draw();
 //    void Finalize();
 };
-
-extern KandataGame *pMainGame;
 
 #endif /* defined(__KandataGame__KandataGame__) */

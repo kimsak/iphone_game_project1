@@ -8,6 +8,7 @@
 
 #include "SampleObject.h"
 #include "BaseGame.h"
+#include "Sprite.h"
 
 void SampleObject::Init() {
     texture = GetGameRef().GetTexture("sampleImage");
@@ -18,5 +19,5 @@ void SampleObject::Move(GameObjList *pObjList) {
 }
 
 void SampleObject::Draw() {
-    
+    CSprite::DrawRotScl(texture, x, y, sclX, sclY, rotation);
 }

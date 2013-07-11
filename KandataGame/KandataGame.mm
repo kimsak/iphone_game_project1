@@ -12,11 +12,6 @@
 
 #include "SampleScene.h"
 
-/**
- *  グローバル変数
- */
-KandataGame *pMainGame = NULL;
-
 void KandataGame::Initialize() {
     /**
      *  GLの初期化
