@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9410BD341775F046003E6E16 /* ShaderManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9410BD321775F045003E6E16 /* ShaderManager.mm */; };
 		941EB6C01776F394005EAD1A /* src_loader_objc.mm in Sources */ = {isa = PBXBuildFile; fileRef = 941EB6BE1776F394005EAD1A /* src_loader_objc.mm */; };
-		941FFE4B177F241200253CC0 /* SampleScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 941FFE49177F241200253CC0 /* SampleScene.mm */; };
 		94261CA3176F472500A123A8 /* sampleImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 94261CA2176F472500A123A8 /* sampleImage.png */; };
 		94261CA5176F4D3700A123A8 /* Basic.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 942E8970176E06C700FEAF15 /* Basic.fsh */; };
 		94261CA6176F4D3700A123A8 /* Basic.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 942E8971176E06C700FEAF15 /* Basic.vsh */; };
@@ -34,7 +33,6 @@
 		942E896E176DBAB800FEAF15 /* KandataGame.mm in Sources */ = {isa = PBXBuildFile; fileRef = 942E896C176DBAB800FEAF15 /* KandataGame.mm */; };
 		942F405D17787D91002A63D9 /* TextureManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 942F405B17787D91002A63D9 /* TextureManager.mm */; };
 		942F4064177889C3002A63D9 /* PixelData_objc.mm in Sources */ = {isa = PBXBuildFile; fileRef = 942F4062177889C3002A63D9 /* PixelData_objc.mm */; };
-		949738CC1783071E00578545 /* SampleObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 949738CA1783071E00578545 /* SampleObject.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,8 +40,6 @@
 		9410BD331775F045003E6E16 /* ShaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderManager.h; sourceTree = "<group>"; };
 		941EB6BC1776F10D005EAD1A /* source_loader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = source_loader.h; sourceTree = "<group>"; };
 		941EB6BE1776F394005EAD1A /* src_loader_objc.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = src_loader_objc.mm; sourceTree = "<group>"; };
-		941FFE49177F241200253CC0 /* SampleScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SampleScene.mm; sourceTree = "<group>"; };
-		941FFE4A177F241200253CC0 /* SampleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleScene.h; sourceTree = "<group>"; };
 		94261CA2176F472500A123A8 /* sampleImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sampleImage.png; sourceTree = "<group>"; };
 		942E8920176C806400FEAF15 /* KandataGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KandataGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		942E8923176C806400FEAF15 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -88,8 +84,6 @@
 		942F405C17787D91002A63D9 /* TextureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureManager.h; sourceTree = "<group>"; };
 		942F405E17788116002A63D9 /* PixelData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PixelData.h; sourceTree = "<group>"; };
 		942F4062177889C3002A63D9 /* PixelData_objc.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PixelData_objc.mm; sourceTree = "<group>"; };
-		949738CA1783071E00578545 /* SampleObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SampleObject.mm; sourceTree = "<group>"; };
-		949738CB1783071E00578545 /* SampleObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleObject.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,8 +241,6 @@
 		949738C81783047500578545 /* scenes */ = {
 			isa = PBXGroup;
 			children = (
-				941FFE49177F241200253CC0 /* SampleScene.mm */,
-				941FFE4A177F241200253CC0 /* SampleScene.h */,
 			);
 			name = scenes;
 			sourceTree = "<group>";
@@ -256,8 +248,6 @@
 		949738C91783070A00578545 /* objects */ = {
 			isa = PBXGroup;
 			children = (
-				949738CA1783071E00578545 /* SampleObject.mm */,
-				949738CB1783071E00578545 /* SampleObject.h */,
 			);
 			name = objects;
 			sourceTree = "<group>";
@@ -344,8 +334,6 @@
 				941EB6C01776F394005EAD1A /* src_loader_objc.mm in Sources */,
 				942F405D17787D91002A63D9 /* TextureManager.mm in Sources */,
 				942F4064177889C3002A63D9 /* PixelData_objc.mm in Sources */,
-				941FFE4B177F241200253CC0 /* SampleScene.mm in Sources */,
-				949738CC1783071E00578545 /* SampleObject.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
