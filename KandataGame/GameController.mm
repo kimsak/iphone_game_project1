@@ -54,12 +54,12 @@
 - (void) mainLoop
 {
     // 更新
-    pMainGame->Update();
+    if(pMainGame) pMainGame->Update();
     
     // 描画
     GameView *gameView = (GameView *)self.view;
     [gameView beginScene];
-    pMainGame->Draw();
+    if(pMainGame) pMainGame->Draw();
     [gameView endScene];
 }
 

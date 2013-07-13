@@ -166,9 +166,9 @@
 		942E8929176C806400FEAF15 /* KandataGame */ = {
 			isa = PBXGroup;
 			children = (
-				942E896A176D9BA800FEAF15 /* main */,
-				942E894C176D781200FEAF15 /* entry */,
 				942E892A176C806400FEAF15 /* Supporting Files */,
+				942E894C176D781200FEAF15 /* entry */,
+				942E896A176D9BA800FEAF15 /* main */,
 			);
 			path = KandataGame;
 			sourceTree = "<group>";

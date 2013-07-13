@@ -27,7 +27,7 @@ void KandataGame::Initialize() {
     /**
      *  シェーダーの読込
      */
-    ShaderManager *shaderMgr = game.GetShaderManager();
+    ShaderManager *shaderMgr = game.GetShaderMgr();
     // Basic
     shaderMgr->CreateShader("Basic", "Basic", "Basic");
     // Basic3D
@@ -44,7 +44,7 @@ void KandataGame::Initialize() {
      *  シーンの作成
      */
 //    pScene = new SampleScene(*this);
-//    pScene->Init();
+    if(pScene) pScene->Init();
 }
 
 void KandataGame::Update() {

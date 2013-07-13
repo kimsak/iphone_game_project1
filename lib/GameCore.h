@@ -39,11 +39,11 @@ public:
     int GetDisplayHeight() const { return displayHeight; }
     float GetDisplayAspect() const { return (float)displayWidth/displayHeight; }
     
-    ShaderManager *GetShaderManager() {
+    ShaderManager *GetShaderMgr() {
         return &shaderManager;
     }
     
-    TextureManager *GetTextureManager() {
+    TextureManager *GetTextureMgr() {
         return &textureManager;
     }
     
