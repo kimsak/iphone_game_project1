@@ -34,6 +34,7 @@
 		942E896E176DBAB800FEAF15 /* KandataGame.mm in Sources */ = {isa = PBXBuildFile; fileRef = 942E896C176DBAB800FEAF15 /* KandataGame.mm */; };
 		942F405D17787D91002A63D9 /* TextureManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 942F405B17787D91002A63D9 /* TextureManager.mm */; };
 		942F4064177889C3002A63D9 /* PixelData_objc.mm in Sources */ = {isa = PBXBuildFile; fileRef = 942F4062177889C3002A63D9 /* PixelData_objc.mm */; };
+		944E0D0417919EB900464ACC /* ObjectSample.mm in Sources */ = {isa = PBXBuildFile; fileRef = 944E0D0217919EB900464ACC /* ObjectSample.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +88,8 @@
 		942F405C17787D91002A63D9 /* TextureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureManager.h; sourceTree = "<group>"; };
 		942F405E17788116002A63D9 /* PixelData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PixelData.h; sourceTree = "<group>"; };
 		942F4062177889C3002A63D9 /* PixelData_objc.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PixelData_objc.mm; sourceTree = "<group>"; };
+		944E0D0217919EB900464ACC /* ObjectSample.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ObjectSample.mm; sourceTree = "<group>"; };
+		944E0D0317919EB900464ACC /* ObjectSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectSample.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 			children = (
 				940DD6571791186800FAAA15 /* SceneSample.h */,
 				940DD6561791186800FAAA15 /* SceneSample.mm */,
+				944E0D0317919EB900464ACC /* ObjectSample.h */,
+				944E0D0217919EB900464ACC /* ObjectSample.mm */,
 			);
 			path = samples;
 			sourceTree = "<group>";
@@ -332,6 +337,7 @@
 				942F405D17787D91002A63D9 /* TextureManager.mm in Sources */,
 				942F4064177889C3002A63D9 /* PixelData_objc.mm in Sources */,
 				940DD6581791186800FAAA15 /* SceneSample.mm in Sources */,
+				944E0D0417919EB900464ACC /* ObjectSample.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

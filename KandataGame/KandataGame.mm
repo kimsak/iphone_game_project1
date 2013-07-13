@@ -10,6 +10,8 @@
 
 #include "Sprite.h"
 
+#include "SceneSample.h"
+
 void KandataGame::Initialize() {
     /**
      *  GLの初期化
@@ -43,8 +45,7 @@ void KandataGame::Initialize() {
     /**
      *  シーンの作成
      */
-//    pScene = new SampleScene(*this);
-    if(pScene) pScene->Init();
+    pScene = InitScene(new SceneSample(game));
 }
 
 void KandataGame::Update() {

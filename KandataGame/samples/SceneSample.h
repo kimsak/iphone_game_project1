@@ -20,7 +20,7 @@ public:
      */
     SceneSample(GameCore &game) : CScene(game) {}
     
-    virtual void LoadContent();
+    virtual void LoadContents();
     virtual void Init();
     virtual void Update();
     virtual void Draw();

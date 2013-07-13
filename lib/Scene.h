@@ -27,4 +27,15 @@ public:
     GameCore &GetGameRef() { return game; }
 };
 
+/**
+ *  シーンクラスの初期化処理を委譲する関数（インライン）
+ */
+inline CScene *InitScene(CScene *scene) {
+    if(scene) {
+        scene->LoadContents();
+        scene->Init();
+    }
+    return scene;
+}
+
 #endif /*SCENE_H_*/

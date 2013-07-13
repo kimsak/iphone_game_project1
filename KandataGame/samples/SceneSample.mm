@@ -11,7 +11,7 @@
 #include "GameCore.h"
 #include "Sprite.h"
 
-void SceneSample::LoadContent() {
+void SceneSample::LoadContents() {
     
     /**
      *  イメージのロード sampleImage.png
