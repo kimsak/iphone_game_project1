@@ -9,13 +9,13 @@
 #ifndef SCENE_H_
 #define SCENE_H_
 
-class BaseGame;
+class GameCore;
 
 class CScene {
-    BaseGame &game;
+    GameCore &game;
 public:
     // コンストラクタ
-    CScene(BaseGame &gameRef) : game(gameRef) {}
+    CScene(GameCore &gameRef) : game(gameRef) {}
     virtual ~CScene() {}
     
     // Virtual functions
@@ -24,7 +24,7 @@ public:
     virtual void Update() = 0;
     virtual void Draw() = 0;
     
-    BaseGame &GetGameRef() { return game; }
+    GameCore &GetGameRef() { return game; }
 };
 
 #endif /*SCENE_H_*/

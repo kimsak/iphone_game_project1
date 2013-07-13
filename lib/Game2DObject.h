@@ -25,7 +25,7 @@ public:
     /**
      *  コンストラクタ
      */
-    Game2DObject(BaseGame &gameRef) : GameObject(gameRef), x(0.0f), y(0.0f), sclX(1.0f), sclY(1.0f),
+    Game2DObject(GameCore &gameRef) : GameObject(gameRef), x(0.0f), y(0.0f), sclX(1.0f), sclY(1.0f),
     rotation(0.0f), color(), texture(0) {}
 };
 

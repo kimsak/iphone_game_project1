@@ -1,5 +1,5 @@
 //
-//  BaseGame.h
+//  GameCore.h
 //  KandataGame
 //
 //  Created by 木村 裕作 on 2013/06/16.
@@ -14,19 +14,22 @@
 
 typedef unsigned ShaderObject;
 
-class BaseGame {
+class GameCore {
     int displayWidth, displayHeight;
-public:
+    
     TextureManager      textureManager;
     ShaderManager       shaderManager;
+public:
     
-    BaseGame(int w = 1, int h = 1) : displayWidth(w), displayHeight(h) {}
+    GameCore(int w = 1, int h = 1) : displayWidth(w), displayHeight(h) {}
     
-    virtual ~BaseGame() {}
+    virtual ~GameCore() {}
     
-    virtual void Initialize() = 0;
-    virtual void Update() = 0;
-    virtual void Draw() = 0;
+    // These three methods are deprecated.
+    virtual void Initialize() {}
+    virtual void Update() {}
+    virtual void Draw() {}
+    
     virtual void Finalize() {
         textureManager.Dispose();
         shaderManager.Dispose();
@@ -36,7 +39,15 @@ public:
     int GetDisplayHeight() const { return displayHeight; }
     float GetDisplayAspect() const { return (float)displayWidth/displayHeight; }
     
-    CTexture *GetTexture(std::string name) {
+    ShaderManager *GetShaderManager() {
+        return &shaderManager;
+    }
+    
+    TextureManager *GetTextureManager() {
+        return &textureManager;
+    }
+    
+    CTexture *GetTexture(std::string name) const {
         return textureManager.GetTexture(name);
     }
 };

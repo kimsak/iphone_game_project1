@@ -15,7 +15,7 @@
 @interface GameController ()
 {
     id mpDisplayLink;
-    BaseGame *pMainGame;
+    KandataGame *pMainGame;
 }
 @end
 

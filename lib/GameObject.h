@@ -10,20 +10,20 @@
 #define GAME_OBJECT_H_
 
 class GameObjList;
-class BaseGame;
+class GameCore;
 
 class GameObject {
-    BaseGame &game;
+    GameCore &game;
 public:
     // コンストラクタ
-    GameObject(BaseGame &gameRef) : game(gameRef) {}
+    GameObject(GameCore &gameRef) : game(gameRef) {}
     virtual ~GameObject() {}
     
     virtual void Init() = 0;
     virtual void Move(GameObjList *pObjList) = 0;
     virtual void Draw() = 0;
     
-    BaseGame &GetGameRef() {
+    GameCore &GetGameRef() {
         return game;
     }
 };

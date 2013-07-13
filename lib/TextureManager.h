@@ -25,12 +25,12 @@ public:
     bool CreateTexture(std::string name, std::string filename, std::string type_name);
     
     /**
-     *  テクスチャの参照を取得する。
+     *  テクスチャオブジェクトの参照を取得する。
      */
-    CTexture *GetTexture(std::string name);
+    CTexture *GetTexture(std::string name) const;
     
     /**
-     *  テクスチャの破棄
+     *  全テクスチャの破棄
      */
     void Dispose();
 };

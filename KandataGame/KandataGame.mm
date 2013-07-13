@@ -10,8 +10,6 @@
 
 #include "Sprite.h"
 
-#include "SampleScene.h"
-
 void KandataGame::Initialize() {
     /**
      *  GLの初期化
@@ -29,30 +27,24 @@ void KandataGame::Initialize() {
     /**
      *  シェーダーの読込
      */
+    ShaderManager *shaderMgr = game.GetShaderManager();
     // Basic
-    shaderManager.CreateShader("Basic", "Basic", "Basic");
+    shaderMgr->CreateShader("Basic", "Basic", "Basic");
     // Basic3D
-    shaderManager.CreateShader("Basic3D", "Basic3D", "Basic3D");
+    shaderMgr->CreateShader("Basic3D", "Basic3D", "Basic3D");
     
     /**
      *  スプライトの設定
      */
-    CSprite::SetDisplaySize(GetDisplayWidth(), GetDisplayHeight());
-    CSprite::SetShaderProgram( shaderManager.GetProgram("Basic") );
+    CSprite::SetDisplaySize(game.GetDisplayWidth(), game.GetDisplayHeight());
+    CSprite::SetShaderProgram( shaderMgr->GetProgram("Basic") );
 //    else NSLog(@"No Shader");
-    
-    /**
-     *  イメージのロード
-     *  sampleImage
-     */
-    const char *sample_image_name = "sampleImage";
-    textureManager.CreateTexture(sample_image_name, sample_image_name, "png");
     
     /**
      *  シーンの作成
      */
-    pScene = new SampleScene(*this);
-    pScene->Init();
+//    pScene = new SampleScene(*this);
+//    pScene->Init();
 }
 
 void KandataGame::Update() {
@@ -60,10 +52,14 @@ void KandataGame::Update() {
 }
 
 void KandataGame::Draw() {
-    glViewport(0, 0, GetDisplayWidth(), GetDisplayHeight());
+    glViewport(0, 0, game.GetDisplayWidth(), game.GetDisplayHeight());
     
     glClearColor(1, 1, 0, 1);
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
     if(pScene) pScene->Draw();
+}
+
+void KandataGame::Finalize() {
+    
 }
 

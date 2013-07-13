@@ -9,21 +9,21 @@
 #ifndef __KandataGame__KandataGame__
 #define __KandataGame__KandataGame__
 
-#include "BaseGame.h"
+#include "GameCore.h"
 #include "_useGL.h"
 #include "Scene.h"
 
-class KandataGame : public BaseGame {
+class KandataGame {
     CScene *pScene;
-    
+    GameCore game;
 public:
     // コンストラクタ
-    KandataGame(int w, int h) : BaseGame(w, h), pScene(NULL) {}
+    KandataGame(int w, int h) : pScene(NULL), game(w, h) {}
     
-    virtual void Initialize();
-    virtual void Update();
-    virtual void Draw();
-//    void Finalize();
+    void Initialize();
+    void Update();
+    void Draw();
+    void Finalize();
 };
 
 #endif /* defined(__KandataGame__KandataGame__) */

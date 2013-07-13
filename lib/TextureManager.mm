@@ -32,8 +32,8 @@ bool TextureManager::CreateTexture(std::string name, std::string filename, std::
 }
 
 // テクスチャの取得
-CTexture *TextureManager::GetTexture(std::string name) {
-    return texture_map.find(name) != texture_map.end() ? texture_map[name] : NULL;
+CTexture *TextureManager::GetTexture(std::string name) const {
+    return texture_map.find(name) != texture_map.end() ? texture_map.at(name) : NULL;
 }
 
 // テクスチャの破棄
