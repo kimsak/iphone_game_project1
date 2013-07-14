@@ -24,11 +24,10 @@ void SceneSample::Init() {
 }
 
 void SceneSample::Update() {
-    
+    objList.Move();
 }
 
 void SceneSample::Draw() {
-    CTexture *pTexture = GetGameRef().GetTextureMgr()->GetTexture("sampleImage");
-    CSprite::DrawRotScl(pTexture, 0, 0, 1, 1, 0);
+    objList.Draw();
 }
 

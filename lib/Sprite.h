@@ -20,15 +20,28 @@ class CSprite {
 	static Color color;
     static float displayWidth, displayHeight;
 public:
+    /**
+     *  シェーダーのプログラムを設定するクラス関数
+     *  描画する前に設定している必要がある
+     */
     static void SetShaderProgram(unsigned int program) {
         if(program) shader_program = program;
     }
     
+    /**
+     *  描画するディスプレイ（対象）の幅と高さを設定する
+     *  （ピクセル単位で描画指定するのに必要な情報）
+     */
     static void SetDisplaySize(float w, float h) {
         displayWidth = w, displayHeight = h;
     }
+    
+    /**
+     *  透過度の設定
+     */
 	static void SetAlpha(float a=1.0f) { color.A = a; }
 	
+    
 	static void Draw(CTexture *texture, int x, int y);
 	static void DrawRotScl(CTexture *texture, int x, int y, float sclX, float sclY, float rad);
 	

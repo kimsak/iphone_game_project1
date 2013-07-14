@@ -23,6 +23,7 @@ static float points[] = {
 };
 
 // 頂点データ（別）
+// 原点中心
 static float points2[] = {
     -1, -1, 0,
     1, -1, 0,

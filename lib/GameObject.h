@@ -28,4 +28,14 @@ public:
     }
 };
 
+/**
+ *  オブジェクトの初期化を以上する関数（インライン）
+ *  使い方：オブジェクトの生成時に以下のように書く
+ *      pObj = InitObj( new SampleObj(game) );
+ */
+inline GameObject *InitObj(GameObject *pObj) {
+    if(pObj) pObj->Init();
+    return pObj;
+}
+
 #endif /*GAME_OBJECT_H_*/
