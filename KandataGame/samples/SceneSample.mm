@@ -10,6 +10,7 @@
 #include "SceneSample.h"
 #include "GameCore.h"
 #include "Sprite.h"
+#include "ObjectSample.h"
 
 void SceneSample::LoadContents() {
     
@@ -20,7 +21,8 @@ void SceneSample::LoadContents() {
 }
 
 void SceneSample::Init() {
-    
+    GameObject *pObj = InitObj(new ObjectSample(GetGameRef()));
+    objList.Push( pObj );
 }
 
 void SceneSample::Update() {
