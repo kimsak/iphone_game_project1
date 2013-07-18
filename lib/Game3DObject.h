@@ -22,7 +22,7 @@ public:
     /**
      *  コンストラクタ
      */
-    Game3DObject(GameCore &gameRef) : GameObject(gameRef), position(), scale(1,1,1), rotation(), color() {}
+    Game3DObject(GameCore *gamePtr) : GameObject(gamePtr), position(), scale(1,1,1), rotation(), color() {}
 };
 
 #endif /*GAME_3D_OBJECT*/

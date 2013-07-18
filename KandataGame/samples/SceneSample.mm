@@ -17,11 +17,11 @@ void SceneSample::LoadContents() {
     /**
      *  イメージのロード sampleImage.png
      */
-    GetGameRef().GetTextureMgr()->CreateTexture("sampleImage", "sampleImage", "png");
+    Get_pGame()->GetTextureMgr()->CreateTexture("sampleImage", "sampleImage", "png");
 }
 
 void SceneSample::Init() {
-    GameObject *pObj = InitObj(new ObjectSample(GetGameRef()));
+    GameObject *pObj = InitObj(new ObjectSample(Get_pGame()));
     objList.Push( pObj );
 }
 

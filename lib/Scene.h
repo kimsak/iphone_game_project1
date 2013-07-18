@@ -12,10 +12,10 @@
 class GameCore;
 
 class CScene {
-    GameCore &game;
+    GameCore *pGame;
 public:
     // コンストラクタ
-    CScene(GameCore &gameRef) : game(gameRef) {}
+    CScene(GameCore *gamePtr) : pGame(gamePtr) {}
     virtual ~CScene() {}
     
     // Virtual functions
@@ -24,7 +24,7 @@ public:
     virtual void Update() = 0;
     virtual void Draw() = 0;
     
-    GameCore &GetGameRef() { return game; }
+    GameCore *Get_pGame() { return pGame; }
 };
 
 /**

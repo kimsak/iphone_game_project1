@@ -45,7 +45,7 @@ void KandataGame::Initialize() {
     /**
      *  シーンの作成
      */
-    pScene = InitScene(new SceneSample(game));
+    pScene = InitScene(new SceneSample(&game));
 }
 
 void KandataGame::Update() {

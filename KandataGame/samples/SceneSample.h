@@ -18,7 +18,7 @@ public:
     /**
      *  コンストラクタ
      */
-    SceneSample(GameCore &game) : CScene(game) {}
+    SceneSample(GameCore *pGame) : CScene(pGame) {}
     
     virtual void LoadContents();
     virtual void Init();

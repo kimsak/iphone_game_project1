@@ -13,18 +13,18 @@
 class GameObjList;
 
 class GameObject {
-    GameCore &game;
+    GameCore *pGame;
 public:
     // コンストラクタ
-    GameObject(GameCore &gameRef) : game(gameRef) {}
+    GameObject(GameCore *gamePtr) : pGame(gamePtr) {}
     virtual ~GameObject() {}
     
     virtual void Init() = 0;
     virtual void Move(GameObjList *pObjList) = 0;
     virtual void Draw() = 0;
     
-    GameCore &GetGameRef() {
-        return game;
+    GameCore *Get_pGame() {
+        return pGame;
     }
 };
 

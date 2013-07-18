@@ -14,7 +14,7 @@
 class ObjectSample : public Game2DObject {
 public:
     // コンストラクタ
-    ObjectSample(GameCore &game) : Game2DObject(game) {}
+    ObjectSample(GameCore *pGame) : Game2DObject(pGame) {}
     
     virtual void Init();
     virtual void Move(GameObjList *);

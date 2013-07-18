@@ -10,7 +10,7 @@
 #include "Sprite.h"
 
 void ObjectSample::Init() {
-    texture = GetGameRef().GetTextureMgr()->GetTexture("sampleImage");
+    texture = Get_pGame()->GetTextureMgr()->GetTexture("sampleImage");
 }
 
 void ObjectSample::Move(GameObjList *objList) {
