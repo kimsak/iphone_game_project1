@@ -28,7 +28,7 @@
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     // インスタンス変数の初期化
-    context = NULL;
+    context = nil;
     frame_buffer = render_buffer = depth_buffer = 0;
     
     self = [super initWithCoder:aDecoder];
@@ -61,15 +61,15 @@
         self.Width = frame.size.width * scale;
         self.Height = frame.size.height * scale;
         
-        /**
-         *  OpenGLの設定
-         */
         [self setupGL:layer];
     }
     
     return self;
 }
 
+/**
+ *  OpenGLの設定
+ */
 - (void) setupGL:(CAEAGLLayer *)layer
 {
     // Contextの作成
