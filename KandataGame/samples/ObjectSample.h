@@ -18,7 +18,7 @@ public:
     
     virtual void Init(GameObjList *);
     virtual void Move(GameObjList *);
-    virtual void Draw();
+//    virtual void Draw();
 };
 
 #endif /* defined(__KandataGame__ObjectSample__) */

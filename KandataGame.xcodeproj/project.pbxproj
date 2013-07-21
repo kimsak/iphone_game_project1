@@ -35,6 +35,7 @@
 		942F405D17787D91002A63D9 /* TextureManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 942F405B17787D91002A63D9 /* TextureManager.mm */; };
 		942F4064177889C3002A63D9 /* PixelData_objc.mm in Sources */ = {isa = PBXBuildFile; fileRef = 942F4062177889C3002A63D9 /* PixelData_objc.mm */; };
 		944E0D0417919EB900464ACC /* ObjectSample.mm in Sources */ = {isa = PBXBuildFile; fileRef = 944E0D0217919EB900464ACC /* ObjectSample.mm */; };
+		94B8ED1B179BD9CC0021EA1C /* Game2DObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 94B8ED1A179BD9CC0021EA1C /* Game2DObject.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +91,7 @@
 		942F4062177889C3002A63D9 /* PixelData_objc.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PixelData_objc.mm; sourceTree = "<group>"; };
 		944E0D0217919EB900464ACC /* ObjectSample.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ObjectSample.mm; sourceTree = "<group>"; };
 		944E0D0317919EB900464ACC /* ObjectSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectSample.h; sourceTree = "<group>"; };
+		94B8ED1A179BD9CC0021EA1C /* Game2DObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Game2DObject.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +217,7 @@
 				942E894F176D78E400FEAF15 /* Color.h */,
 				942E8952176D78E400FEAF15 /* GameObject.h */,
 				942E8950176D78E400FEAF15 /* Game2DObject.h */,
+				94B8ED1A179BD9CC0021EA1C /* Game2DObject.mm */,
 				942E8951176D78E400FEAF15 /* Game3DObject.h */,
 				942E8953176D78E400FEAF15 /* GameObjList.h */,
 				942E8954176D78E400FEAF15 /* Math.h */,
@@ -338,6 +341,7 @@
 				942F4064177889C3002A63D9 /* PixelData_objc.mm in Sources */,
 				940DD6581791186800FAAA15 /* SceneSample.mm in Sources */,
 				944E0D0417919EB900464ACC /* ObjectSample.mm in Sources */,
+				94B8ED1B179BD9CC0021EA1C /* Game2DObject.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

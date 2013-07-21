@@ -10,13 +10,13 @@
 #include "Sprite.h"
 
 void ObjectSample::Init(GameObjList *pObjList) {
-    texture = Get_pGame()->GetTextureMgr()->GetTexture("sampleImage");
+    pTexture = Get_pGame()->GetTextureMgr()->GetTexture("sampleImage");
 }
 
 void ObjectSample::Move(GameObjList *pObjList) {
     
 }
 
-void ObjectSample::Draw() {
-    CSprite::DrawRotScl(texture, x, y, sclX, sclY, rotation);
-}
+//void ObjectSample::Draw() {
+//    CSprite::DrawRotScl(pTexture, x, y, sclX, sclY, rotation);
+//}

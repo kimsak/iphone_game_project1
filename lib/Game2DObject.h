@@ -20,13 +20,17 @@ public:
     
     Color color;
     
-    CTexture *texture;
+    CTexture *pTexture;
     
     /**
      *  コンストラクタ
      */
     Game2DObject(GameCore *gamePtr) : GameObject(gamePtr), x(0.0f), y(0.0f), sclX(1.0f), sclY(1.0f),
-    rotation(0.0f), color(), texture(0) {}
+    rotation(0.0f), color(), pTexture(NULL) {}
+    
+    // 描画メソッド
+    // @Override
+    virtual void Draw();
 };
 
 #endif
