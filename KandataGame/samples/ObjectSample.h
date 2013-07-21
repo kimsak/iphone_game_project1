@@ -16,7 +16,7 @@ public:
     // コンストラクタ
     ObjectSample(GameCore *pGame) : Game2DObject(pGame) {}
     
-    virtual void Init();
+    virtual void Init(GameObjList *);
     virtual void Move(GameObjList *);
     virtual void Draw();
 };

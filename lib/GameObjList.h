@@ -16,7 +16,10 @@ class GameObjList {
     GameObjects objs;
 public:
     void Push(GameObject *obj) {
-        if(obj) objs.push_back(obj);
+        if(obj) {
+            objs.push_back(obj);
+            obj->Init(this);
+        }
     }
     
     void Move() {
@@ -47,7 +50,7 @@ public:
     }
     
     // 検索に使用
-    GameObject *FindWith(bool (*func)(GameObject *)) {
+    GameObject *FindBy(bool (*func)(GameObject *)) {
         for (GameObjects::iterator it = objs.begin(); it != objs.begin(); it++) {
             if (func(*it)) return *it;
         }

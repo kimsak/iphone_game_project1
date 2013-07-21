@@ -11,6 +11,7 @@
 #include "Texture.h"
 
 // 頂点データ
+// 左上原点
 static float points[] = {
 //	-1, -1, 0,
 //	1, -1, 0,

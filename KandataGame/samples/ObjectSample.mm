@@ -9,14 +9,14 @@
 #include "ObjectSample.h"
 #include "Sprite.h"
 
-void ObjectSample::Init() {
+void ObjectSample::Init(GameObjList *pObjList) {
     texture = Get_pGame()->GetTextureMgr()->GetTexture("sampleImage");
 }
 
-void ObjectSample::Move(GameObjList *objList) {
+void ObjectSample::Move(GameObjList *pObjList) {
     
 }
 
 void ObjectSample::Draw() {
-    CSprite::DrawRotScl(texture, 0, 0, 1, 1, 0);
+    CSprite::DrawRotScl(texture, x, y, sclX, sclY, rotation);
 }

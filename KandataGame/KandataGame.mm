@@ -61,6 +61,6 @@ void KandataGame::Draw() {
 }
 
 void KandataGame::Finalize() {
-    
+    game.Finalize();
 }
 

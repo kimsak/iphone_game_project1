@@ -19,7 +19,7 @@ public:
     GameObject(GameCore *gamePtr) : pGame(gamePtr) {}
     virtual ~GameObject() {}
     
-    virtual void Init() = 0;
+    virtual void Init(GameObjList *pObjList) = 0;
     virtual void Move(GameObjList *pObjList) = 0;
     virtual void Draw() = 0;
     
@@ -27,15 +27,5 @@ public:
         return pGame;
     }
 };
-
-/**
- *  オブジェクトの初期化を以上する関数（インライン）
- *  使い方：オブジェクトの生成時に以下のように書く
- *      pObj = InitObj( new SampleObj(game) );
- */
-inline GameObject *InitObj(GameObject *pObj) {
-    if(pObj) pObj->Init();
-    return pObj;
-}
 
 #endif /*GAME_OBJECT_H_*/

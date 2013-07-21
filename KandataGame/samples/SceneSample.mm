@@ -21,8 +21,7 @@ void SceneSample::LoadContents() {
 }
 
 void SceneSample::Init() {
-    GameObject *pObj = InitObj(new ObjectSample(Get_pGame()));
-    objList.Push( pObj );
+    objList.Push( new ObjectSample(Get_pGame()) );
 }
 
 void SceneSample::Update() {

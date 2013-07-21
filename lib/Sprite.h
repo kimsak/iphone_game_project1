@@ -11,7 +11,6 @@
 #include "Color.h"
 
 class CTexture;
-class CGraphicDevice;
 class CRectangle;
 
 class CSprite {
@@ -41,10 +40,17 @@ public:
      */
 	static void SetAlpha(float a=1.0f) { color.A = a; }
 	
+    /**
+     *  スプライト描画関数
+     *  @param x 描画位置(x座標)
+     *  @param y 描画位置(y座標)
+     *  @param sclX 描画するスプライトの伸縮倍率(x方向)
+     *  @param sclY 描画するスプライトの伸縮倍率(y方向)
+     */
+    
+	static void DrawRotScl(CTexture *texture, int x, int y, float sclX, float sclY, float rad);
     
 	static void Draw(CTexture *texture, int x, int y);
-	static void DrawRotScl(CTexture *texture, int x, int y, float sclX, float sclY, float rad);
-	
 	static void DrawRect(CTexture *texture, const CRectangle& srcRect, const CRectangle& destRect);
 };
 
