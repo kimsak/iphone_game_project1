@@ -36,10 +36,9 @@ void KandataGame::Initialize() {
     shaderMgr->CreateShader("Basic3D", "Basic3D", "Basic3D");
     
     /**
-     *  スプライトの設定
+     *  スプライトの初期化
      */
-    CSprite::SetDisplaySize(game.GetDisplayWidth(), game.GetDisplayHeight());
-    CSprite::SetShaderProgram( shaderMgr->GetProgram("Basic") );
+    CSprite::Initialize(&game);
 //    else NSLog(@"No Shader");
     
     /**
