@@ -17,6 +17,6 @@ void ObjectSample::Move(GameObjList *pObjList) {
     
 }
 
-//void ObjectSample::Draw() {
-//    CSprite::DrawRotScl(pTexture, x, y, sclX, sclY, rotation);
-//}
+void ObjectSample::Draw() {
+    CSprite(x, y, color).DrawRotScl(pTexture, sclX, sclY, rotation);
+}

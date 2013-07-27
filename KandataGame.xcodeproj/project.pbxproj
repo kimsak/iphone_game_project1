@@ -10,6 +10,8 @@
 		940DD6581791186800FAAA15 /* SceneSample.mm in Sources */ = {isa = PBXBuildFile; fileRef = 940DD6561791186800FAAA15 /* SceneSample.mm */; };
 		9410BD341775F046003E6E16 /* ShaderManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9410BD321775F045003E6E16 /* ShaderManager.mm */; };
 		941EB6C01776F394005EAD1A /* src_loader_objc.mm in Sources */ = {isa = PBXBuildFile; fileRef = 941EB6BE1776F394005EAD1A /* src_loader_objc.mm */; };
+		9420EBD617A36395007DC5E2 /* Sprite.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 94428C5817A2D4F800CED6E6 /* Sprite.vsh */; };
+		9420EBD717A36395007DC5E2 /* Sprite.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 94428C5A17A2D50A00CED6E6 /* Sprite.fsh */; };
 		94261CA3176F472500A123A8 /* sampleImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 94261CA2176F472500A123A8 /* sampleImage.png */; };
 		94261CA5176F4D3700A123A8 /* Basic.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 942E8970176E06C700FEAF15 /* Basic.fsh */; };
 		94261CA6176F4D3700A123A8 /* Basic.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 942E8971176E06C700FEAF15 /* Basic.vsh */; };
@@ -81,14 +83,16 @@
 		942E896B176D9BF600FEAF15 /* GameCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameCore.h; sourceTree = "<group>"; };
 		942E896C176DBAB800FEAF15 /* KandataGame.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KandataGame.mm; sourceTree = "<group>"; };
 		942E896D176DBAB800FEAF15 /* KandataGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KandataGame.h; sourceTree = "<group>"; };
-		942E8970176E06C700FEAF15 /* Basic.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Basic.fsh; sourceTree = "<group>"; };
-		942E8971176E06C700FEAF15 /* Basic.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Basic.vsh; sourceTree = "<group>"; };
-		942E8972176E06C700FEAF15 /* Basic3D.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Basic3D.fsh; sourceTree = "<group>"; };
-		942E8973176E06C700FEAF15 /* Basic3D.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Basic3D.vsh; sourceTree = "<group>"; };
+		942E8970176E06C700FEAF15 /* Basic.fsh */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; path = Basic.fsh; sourceTree = "<group>"; };
+		942E8971176E06C700FEAF15 /* Basic.vsh */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; path = Basic.vsh; sourceTree = "<group>"; };
+		942E8972176E06C700FEAF15 /* Basic3D.fsh */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; path = Basic3D.fsh; sourceTree = "<group>"; };
+		942E8973176E06C700FEAF15 /* Basic3D.vsh */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; path = Basic3D.vsh; sourceTree = "<group>"; };
 		942F405B17787D91002A63D9 /* TextureManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TextureManager.mm; sourceTree = "<group>"; };
 		942F405C17787D91002A63D9 /* TextureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureManager.h; sourceTree = "<group>"; };
 		942F405E17788116002A63D9 /* PixelData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PixelData.h; sourceTree = "<group>"; };
 		942F4062177889C3002A63D9 /* PixelData_objc.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PixelData_objc.mm; sourceTree = "<group>"; };
+		94428C5817A2D4F800CED6E6 /* Sprite.vsh */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; path = Sprite.vsh; sourceTree = "<group>"; };
+		94428C5A17A2D50A00CED6E6 /* Sprite.fsh */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; path = Sprite.fsh; sourceTree = "<group>"; };
 		944E0D0217919EB900464ACC /* ObjectSample.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ObjectSample.mm; sourceTree = "<group>"; };
 		944E0D0317919EB900464ACC /* ObjectSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectSample.h; sourceTree = "<group>"; };
 		94B8ED1A179BD9CC0021EA1C /* Game2DObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Game2DObject.mm; sourceTree = "<group>"; };
@@ -253,6 +257,8 @@
 				942E8971176E06C700FEAF15 /* Basic.vsh */,
 				942E8972176E06C700FEAF15 /* Basic3D.fsh */,
 				942E8973176E06C700FEAF15 /* Basic3D.vsh */,
+				94428C5817A2D4F800CED6E6 /* Sprite.vsh */,
+				94428C5A17A2D50A00CED6E6 /* Sprite.fsh */,
 			);
 			path = shaders;
 			sourceTree = "<group>";
@@ -308,6 +314,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9420EBD617A36395007DC5E2 /* Sprite.vsh in Resources */,
+				9420EBD717A36395007DC5E2 /* Sprite.fsh in Resources */,
 				94261CA5176F4D3700A123A8 /* Basic.fsh in Resources */,
 				94261CA6176F4D3700A123A8 /* Basic.vsh in Resources */,
 				94261CA7176F4D3700A123A8 /* Basic3D.fsh in Resources */,
