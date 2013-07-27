@@ -13,7 +13,11 @@ varying lowp vec4 colorVarying;
 varying mediump vec2 texCoord0;
 
 uniform vec4 monoColor;
-uniform mat4 modelViewProjectionMatrix;
+//uniform mat4 modelViewProjectionMatrix;
+
+uniform mat4 projMat;
+uniform mat4 viewMat;
+uniform mat4 wldMat;
 //uniform mat3 normalMatrix;
 
 uniform mat4 texMatrix;
@@ -22,7 +26,10 @@ void main()
 {
     colorVarying = monoColor;
     
-    gl_Position = modelViewProjectionMatrix * position;
+    mat4 t = projMat;
+    t *= viewMat;
+    t *= wldMat;
+    gl_Position = t * position;
 	
 	vec4 texcoordVec4 = vec4(texcoord, 0, 1);
 	texcoordVec4 = texMatrix * texcoordVec4;
