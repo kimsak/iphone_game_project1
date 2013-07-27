@@ -9,6 +9,8 @@
 #include "Sprite.h"
 #include "Math.h"
 #include "Texture.h"
+#include "GameCore.h"
+#include "ShaderManager.h"
 
 // 頂点データ
 // 左上原点
@@ -40,14 +42,31 @@ static float tex_coords[] = {
 	1, 0
 };
 
-// クラス変数
-/*static*/unsigned int CSprite::shader_program = 0;
+/*static*/unsigned int CSprite::shader_program = 0;     // 初期化する前は0で保持する
 
-/*static*/Color CSprite::color;
 /*static*/float CSprite::displayWidth = 1;
 /*static*/float CSprite::displayHeight = 1;
 
-void CSprite::Draw(CTexture *texture, int x, int y) {
+/*static*/void CSprite::Initialize(GameCore *pGame) {
+    /**
+     *  ディスプレイの設定
+     */
+    displayWidth = (float)pGame->GetDisplayWidth(), displayHeight = (float)pGame->GetDisplayHeight();
+    
+    /**
+     *  専用シェーダーの作成
+     */
+    const char *shader_name = "Sprite";
+    pGame->GetShaderMgr()->CreateShader(shader_name, shader_name, shader_name);
+    // プログラムIDの取得
+    shader_program = pGame->GetShaderMgr()->GetProgram(shader_name);
+}
+
+/*static*/void CSprite::Fianlize() {
+    
+}
+
+void CSprite::Draw(CTexture *texture) {
 	if(texture==NULL) return;
 //	DrawRotScl(texture, x, y, 1, 1, 0, device);
 	CRectangle src, dest;
@@ -60,7 +79,7 @@ void CSprite::Draw(CTexture *texture, int x, int y) {
  *	回転、伸縮の指定をしてテクスチャを描画する関数
  *	描画するテクスチャの座標は中心が基準
  */
-void CSprite::DrawRotScl(CTexture *texture, int x, int y, float sclX, float sclY, float rad) {
+void CSprite::DrawRotScl(CTexture *texture, float sclX, float sclY, float rad) {
 	if(!texture || !shader_program) return;
 	
 	// シェーダーのプログラムID取得

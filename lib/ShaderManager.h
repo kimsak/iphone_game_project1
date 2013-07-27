@@ -11,6 +11,7 @@
 #include <map>
 #include <string>
 #include "_useGL.h"
+#include "Math.h"
 
 class ShaderManager {
     std::map<std::string, unsigned int> shader_map;
@@ -32,6 +33,7 @@ public:
      *  登録されているシェーダーの破棄
      */
     void Dispose();
+    
 };
 
 #endif /* defined(SHADER_MANAGER_H_) */
