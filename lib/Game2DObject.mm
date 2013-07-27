@@ -40,6 +40,7 @@ static float tex_coords[] = {
 	1, 0
 };
 
+
 void Game2DObject::Draw() {
     // テクスチャの有無を確認
     if(!pTexture) {
@@ -79,30 +80,17 @@ void Game2DObject::Draw() {
 	    
     // modelViewProjectionMatrix
 	// 行列変換
-	GLuint mvpLoc = glGetUniformLocation(programID, "modelViewProjectionMatrix");
+    // wldMat
+    GLuint wmLoc = glGetUniformLocation(programID, "wldMat");
+    CMatrix4 wldMat = CMatrix4::Scale(CVector(sclX, sclY, 1));
+    wldMat *= CMatrix4::Rotation(CQuaternion(rotation, AXIS_Z));
+    wldMat *= CMatrix4::Translation(CVector(x, y, z));
+    glUniformMatrix4fv(wmLoc, 1, GL_FALSE, (const float *)&wldMat);
     
-    // 変換行列の設定
-    float
-        dw = Get_pGame()->GetDisplayWidth(), dh = Get_pGame()->GetDisplayHeight(),
-        tw = pTexture->GetWidth(), th = pTexture->GetHeight(),
-        t_x = sclX * tw / 2 - dw / 2 + x,
-        t_y = -sclY * th / 2 + dh / 2 - y;
-    
-	CMatrix4 mvpMat;
-    mvpMat[0] = sclX * tw * cosf(rotation) / dw;
-    mvpMat[1] = -sclX * tw * sinf(rotation) / dh;
-    mvpMat[4] = sclY * th * sinf(rotation) / dw;
-    mvpMat[5] = sclY * th * cosf(rotation) / dh;
-    mvpMat[12] = 2 * t_x / dw;
-    mvpMat[13] = 2 * t_y / dh;
-	
-	glUniformMatrix4fv(mvpLoc, 1, GL_FALSE, (const float *)&mvpMat);
-	
 	// texMatrix
 	GLuint tmLoc = glGetUniformLocation(programID, "texMatrix");
 	CMatrix4 tmMat;
 	glUniformMatrix4fv(tmLoc, 1, GL_FALSE, (const float *)&tmMat);
-	
     
 	// テクスチャの設定
 	glActiveTexture(GL_TEXTURE0);

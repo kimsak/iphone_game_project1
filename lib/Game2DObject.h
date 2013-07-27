@@ -14,7 +14,7 @@
 
 class Game2DObject : public GameObject {
 public:
-    float x, y;
+    float x, y, z;
     float sclX, sclY;
     float rotation;
     
@@ -25,7 +25,7 @@ public:
     /**
      *  コンストラクタ
      */
-    Game2DObject(GameCore *gamePtr) : GameObject(gamePtr), x(0.0f), y(0.0f), sclX(1.0f), sclY(1.0f),
+    Game2DObject(GameCore *gamePtr) : GameObject(gamePtr), x(0.0f), y(0.0f), z(0.0f), sclX(1.0f), sclY(1.0f),
     rotation(0.0f), color(), pTexture(NULL) {}
     
     // 描画メソッド
