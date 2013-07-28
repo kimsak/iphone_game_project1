@@ -56,14 +56,19 @@ static float tex_coords[] = {
     /**
      *  専用シェーダーの作成
      */
-    const char *shader_name = "Sprite";
-    pGame->GetShaderMgr()->CreateShader(shader_name, shader_name, shader_name);
-    // プログラムIDの取得
-    shader_program = pGame->GetShaderMgr()->GetProgram(shader_name);
+    LoadShader(pGame);
+
 }
 
 /*static*/void CSprite::Fianlize() {
     
+}
+
+/*static*/void CSprite::LoadShader(GameCore *pGame) {
+    const char *shader_name = "Sprite";
+    pGame->GetShaderMgr()->CreateShader(shader_name, shader_name, shader_name);
+    // プログラムIDの取得
+    shader_program = pGame->GetShaderMgr()->GetProgram(shader_name);
 }
 
 void CSprite::Draw(CTexture *texture) {
@@ -142,7 +147,8 @@ void CSprite::DrawRotScl(CTexture *texture, float sclX, float sclY, float rad) {
 	
 	// texMatrix
 	GLuint tmLoc = glGetUniformLocation(program, "texMatrix");
-	CMatrix4 tmMat;
+	CMatrix4 tmMat = CMatrix4::Scale(CVector(srcRect.GetWidth(), srcRect.GetHeight(), 1));
+    tmMat *= CMatrix4::Translation(CVector(srcRect.GetX(), srcRect.GetY(), 0));
 	glUniformMatrix4fv(tmLoc, 1, GL_FALSE, (const float *)&tmMat);
 	
 	/**

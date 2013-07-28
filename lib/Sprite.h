@@ -9,9 +9,9 @@
 #ifndef SPRITE_H_
 #define SPRITE_H_
 #include "Color.h"
+#include "Math.h"
 
 class CTexture;
-class CRectangle;
 class GameCore;
 
 class CSprite {
@@ -19,9 +19,10 @@ class CSprite {
     static float displayWidth, displayHeight;
     
     // インスタンス変数
-    float x;
-    float y;
-    Color color;
+    float       x;
+    float       y;
+    Color       color;
+    CRectangle  srcRect;
 public:
     /**
      *  スプライトクラスの初期化処理
@@ -35,9 +36,18 @@ public:
     static void Fianlize();
     
     /**
+     *  シェーダーを読み込む関数
+     */
+    static void LoadShader(GameCore *pGame);
+    
+    /**
      *  コンストラクタ
      */
-    CSprite(float _x, float _y, const Color &_color) : x(_x), y(_y), color(_color) {}
+    CSprite(float _x, float _y, const Color &_color) : x(_x), y(_y), color(_color), srcRect() {}
+    
+    void SetSrcRect(float _x, float _y, float _w, float _h) {
+        srcRect.SetBounds(_x, _y, _w, _h);
+    }
 	
     /**
      *  スプライト描画関数
