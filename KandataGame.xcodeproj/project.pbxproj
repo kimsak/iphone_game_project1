@@ -17,6 +17,7 @@
 		94261CA6176F4D3700A123A8 /* Basic.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 942E8971176E06C700FEAF15 /* Basic.vsh */; };
 		94261CA7176F4D3700A123A8 /* Basic3D.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 942E8972176E06C700FEAF15 /* Basic3D.fsh */; };
 		94261CA8176F4D3700A123A8 /* Basic3D.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 942E8973176E06C700FEAF15 /* Basic3D.vsh */; };
+		942BC56517A551F400DC7881 /* sampleImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 942BC56417A551F400DC7881 /* sampleImage@2x.png */; };
 		942E8924176C806400FEAF15 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942E8923176C806400FEAF15 /* UIKit.framework */; };
 		942E8926176C806400FEAF15 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942E8925176C806400FEAF15 /* Foundation.framework */; };
 		942E8928176C806400FEAF15 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942E8927176C806400FEAF15 /* CoreGraphics.framework */; };
@@ -48,6 +49,7 @@
 		941EB6BC1776F10D005EAD1A /* source_loader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = source_loader.h; sourceTree = "<group>"; };
 		941EB6BE1776F394005EAD1A /* src_loader_objc.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = src_loader_objc.mm; sourceTree = "<group>"; };
 		94261CA2176F472500A123A8 /* sampleImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sampleImage.png; sourceTree = "<group>"; };
+		942BC56417A551F400DC7881 /* sampleImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sampleImage@2x.png"; sourceTree = "<group>"; };
 		942E8920176C806400FEAF15 /* KandataGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KandataGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		942E8923176C806400FEAF15 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		942E8925176C806400FEAF15 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -137,6 +139,7 @@
 		94261CA1176F471400A123A8 /* res */ = {
 			isa = PBXGroup;
 			children = (
+				942BC56417A551F400DC7881 /* sampleImage@2x.png */,
 				94261CA2176F472500A123A8 /* sampleImage.png */,
 			);
 			name = res;
@@ -326,6 +329,7 @@
 				942E893A176C806400FEAF15 /* Default-568h@2x.png in Resources */,
 				942E8945176C825700FEAF15 /* GameController.xib in Resources */,
 				94261CA3176F472500A123A8 /* sampleImage.png in Resources */,
+				942BC56517A551F400DC7881 /* sampleImage@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
