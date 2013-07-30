@@ -10,6 +10,7 @@
 #include "GameObject.h"
 #include "Math.h"
 #include "Color.h"
+#include "AbstractModel.h"
 
 class Game3DObject : public GameObject {
 public:
@@ -19,10 +20,13 @@ public:
     
     Color           color;
     
+    AbstractModel   *pModel;
+    
     /**
      *  コンストラクタ
      */
-    Game3DObject(GameCore *gamePtr) : GameObject(gamePtr), position(), scale(1,1,1), rotation(), color() {}
+    Game3DObject(GameCore *gamePtr)
+    : GameObject(gamePtr), position(), scale(1,1,1), rotation(), color(), pModel(NULL) {}
 };
 
 #endif /*GAME_3D_OBJECT*/
