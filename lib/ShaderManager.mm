@@ -29,7 +29,7 @@ bool ShaderManager::CreateShader(std::string name, std::string vertexSrcPath, st
         return false;
     }
     
-    // TODO: シェーダーの登録
+    // シェーダーの登録
     shader_map[name] = program;
     
     return true;

@@ -23,7 +23,7 @@ public:
     virtual void Move(GameObjList *pObjList) = 0;
     virtual void Draw() = 0;
     
-    GameCore *Get_pGame() {
+    GameCore *Get_pGame() const {
         return pGame;
     }
 };

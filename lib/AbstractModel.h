@@ -9,9 +9,11 @@
 #ifndef ABSTRACT_MODEL_H_
 #define ABSTRACT_MODEL_H_
 
+class Game3DObject;
+
 class AbstractModel {
 public:
-    virtual void Render() = 0;
+    virtual void Render(const Game3DObject *) = 0;
 };
 
 #endif  /*defined(ABSTRACT_MODEL_H_)*/

@@ -38,6 +38,7 @@
 		942F405D17787D91002A63D9 /* TextureManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 942F405B17787D91002A63D9 /* TextureManager.mm */; };
 		942F4064177889C3002A63D9 /* PixelData_objc.mm in Sources */ = {isa = PBXBuildFile; fileRef = 942F4062177889C3002A63D9 /* PixelData_objc.mm */; };
 		944E0D0417919EB900464ACC /* ObjectSample.mm in Sources */ = {isa = PBXBuildFile; fileRef = 944E0D0217919EB900464ACC /* ObjectSample.mm */; };
+		944FAF4217AA978100676A6C /* CubeModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 944FAF4017AA978100676A6C /* CubeModel.mm */; };
 		94B8ED1B179BD9CC0021EA1C /* Game2DObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 94B8ED1A179BD9CC0021EA1C /* Game2DObject.mm */; };
 /* End PBXBuildFile section */
 
@@ -93,11 +94,13 @@
 		942F405C17787D91002A63D9 /* TextureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureManager.h; sourceTree = "<group>"; };
 		942F405E17788116002A63D9 /* PixelData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PixelData.h; sourceTree = "<group>"; };
 		942F4062177889C3002A63D9 /* PixelData_objc.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PixelData_objc.mm; sourceTree = "<group>"; };
-		9431BD7517A8056B00B31F15 /* AbstractModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractModel.h; sourceTree = "<group>"; };
+		9431BD7517A8056B00B31F15 /* AbstractModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AbstractModel.h; path = lib/AbstractModel.h; sourceTree = "<group>"; };
 		94428C5817A2D4F800CED6E6 /* Sprite.vsh */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; path = Sprite.vsh; sourceTree = "<group>"; };
 		94428C5A17A2D50A00CED6E6 /* Sprite.fsh */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; path = Sprite.fsh; sourceTree = "<group>"; };
 		944E0D0217919EB900464ACC /* ObjectSample.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ObjectSample.mm; sourceTree = "<group>"; };
 		944E0D0317919EB900464ACC /* ObjectSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectSample.h; sourceTree = "<group>"; };
+		944FAF4017AA978100676A6C /* CubeModel.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CubeModel.mm; sourceTree = "<group>"; };
+		944FAF4117AA978100676A6C /* CubeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubeModel.h; sourceTree = "<group>"; };
 		94B8ED1A179BD9CC0021EA1C /* Game2DObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Game2DObject.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -220,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				941EB6BD1776F342005EAD1A /* objC */,
+				944FAF3F17AA972000676A6C /* Model */,
 				942F405E17788116002A63D9 /* PixelData.h */,
 				942E894E176D78E400FEAF15 /* _useGL.h */,
 				942E896B176D9BF600FEAF15 /* GameCore.h */,
@@ -240,7 +244,6 @@
 				941EB6BC1776F10D005EAD1A /* source_loader.h */,
 				942F405C17787D91002A63D9 /* TextureManager.h */,
 				942F405B17787D91002A63D9 /* TextureManager.mm */,
-				9431BD7517A8056B00B31F15 /* AbstractModel.h */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -266,6 +269,17 @@
 				94428C5A17A2D50A00CED6E6 /* Sprite.fsh */,
 			);
 			path = shaders;
+			sourceTree = "<group>";
+		};
+		944FAF3F17AA972000676A6C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9431BD7517A8056B00B31F15 /* AbstractModel.h */,
+				944FAF4017AA978100676A6C /* CubeModel.mm */,
+				944FAF4117AA978100676A6C /* CubeModel.h */,
+			);
+			name = Model;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,6 +370,7 @@
 				940DD6581791186800FAAA15 /* SceneSample.mm in Sources */,
 				944E0D0417919EB900464ACC /* ObjectSample.mm in Sources */,
 				94B8ED1B179BD9CC0021EA1C /* Game2DObject.mm in Sources */,
+				944FAF4217AA978100676A6C /* CubeModel.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

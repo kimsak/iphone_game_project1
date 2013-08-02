@@ -10,7 +10,8 @@
 #include "GameObject.h"
 #include "Math.h"
 #include "Color.h"
-#include "AbstractModel.h"
+
+class AbstractModel;
 
 class Game3DObject : public GameObject {
 public:
@@ -25,8 +26,15 @@ public:
     /**
      *  コンストラクタ
      */
-    Game3DObject(GameCore *gamePtr)
-    : GameObject(gamePtr), position(), scale(1,1,1), rotation(), color(), pModel(NULL) {}
+    Game3DObject(GameCore *gamePtr) : GameObject(gamePtr), position(), scale(1,1,1), rotation(), color(), pModel(NULL) {}
+
+    // 描画メソッド
+    // @Override
+    virtual void Draw() {
+        if(pModel) pModel->Render(this);
+    }
+
+
 };
 
 #endif /*GAME_3D_OBJECT*/
