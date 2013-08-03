@@ -13,6 +13,9 @@ class Game3DObject;
 
 class AbstractModel {
 public:
+    // デストラクタ
+    virtual ~AbstractModel() {}
+    
     virtual void Render(const Game3DObject *) = 0;
 };
 
