@@ -10,8 +10,7 @@
 #include "GameObject.h"
 #include "Math.h"
 #include "Color.h"
-
-class AbstractModel;
+#include "AbstractModel.h"
 
 class Game3DObject : public GameObject {
 public:
@@ -28,6 +27,15 @@ public:
      */
     Game3DObject(GameCore *gamePtr) : GameObject(gamePtr), position(), scale(1,1,1), rotation(), color(), pModel(NULL) {}
 
+    /**
+     *  デストラクタ
+     *  参照モデルクラスの破棄を行う
+     *  @Override
+     */
+    ~Game3DObject() {
+        if(pModel) delete pModel;
+    }
+    
     // 描画メソッド
     // @Override
     virtual void Draw() {
