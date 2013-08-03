@@ -11,9 +11,11 @@
 
 #include "../../lib/Scene.h"
 #include "../../lib/GameObjList.h"
+#include "../../lib/Game3DCamera.h"
 
 class SceneSample : public CScene {
     GameObjList objList;
+    GameObjList obj3DList;
 public:
     /**
      *  コンストラクタ

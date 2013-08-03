@@ -11,6 +11,7 @@
 #include "GameCore.h"
 #include "Sprite.h"
 #include "ObjectSample.h"
+#include "Object3DSample.h"
 
 #include "Math.h"
 #include "_useGL.h"
@@ -26,10 +27,12 @@ void SceneSample::LoadContents() {
 
 void SceneSample::Init() {
     objList.Push( new ObjectSample(Get_pGame()) );
+    obj3DList.Push( new Sample3DObj(Get_pGame()) );
 }
 
 void SceneSample::Update() {
     objList.Move();
+    obj3DList.Move();
 }
 
 void SceneSample::Draw() {
@@ -50,6 +53,29 @@ void SceneSample::Draw() {
     glUniformMatrix4fv(pmLoc, 1, GL_FALSE, (const float *)&projMat);
 	glUseProgram(0);
     
+    /**
+     *  Basic3Dシェーダーの設定
+     */
+    GLuint program = Get_pGame()->GetShaderMgr()->GetProgram("Basic3D");
+    glUseProgram(program);
+    // Uniform変数の設定
+    // viewMatrix
+    GLuint viewLoc = glGetUniformLocation(program, "viewMatrix");
+    CMatrix4 view3DMat = CMatrix4::LookAt(AXIS_Z*10.0f,
+                                        VEC_ZERO,
+                                        AXIS_Y);
+    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, (const float *)&view3DMat);
+    
+    // projMatrix
+    GLuint projLoc = glGetUniformLocation(program, "projMatrix");
+    CMatrix4 proj3DMat = CMatrix4::Perspective(30.0f,
+                                             Get_pGame()->GetDisplayAspect(),
+                                             1.0f, 100.0f);
+    glUniformMatrix4fv(projLoc, 1, GL_FALSE, (const float *)&proj3DMat);
+    glUseProgram(0);
+    
+    obj3DList.Draw();
+//    glClear(GL_DEPTH_BUFFER_BIT);
     objList.Draw();
 }
 
