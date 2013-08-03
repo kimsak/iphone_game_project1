@@ -9,11 +9,15 @@
 #ifndef GAME_OBJECT_H_
 #define GAME_OBJECT_H_
 #include "GameCore.h"
+#include <string>
 
 class GameObjList;
 
 class GameObject {
     GameCore *pGame;
+    
+    // 名前
+    std::string name;
 public:
     // コンストラクタ
     GameObject(GameCore *gamePtr) : pGame(gamePtr) {}
@@ -25,6 +29,14 @@ public:
     
     GameCore *Get_pGame() const {
         return pGame;
+    }
+    
+    void SetName(std::string name) {
+        this->name = name;
+    }
+    
+    std::string GetName() const {
+        return name;
     }
 };
 
