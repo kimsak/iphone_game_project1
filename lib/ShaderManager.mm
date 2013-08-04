@@ -8,6 +8,7 @@
 
 #include "ShaderManager.h"
 #include "source_loader.h"
+#include "TextSrcData.h"
 
 const int LOG_BUF_SIZE = 2048;
 
@@ -18,14 +19,18 @@ bool ShaderManager::CreateShader(std::string name, std::string vertexSrcPath, st
     if( GetProgram(name) ) return false;
     
     // ソースの中身を読み込む
-    const char *vSrcData, *fSrcData;
-    if( !::LoadSourceData(vertexSrcPath.c_str(), fragmentSrcPath.c_str(), &vSrcData, &fSrcData)) {
+    TextSrcData vsh_data, fsh_data;
+    if( !vsh_data.LoadContentFromFile(vertexSrcPath.c_str(), "vsh") ||
+        !fsh_data.LoadContentFromFile(fragmentSrcPath.c_str(), "fsh") )
         return false;
-    }
+//    const char *vSrcData, *fSrcData;
+//    if( !::LoadSourceData(vertexSrcPath.c_str(), fragmentSrcPath.c_str(), &vSrcData, &fSrcData)) {
+//        return false;
+//    }
     
     // シェーダーをビルドする
-    GLuint program;
-    if ( !LoadShader(vSrcData, fSrcData, &program) ) {
+    GLuint program = 0;
+    if ( !LoadShader(vsh_data.GetCString(), fsh_data.GetCString(), &program) ) {
         return false;
     }
     

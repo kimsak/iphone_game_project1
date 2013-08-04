@@ -66,6 +66,7 @@ void CubeModel::Render(const Game3DObject *pObj) {
     
     GLuint program = pObj->Get_pGame()->GetShaderMgr()->GetProgram(USE_SHADER_NAME);
     if(program == 0) return;      // プログラム値が０だったら処理終了
+    glUseProgram(program);
     
     /**
 	 *	Attribute変数の設定
@@ -105,4 +106,6 @@ void CubeModel::Render(const Game3DObject *pObj) {
 	
 	glDisableVertexAttribArray(posLoc);
 	glDisableVertexAttribArray(nrmPos);
+    
+    glUseProgram(0);
 }
