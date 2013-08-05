@@ -7,7 +7,6 @@
 //
 
 #include "ShaderManager.h"
-#include "source_loader.h"
 #include "TextSrcData.h"
 
 const int LOG_BUF_SIZE = 2048;

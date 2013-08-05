@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		940DD6581791186800FAAA15 /* SceneSample.mm in Sources */ = {isa = PBXBuildFile; fileRef = 940DD6561791186800FAAA15 /* SceneSample.mm */; };
 		9410BD341775F046003E6E16 /* ShaderManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9410BD321775F045003E6E16 /* ShaderManager.mm */; };
-		941EB6C01776F394005EAD1A /* src_loader_objc.mm in Sources */ = {isa = PBXBuildFile; fileRef = 941EB6BE1776F394005EAD1A /* src_loader_objc.mm */; };
 		9420EBD617A36395007DC5E2 /* Sprite.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 94428C5817A2D4F800CED6E6 /* Sprite.vsh */; };
 		9420EBD717A36395007DC5E2 /* Sprite.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 94428C5A17A2D50A00CED6E6 /* Sprite.fsh */; };
 		94261CA3176F472500A123A8 /* sampleImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 94261CA2176F472500A123A8 /* sampleImage.png */; };
@@ -50,8 +49,6 @@
 		940DD6571791186800FAAA15 /* SceneSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneSample.h; sourceTree = "<group>"; };
 		9410BD321775F045003E6E16 /* ShaderManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ShaderManager.mm; sourceTree = "<group>"; };
 		9410BD331775F045003E6E16 /* ShaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderManager.h; sourceTree = "<group>"; };
-		941EB6BC1776F10D005EAD1A /* source_loader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = source_loader.h; sourceTree = "<group>"; };
-		941EB6BE1776F394005EAD1A /* src_loader_objc.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = src_loader_objc.mm; sourceTree = "<group>"; };
 		94261CA2176F472500A123A8 /* sampleImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sampleImage.png; sourceTree = "<group>"; };
 		942BC56417A551F400DC7881 /* sampleImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sampleImage@2x.png"; sourceTree = "<group>"; };
 		942E8920176C806400FEAF15 /* KandataGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KandataGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,7 +142,6 @@
 		941EB6BD1776F342005EAD1A /* objC */ = {
 			isa = PBXGroup;
 			children = (
-				941EB6BE1776F394005EAD1A /* src_loader_objc.mm */,
 				942F4062177889C3002A63D9 /* PixelData_objc.mm */,
 				9440482017AE7E8900737FE3 /* TextSrcData_objc.mm */,
 			);
@@ -250,7 +246,6 @@
 				942E895C176D78E400FEAF15 /* Texture.mm */,
 				9410BD331775F045003E6E16 /* ShaderManager.h */,
 				9410BD321775F045003E6E16 /* ShaderManager.mm */,
-				941EB6BC1776F10D005EAD1A /* source_loader.h */,
 				942F405C17787D91002A63D9 /* TextureManager.h */,
 				942F405B17787D91002A63D9 /* TextureManager.mm */,
 			);
@@ -387,7 +382,6 @@
 				942E8961176D78E400FEAF15 /* Texture.mm in Sources */,
 				942E896E176DBAB800FEAF15 /* KandataGame.mm in Sources */,
 				9410BD341775F046003E6E16 /* ShaderManager.mm in Sources */,
-				941EB6C01776F394005EAD1A /* src_loader_objc.mm in Sources */,
 				942F405D17787D91002A63D9 /* TextureManager.mm in Sources */,
 				942F4064177889C3002A63D9 /* PixelData_objc.mm in Sources */,
 				940DD6581791186800FAAA15 /* SceneSample.mm in Sources */,

@@ -9,6 +9,12 @@
 #include <cstring>
 #include "TextSrcData.h"
 
+/**
+ *  iOS用のImageDataクラスの定義
+ */
+#ifdef __APPLE__
+#include <UIKit/UIKit.h>
+
 bool TextSrcData::LoadContentFromFile(const char *filename, const char *extension_name) {
     if(!filename || !extension_name) return false;
     
@@ -39,3 +45,5 @@ bool TextSrcData::LoadContentFromFile(const char *filename, const char *extensio
     
     return true;
 }
+
+#endif  // __APPLE__
