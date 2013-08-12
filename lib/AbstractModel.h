@@ -8,10 +8,11 @@
 
 #ifndef ABSTRACT_MODEL_H_
 #define ABSTRACT_MODEL_H_
+#include "Component.h"
 
 class Game3DObject;
 
-class AbstractModel {
+class AbstractModel : public IComponent {
 public:
     // デストラクタ
     virtual ~AbstractModel() {}
