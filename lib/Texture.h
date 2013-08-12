@@ -8,8 +8,9 @@
 
 #ifndef iOS_Sample2_Texture_h
 #define iOS_Sample2_Texture_h
+#include "Component.h"
 
-class CTexture {
+class CTexture : public IComponent {
     unsigned int textureID;
     int width, height;
 public:

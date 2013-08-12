@@ -10,8 +10,9 @@
 #define CAMERA_H_
 #include "Math.h"
 #include "_useGL.h"
+#include "Component.h"
 
-class Camera {
+class Camera : public IComponent {
     float fovy;
     float nearClip;
     float farClip;
