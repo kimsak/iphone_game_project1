@@ -38,7 +38,7 @@ public:
     float GetNearClip() const   { return nearClip; }
     float GetFarClip() const    { return farClip; }
     
-    void UpdateView(const GLuint program, const CMatrix4 &vm, const CMatrix4 &pm);
+    void Update(const GLuint program, const CMatrix4 &vm, const CMatrix4 &pm);
 };
 
 #endif /* defined(CAMERA_H_) */

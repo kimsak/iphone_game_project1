@@ -8,12 +8,15 @@
 
 #include "Camera.h"
 
-void Camera::UpdateView(const GLuint program, const CMatrix4 &vm, const CMatrix4 &pm) {
+void Camera::Update(const GLuint program, const CMatrix4 &vm, const CMatrix4 &pm) {
     if(program == 0) return;
+    glUseProgram(program);
     
     GLuint viewLoc = glGetUniformLocation(program, "viewMatrix");
     glUniformMatrix4fv(viewLoc, 1, GL_FALSE, (const float *)&vm);
     
     GLuint projLoc = glGetUniformLocation(program, "projMatrix");
     glUniformMatrix4fv(projLoc, 1, GL_FALSE, (const float *)&pm);
+    
+    glUseProgram(0);
 }
