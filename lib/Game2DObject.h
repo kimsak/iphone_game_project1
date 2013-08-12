@@ -12,6 +12,8 @@
 #include "Color.h"
 #include "Texture.h"
 
+#define TEXTURE_PROPERTY    "Texture"
+
 class Game2DObject : public GameObject {
 public:
     float x, y, z;
@@ -20,17 +22,23 @@ public:
     
     Color color;
     
-    CTexture *pTexture;
-    
     /**
      *  コンストラクタ
      */
     Game2DObject(GameCore *gamePtr) : GameObject(gamePtr), x(0.0f), y(0.0f), z(0.0f), sclX(1.0f), sclY(1.0f),
-    rotation(0.0f), color(), pTexture(NULL) {}
+    rotation(0.0f), color() {}
     
     // 描画メソッド
     // @Override
-    virtual void Draw();
+    virtual bool Draw();
+    
+    void SetTexture(CTexture *pTexture) {
+        SetValue(TEXTURE_PROPERTY, pTexture);
+    }
+    
+    CTexture *GetTexture() {
+        return (CTexture *)GetValue(TEXTURE_PROPERTY);
+    }
 };
 
 #endif

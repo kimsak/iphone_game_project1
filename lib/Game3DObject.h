@@ -10,7 +10,10 @@
 #include "GameObject.h"
 #include "Math.h"
 #include "Color.h"
-#include "AbstractModel.h"
+#include <string>
+#include <map>
+
+#define MODEL_PROPERTY      "Model"
 
 class Game3DObject : public GameObject {
 public:
@@ -20,29 +23,10 @@ public:
     
     Color           color;
     
-    AbstractModel   *pModel;
-    
     /**
      *  コンストラクタ
      */
-    Game3DObject(GameCore *gamePtr) : GameObject(gamePtr), position(), scale(1,1,1), rotation(), color(), pModel(NULL) {}
-
-    /**
-     *  デストラクタ
-     *  参照モデルクラスの破棄を行う
-     *  @Override
-     */
-    ~Game3DObject() {
-        if(pModel) delete pModel;
-    }
-    
-    // 描画メソッド
-    // @Override
-    virtual void Draw() {
-        if(pModel) pModel->Render(this);
-    }
-
-
+    Game3DObject(GameCore *gamePtr) : GameObject(gamePtr), position(), scale(1,1,1), rotation(), color() {}
 };
 
 #endif /*GAME_3D_OBJECT*/

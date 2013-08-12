@@ -8,6 +8,19 @@
 
 #include "GameObject.h"
 
+GameObject *GameObject::SearchObj(std::string name) {
+    if( name == GetName() ) {
+        return this;
+    }
+    else {
+        for (GameObjList::const_iterator it = objChildren.begin(); it != objChildren.end(); ++it) {
+            GameObject *pObj = (*it)->SearchObj(name);
+            if(pObj) return pObj;
+        }
+    }
+    return NULL;
+}
+
 size_t GameObject::RegisterChildObj(GameObject *pObj) {
     if(pObj) {
         pObj->Init();   // オブジェクトの初期化
@@ -59,4 +72,12 @@ void GameObject::UnderTake(GameObject *pObj) {
     
     // コピー元のオブジェクトリストを空にする
     pObj->objChildren.clear();
+}
+
+void GameObject::DestroyChildAll() {
+    for (GameObjList::const_iterator it = objChildren.begin(); it != objChildren.end(); ++it) {
+        (*it)->DestroyChildAll();
+        delete *it;
+    }
+    objChildren.clear();
 }
