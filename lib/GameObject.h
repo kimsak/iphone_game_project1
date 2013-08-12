@@ -9,34 +9,36 @@
 #ifndef GAME_OBJECT_H_
 #define GAME_OBJECT_H_
 #include "GameCore.h"
-#include <string>
+#include "AbstractObject.h"
+#include <list>
 
-class GameObjList;
+class GameObject;
+typedef std::list<GameObject *> GameObjList;
 
-class GameObject {
+class GameObject : public AbstractObject {
     GameCore *pGame;
-    
-    // 名前
-    std::string name;
+protected:
+    // 子オブジェクトリスト
+    GameObjList objChildren;
 public:
     // コンストラクタ
-    GameObject(GameCore *gamePtr) : pGame(gamePtr) {}
+    GameObject(GameCore *gamePtr) : AbstractObject(), pGame(gamePtr) {}
     virtual ~GameObject() {}
     
-    virtual void Init(GameObjList *pObjList) = 0;
-    virtual void Move(GameObjList *pObjList) = 0;
-    virtual void Draw() = 0;
+    // 子オブジェクトリストに新しいオブジェクトを登録
+    virtual size_t RegisterChildObj(GameObject *pObj);
+    
+    virtual bool UpdateObj();
+    virtual bool DrawObj();
+    
+    /**
+     *  指定したオブジェクトの持つ子オブジェクトたちを引き継いで自身の子オブジェクトリストに追加していく。
+     *  @param pObj 引き継ぐオブジェクトたちの親オブジェクト
+     */
+    void UnderTake(GameObject *pObj);
     
     GameCore *Get_pGame() const {
         return pGame;
-    }
-    
-    void SetName(std::string name) {
-        this->name = name;
-    }
-    
-    std::string GetName() const {
-        return name;
     }
 };
 
