@@ -17,25 +17,11 @@
 #include "_useGL.h"
 
 void SceneSample::LoadContents() {
-    
     /**
      *  イメージのロード sampleImage.png
      */
     Get_pGame()->GetTextureMgr()->CreateTexture("sampleImage", "sampleImage", "png");
     
-}
-
-void SceneSample::Init() {
-    objList.Push( new ObjectSample(Get_pGame()) );
-    obj3DList.Push( new Sample3DObj(Get_pGame()) );
-}
-
-void SceneSample::Update() {
-    objList.Move();
-    obj3DList.Move();
-}
-
-void SceneSample::Draw() {
     /**
      *  Basicシェーダーの設定
      *  Camera, Projection
@@ -52,30 +38,46 @@ void SceneSample::Draw() {
     CMatrix4 projMat = CMatrix4::Orthof(-1, 1, 1.0f/as, -1.0f/as, 1, 100);
     glUniformMatrix4fv(pmLoc, 1, GL_FALSE, (const float *)&projMat);
 	glUseProgram(0);
+}
+
+void SceneSample::Init() {
+    // ルートオブジェの生成
+    pRoot = new GameObject(Get_pGame());
+    pRoot->SetName("Root");
     
-    /**
-     *  Basic3Dシェーダーの設定
-     */
-    GLuint program = Get_pGame()->GetShaderMgr()->GetProgram("Basic3D");
-    glUseProgram(program);
-    // Uniform変数の設定
-    // viewMatrix
-    GLuint viewLoc = glGetUniformLocation(program, "viewMatrix");
+    // 3D描画用ルートオブジェクトの生成＆Root下に登録
+    GameObject *p3D_root_obj = new GameObject(Get_pGame());
+    p3D_root_obj->SetName("3DRoot");
+    pRoot->RegisterChildObj(p3D_root_obj);
+    
+    // 2D描画用ルートオブジェクトの生成＆Root下に登録
+    GameObject *p2D_root_obj = new GameObject(Get_pGame());
+    p2D_root_obj->SetName("2DRoot");
+    pRoot->RegisterChildObj(p2D_root_obj);
+    
+    // 2D用サンプルオブジェクトの生成＆2DRoot下に登録
+    ObjectSample *p2DSample = new ObjectSample(Get_pGame());
+    p2D_root_obj->RegisterChildObj(p2DSample);
+    
+    // 3Dサンプルオブジェクトの生成＆3DRoot下に登録
+    Sample3DObj *p3DSample = new Sample3DObj(Get_pGame());
+    p3D_root_obj->RegisterChildObj(p3DSample);
+}
+
+void SceneSample::Update() {
+    pRoot->UpdateObj();
+    
+    // 3Dカメラの更新
     CMatrix4 view3DMat = CMatrix4::LookAt(AXIS_Z*10.0f,
-                                        VEC_ZERO,
-                                        AXIS_Y);
-    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, (const float *)&view3DMat);
-    
-    // projMatrix
-    GLuint projLoc = glGetUniformLocation(program, "projMatrix");
+                                          VEC_ZERO,
+                                          AXIS_Y);
     CMatrix4 proj3DMat = CMatrix4::Perspective(30.0f,
-                                             Get_pGame()->GetDisplayAspect(),
-                                             1.0f, 100.0f);
-    glUniformMatrix4fv(projLoc, 1, GL_FALSE, (const float *)&proj3DMat);
-    glUseProgram(0);
-    
-    obj3DList.Draw();
-//    glClear(GL_DEPTH_BUFFER_BIT);
-    objList.Draw();
+                                               Get_pGame()->GetDisplayAspect(),
+                                               1.0f, 100.0f);
+    camera.Update(Get_pGame()->GetShaderMgr()->GetProgram("Basic3D"), view3DMat, proj3DMat);
+}
+
+void SceneSample::Draw() {
+    pRoot->DrawObj();
 }
 

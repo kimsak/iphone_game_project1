@@ -60,6 +60,7 @@ void KandataGame::Draw() {
 }
 
 void KandataGame::Finalize() {
+    if(pScene) delete pScene;
     game.Finalize();
 }
 

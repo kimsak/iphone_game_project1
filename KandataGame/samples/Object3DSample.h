@@ -9,19 +9,21 @@
 #ifndef __KandataGame__Object3DSample__
 #define __KandataGame__Object3DSample__
 
-#include "Game3DCamera.h"
 #include "Game3DObject.h"
-#include "CubeModel.h"
 
 class Sample3DObj : public Game3DObject {
 public:
+    // コンストラクタ
     Sample3DObj(GameCore *pGame) : Game3DObject(pGame) {
-        pModel = new CubeModel();
     }
     
+    // デストラクタ
+    ~Sample3DObj();
+    
     // Override
-    virtual void Init(GameObjList *);
-    virtual void Move(GameObjList *);
+    virtual bool Init();
+    virtual bool Move();
+    virtual bool Draw();
 };
 
 #endif /* defined(__KandataGame__Object3DSample__) */

@@ -9,18 +9,23 @@
 #ifndef __KandataGame__SceneSample__
 #define __KandataGame__SceneSample__
 
-#include "../../lib/Scene.h"
-#include "../../lib/GameObjList.h"
-#include "../../lib/Game3DCamera.h"
+#include "Scene.h"
+#include "GameObject.h"
+#include "Camera.h"
 
 class SceneSample : public CScene {
-    GameObjList objList;
-    GameObjList obj3DList;
+    GameObject *pRoot;
+    Camera camera;
 public:
     /**
      *  コンストラクタ
      */
     SceneSample(GameCore *pGame) : CScene(pGame) {}
+    
+    // デストラクタ
+    ~SceneSample() {
+        if(pRoot) pRoot->DestroyChildAll(), delete pRoot;
+    }
     
     virtual void LoadContents();
     virtual void Init();

@@ -40,12 +40,14 @@
 		9440482217AE7E8900737FE3 /* TextSrcData_objc.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9440482017AE7E8900737FE3 /* TextSrcData_objc.mm */; };
 		944E0D0417919EB900464ACC /* ObjectSample.mm in Sources */ = {isa = PBXBuildFile; fileRef = 944E0D0217919EB900464ACC /* ObjectSample.mm */; };
 		944FAF4217AA978100676A6C /* CubeModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 944FAF4017AA978100676A6C /* CubeModel.mm */; };
-		945A9C8617ACCE70008CC68A /* Game3DCamera.mm in Sources */ = {isa = PBXBuildFile; fileRef = 945A9C8517ACCE70008CC68A /* Game3DCamera.mm */; };
 		945A9C8917ACD4C9008CC68A /* Object3DSample.mm in Sources */ = {isa = PBXBuildFile; fileRef = 945A9C8717ACD4C9008CC68A /* Object3DSample.mm */; };
 		94B8ED1B179BD9CC0021EA1C /* Game2DObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 94B8ED1A179BD9CC0021EA1C /* Game2DObject.mm */; };
+		94FFE6BA17B883D9003E74E2 /* GameObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 94FFE6B917B883D9003E74E2 /* GameObject.mm */; };
+		94FFE6BD17B8CEC1003E74E2 /* Camera3DSample.mm in Sources */ = {isa = PBXBuildFile; fileRef = 94FFE6BB17B8CEC1003E74E2 /* Camera3DSample.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		94020D5317B6110F00B3D8D9 /* Component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Component.h; sourceTree = "<group>"; };
 		940DD6561791186800FAAA15 /* SceneSample.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SceneSample.mm; sourceTree = "<group>"; };
 		940DD6571791186800FAAA15 /* SceneSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneSample.h; sourceTree = "<group>"; };
 		9410BD321775F045003E6E16 /* ShaderManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ShaderManager.mm; sourceTree = "<group>"; };
@@ -77,7 +79,6 @@
 		942E8950176D78E400FEAF15 /* Game2DObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game2DObject.h; sourceTree = "<group>"; };
 		942E8951176D78E400FEAF15 /* Game3DObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game3DObject.h; sourceTree = "<group>"; };
 		942E8952176D78E400FEAF15 /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
-		942E8953176D78E400FEAF15 /* GameObjList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObjList.h; sourceTree = "<group>"; };
 		942E8954176D78E400FEAF15 /* Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Math.h; sourceTree = "<group>"; };
 		942E8956176D78E400FEAF15 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
 		942E8959176D78E400FEAF15 /* Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sprite.h; sourceTree = "<group>"; };
@@ -106,11 +107,13 @@
 		944E0D0317919EB900464ACC /* ObjectSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectSample.h; sourceTree = "<group>"; };
 		944FAF4017AA978100676A6C /* CubeModel.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CubeModel.mm; sourceTree = "<group>"; };
 		944FAF4117AA978100676A6C /* CubeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubeModel.h; sourceTree = "<group>"; };
-		945A9C8317ACC742008CC68A /* Game3DCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Game3DCamera.h; sourceTree = "<group>"; };
-		945A9C8517ACCE70008CC68A /* Game3DCamera.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Game3DCamera.mm; sourceTree = "<group>"; };
 		945A9C8717ACD4C9008CC68A /* Object3DSample.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Object3DSample.mm; sourceTree = "<group>"; };
 		945A9C8817ACD4C9008CC68A /* Object3DSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object3DSample.h; sourceTree = "<group>"; };
 		94B8ED1A179BD9CC0021EA1C /* Game2DObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Game2DObject.mm; sourceTree = "<group>"; };
+		94FFE6B517B8615A003E74E2 /* AbstractObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractObject.h; sourceTree = "<group>"; };
+		94FFE6B917B883D9003E74E2 /* GameObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameObject.mm; sourceTree = "<group>"; };
+		94FFE6BB17B8CEC1003E74E2 /* Camera3DSample.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Camera3DSample.mm; sourceTree = "<group>"; };
+		94FFE6BC17B8CEC1003E74E2 /* Camera3DSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera3DSample.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +141,8 @@
 				944E0D0217919EB900464ACC /* ObjectSample.mm */,
 				945A9C8817ACD4C9008CC68A /* Object3DSample.h */,
 				945A9C8717ACD4C9008CC68A /* Object3DSample.mm */,
+				94FFE6BC17B8CEC1003E74E2 /* Camera3DSample.h */,
+				94FFE6BB17B8CEC1003E74E2 /* Camera3DSample.mm */,
 			);
 			path = samples;
 			sourceTree = "<group>";
@@ -239,6 +244,7 @@
 				942F405E17788116002A63D9 /* PixelData.h */,
 				9440481F17AE715300737FE3 /* TextSrcData.h */,
 				942E894E176D78E400FEAF15 /* _useGL.h */,
+				94020D5317B6110F00B3D8D9 /* Component.h */,
 				942E896B176D9BF600FEAF15 /* GameCore.h */,
 				942E894F176D78E400FEAF15 /* Color.h */,
 				942E8954176D78E400FEAF15 /* Math.h */,
@@ -294,13 +300,12 @@
 		945A9C8417ACC9E7008CC68A /* GameObject */ = {
 			isa = PBXGroup;
 			children = (
+				94FFE6B517B8615A003E74E2 /* AbstractObject.h */,
 				942E8952176D78E400FEAF15 /* GameObject.h */,
+				94FFE6B917B883D9003E74E2 /* GameObject.mm */,
 				942E8950176D78E400FEAF15 /* Game2DObject.h */,
 				94B8ED1A179BD9CC0021EA1C /* Game2DObject.mm */,
 				942E8951176D78E400FEAF15 /* Game3DObject.h */,
-				945A9C8317ACC742008CC68A /* Game3DCamera.h */,
-				945A9C8517ACCE70008CC68A /* Game3DCamera.mm */,
-				942E8953176D78E400FEAF15 /* GameObjList.h */,
 			);
 			name = GameObject;
 			sourceTree = "<group>";
@@ -393,10 +398,11 @@
 				944E0D0417919EB900464ACC /* ObjectSample.mm in Sources */,
 				94B8ED1B179BD9CC0021EA1C /* Game2DObject.mm in Sources */,
 				944FAF4217AA978100676A6C /* CubeModel.mm in Sources */,
-				945A9C8617ACCE70008CC68A /* Game3DCamera.mm in Sources */,
 				945A9C8917ACD4C9008CC68A /* Object3DSample.mm in Sources */,
 				9440482217AE7E8900737FE3 /* TextSrcData_objc.mm in Sources */,
 				943A301317B13D1300492BCF /* Camera.mm in Sources */,
+				94FFE6BA17B883D9003E74E2 /* GameObject.mm in Sources */,
+				94FFE6BD17B8CEC1003E74E2 /* Camera3DSample.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

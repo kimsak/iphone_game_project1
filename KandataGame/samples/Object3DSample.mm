@@ -7,13 +7,26 @@
 //
 
 #include "Object3DSample.h"
+#include "CubeModel.h"
 
-void Sample3DObj::Init(GameObjList *pObjList) {
+bool Sample3DObj::Init() {
+    SetValue(MODEL_PROPERTY, new CubeModel);
+    return true;
+}
+
+bool Sample3DObj::Move() {
+    rotation *= CQuaternion(0.02f, AXIS_X);
+    return true;
+}
+
+bool Sample3DObj::Draw() {
+    AbstractModel *pModel = (AbstractModel *)GetValue(MODEL_PROPERTY);
+    if (pModel) pModel->Render(this);
     
+    return true;
 }
 
-void Sample3DObj::Move(GameObjList *pObjList) {
-    rotation *= CQuaternion(0.01f, AXIS_X);
+Sample3DObj::~Sample3DObj() {
+    AbstractModel *pModel = (AbstractModel *)GetValue(MODEL_PROPERTY);
+    if(pModel) delete pModel;
 }
-
-

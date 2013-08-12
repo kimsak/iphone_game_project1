@@ -16,9 +16,9 @@ public:
     // コンストラクタ
     ObjectSample(GameCore *pGame) : Game2DObject(pGame) {}
     
-    virtual void Init(GameObjList *);
-    virtual void Move(GameObjList *);
-    virtual void Draw();
+    virtual bool Init();
+    virtual bool Move();
+    virtual bool Draw();
 };
 
 #endif /* defined(__KandataGame__ObjectSample__) */
