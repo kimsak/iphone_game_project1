@@ -26,6 +26,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    // トップのステータスバーを消去する方法
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    
     // ディスプレイリンクの設定 --> mainLoop
 	mpDisplayLink = [[UIScreen mainScreen] displayLinkWithTarget:self selector:@selector(mainLoop)];
 	[mpDisplayLink addToRunLoop:[ NSRunLoop currentRunLoop ] forMode:NSDefaultRunLoopMode ];

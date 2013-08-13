@@ -28,7 +28,7 @@
 		942E893A176C806400FEAF15 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 942E8939176C806400FEAF15 /* Default-568h@2x.png */; };
 		942E8941176C80A300FEAF15 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942E8940176C80A300FEAF15 /* OpenGLES.framework */; };
 		942E8943176C80B100FEAF15 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942E8942176C80B100FEAF15 /* QuartzCore.framework */; };
-		942E8945176C825700FEAF15 /* GameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 942E8944176C825700FEAF15 /* GameController.xib */; };
+		942E8945176C825700FEAF15 /* GameController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 942E8944176C825700FEAF15 /* GameController_iPhone.xib */; };
 		942E8948176C82E600FEAF15 /* GameController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 942E8947176C82E600FEAF15 /* GameController.mm */; };
 		942E894B176C98D000FEAF15 /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 942E894A176C98D000FEAF15 /* GameView.m */; };
 		942E8960176D78E400FEAF15 /* Sprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 942E895A176D78E400FEAF15 /* Sprite.mm */; };
@@ -41,6 +41,7 @@
 		944E0D0417919EB900464ACC /* ObjectSample.mm in Sources */ = {isa = PBXBuildFile; fileRef = 944E0D0217919EB900464ACC /* ObjectSample.mm */; };
 		944FAF4217AA978100676A6C /* CubeModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 944FAF4017AA978100676A6C /* CubeModel.mm */; };
 		945A9C8917ACD4C9008CC68A /* Object3DSample.mm in Sources */ = {isa = PBXBuildFile; fileRef = 945A9C8717ACD4C9008CC68A /* Object3DSample.mm */; };
+		9472AA5817BA8D8100E2B125 /* GameController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9472AA5717BA8D8100E2B125 /* GameController_iPad.xib */; };
 		94B8ED1B179BD9CC0021EA1C /* Game2DObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 94B8ED1A179BD9CC0021EA1C /* Game2DObject.mm */; };
 		94FFE6BA17B883D9003E74E2 /* GameObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 94FFE6B917B883D9003E74E2 /* GameObject.mm */; };
 		94FFE6BD17B8CEC1003E74E2 /* Camera3DSample.mm in Sources */ = {isa = PBXBuildFile; fileRef = 94FFE6BB17B8CEC1003E74E2 /* Camera3DSample.mm */; };
@@ -69,7 +70,7 @@
 		942E8939176C806400FEAF15 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		942E8940176C80A300FEAF15 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		942E8942176C80B100FEAF15 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		942E8944176C825700FEAF15 /* GameController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameController.xib; sourceTree = "<group>"; };
+		942E8944176C825700FEAF15 /* GameController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameController_iPhone.xib; sourceTree = "<group>"; };
 		942E8946176C82E600FEAF15 /* GameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
 		942E8947176C82E600FEAF15 /* GameController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameController.mm; sourceTree = "<group>"; };
 		942E8949176C98D000FEAF15 /* GameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameView.h; sourceTree = "<group>"; };
@@ -109,6 +110,7 @@
 		944FAF4117AA978100676A6C /* CubeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubeModel.h; sourceTree = "<group>"; };
 		945A9C8717ACD4C9008CC68A /* Object3DSample.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Object3DSample.mm; sourceTree = "<group>"; };
 		945A9C8817ACD4C9008CC68A /* Object3DSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object3DSample.h; sourceTree = "<group>"; };
+		9472AA5717BA8D8100E2B125 /* GameController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameController_iPad.xib; sourceTree = "<group>"; };
 		94B8ED1A179BD9CC0021EA1C /* Game2DObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Game2DObject.mm; sourceTree = "<group>"; };
 		94FFE6B517B8615A003E74E2 /* AbstractObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractObject.h; sourceTree = "<group>"; };
 		94FFE6B917B883D9003E74E2 /* GameObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameObject.mm; sourceTree = "<group>"; };
@@ -228,7 +230,8 @@
 				942E8933176C806400FEAF15 /* AppDelegate.m */,
 				942E8949176C98D000FEAF15 /* GameView.h */,
 				942E894A176C98D000FEAF15 /* GameView.m */,
-				942E8944176C825700FEAF15 /* GameController.xib */,
+				942E8944176C825700FEAF15 /* GameController_iPhone.xib */,
+				9472AA5717BA8D8100E2B125 /* GameController_iPad.xib */,
 				942E8946176C82E600FEAF15 /* GameController.h */,
 				942E8947176C82E600FEAF15 /* GameController.mm */,
 			);
@@ -371,9 +374,10 @@
 				942E8936176C806400FEAF15 /* Default.png in Resources */,
 				942E8938176C806400FEAF15 /* Default@2x.png in Resources */,
 				942E893A176C806400FEAF15 /* Default-568h@2x.png in Resources */,
-				942E8945176C825700FEAF15 /* GameController.xib in Resources */,
+				942E8945176C825700FEAF15 /* GameController_iPhone.xib in Resources */,
 				94261CA3176F472500A123A8 /* sampleImage.png in Resources */,
 				942BC56517A551F400DC7881 /* sampleImage@2x.png in Resources */,
+				9472AA5817BA8D8100E2B125 /* GameController_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,7 +487,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KandataGame/KandataGame-Prefix.pch";
 				INFOPLIST_FILE = "KandataGame/KandataGame-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -495,7 +501,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KandataGame/KandataGame-Prefix.pch";
 				INFOPLIST_FILE = "KandataGame/KandataGame-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

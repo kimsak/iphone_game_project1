@@ -16,7 +16,13 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = [[GameController alloc] initWithNibName:@"GameController" bundle:nil];
+    // Universal
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        self.window.rootViewController = [[GameController alloc] initWithNibName:@"GameController_iPhone" bundle:nil];
+    }
+    else {
+        self.window.rootViewController = [[GameController alloc] initWithNibName:@"GameController_iPad" bundle:nil];
+    }
     [self.window makeKeyAndVisible];
     return YES;
 }
