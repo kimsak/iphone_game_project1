@@ -53,13 +53,13 @@ bool GameObject::UpdateObj() {
 }
 
 bool GameObject::DrawObj() {
-    // 自身のオブジェクトの描画
-    if(obj_state == ACTIVE) this->Draw();
-    
     // 子オブジェクトの描画
     for (GameObjList::const_iterator it = objChildren.begin(); it != objChildren.end(); ++it) {
         (*it)->DrawObj();
     }
+    
+    // 自身のオブジェクトの描画
+    if(obj_state == ACTIVE) this->Draw();
     
     return true;
 }
