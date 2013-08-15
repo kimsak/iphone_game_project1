@@ -18,9 +18,10 @@
 
 void SceneSample::LoadContents() {
     /**
-     *  イメージのロード sampleImage.png
+     *  イメージのロード sampleImage.png MyShip.png
      */
     Get_pGame()->GetTextureMgr()->CreateTexture("sampleImage", "sampleImage", "png");
+    Get_pGame()->GetTextureMgr()->CreateTexture("MyShip", "MyShip", "png");
     
     /**
      *  Basicシェーダーの設定

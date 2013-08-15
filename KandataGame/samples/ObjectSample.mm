@@ -11,7 +11,7 @@
 
 bool ObjectSample::Init() {
     // テクスチャの設定
-    SetTexture( Get_pGame()->GetTextureMgr()->GetTexture("sampleImage") );
+    SetTexture( Get_pGame()->GetTextureMgr()->GetTexture("MyShip") );
     
     return true;
 }

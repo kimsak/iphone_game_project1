@@ -11,6 +11,8 @@
 		9410BD341775F046003E6E16 /* ShaderManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9410BD321775F045003E6E16 /* ShaderManager.mm */; };
 		9420EBD617A36395007DC5E2 /* Sprite.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 94428C5817A2D4F800CED6E6 /* Sprite.vsh */; };
 		9420EBD717A36395007DC5E2 /* Sprite.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 94428C5A17A2D50A00CED6E6 /* Sprite.fsh */; };
+		9423A33B17BC809400B1FE3A /* PixelData.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9423A33A17BC809400B1FE3A /* PixelData.mm */; };
+		9423A33D17BC9CFC00B1FE3A /* MyShip.png in Resources */ = {isa = PBXBuildFile; fileRef = 9423A33C17BC9CFC00B1FE3A /* MyShip.png */; };
 		94261CA3176F472500A123A8 /* sampleImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 94261CA2176F472500A123A8 /* sampleImage.png */; };
 		94261CA5176F4D3700A123A8 /* Basic.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 942E8970176E06C700FEAF15 /* Basic.fsh */; };
 		94261CA6176F4D3700A123A8 /* Basic.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 942E8971176E06C700FEAF15 /* Basic.vsh */; };
@@ -53,6 +55,8 @@
 		940DD6571791186800FAAA15 /* SceneSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneSample.h; sourceTree = "<group>"; };
 		9410BD321775F045003E6E16 /* ShaderManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ShaderManager.mm; sourceTree = "<group>"; };
 		9410BD331775F045003E6E16 /* ShaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderManager.h; sourceTree = "<group>"; };
+		9423A33A17BC809400B1FE3A /* PixelData.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PixelData.mm; sourceTree = "<group>"; };
+		9423A33C17BC9CFC00B1FE3A /* MyShip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MyShip.png; sourceTree = "<group>"; };
 		94261CA2176F472500A123A8 /* sampleImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sampleImage.png; sourceTree = "<group>"; };
 		942BC56417A551F400DC7881 /* sampleImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sampleImage@2x.png"; sourceTree = "<group>"; };
 		942E8920176C806400FEAF15 /* KandataGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KandataGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +165,7 @@
 		94261CA1176F471400A123A8 /* res */ = {
 			isa = PBXGroup;
 			children = (
+				9423A33C17BC9CFC00B1FE3A /* MyShip.png */,
 				942BC56417A551F400DC7881 /* sampleImage@2x.png */,
 				94261CA2176F472500A123A8 /* sampleImage.png */,
 			);
@@ -245,6 +250,7 @@
 				945A9C8417ACC9E7008CC68A /* GameObject */,
 				944FAF3F17AA972000676A6C /* Model */,
 				942F405E17788116002A63D9 /* PixelData.h */,
+				9423A33A17BC809400B1FE3A /* PixelData.mm */,
 				9440481F17AE715300737FE3 /* TextSrcData.h */,
 				942E894E176D78E400FEAF15 /* _useGL.h */,
 				94020D5317B6110F00B3D8D9 /* Component.h */,
@@ -378,6 +384,7 @@
 				94261CA3176F472500A123A8 /* sampleImage.png in Resources */,
 				942BC56517A551F400DC7881 /* sampleImage@2x.png in Resources */,
 				9472AA5817BA8D8100E2B125 /* GameController_iPad.xib in Resources */,
+				9423A33D17BC9CFC00B1FE3A /* MyShip.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +414,7 @@
 				943A301317B13D1300492BCF /* Camera.mm in Sources */,
 				94FFE6BA17B883D9003E74E2 /* GameObject.mm in Sources */,
 				94FFE6BD17B8CEC1003E74E2 /* Camera3DSample.mm in Sources */,
+				9423A33B17BC809400B1FE3A /* PixelData.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

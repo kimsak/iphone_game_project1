@@ -20,14 +20,22 @@ bool TextureManager::CreateTexture(std::string name, std::string filename, std::
         return false;
     }
     
+    // ピクセルデータのリサイズ
+    int w, h;
+    uint8_t *pNewPixelArr = NULL;
+    PixelData::ResizePixelData(&pixels, &w, &h, &pNewPixelArr);
+    
     // テクスチャのロード
-    CTexture *pTexture = new CTexture(pixels.GetWidth(), pixels.GetHeight());
-    if( !LoadTexture(pixels.GetPixels(), pixels.GetWidth(), pixels.GetWidth(), pTexture) )
+    CTexture *pTexture = new CTexture(w, h);
+    if( !LoadTexture(pNewPixelArr, w, h, pTexture) ) {
+        if(pNewPixelArr) delete [] pNewPixelArr;
         return false;
+    }
     
     // テクスチャの登録
     texture_map[name] = pTexture;
     
+    if(pNewPixelArr) delete [] pNewPixelArr;
     return true;
 }
 
