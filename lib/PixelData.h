@@ -16,6 +16,8 @@ class PixelData {
 public:
     static bool LoadAndCopyPixelData(const char *, const char *, PixelData *pPixelData);
     
+    static bool ResizePixelData(const PixelData *pSrcPixels, int *pWidth, int *pHeight, uint8_t **ppPixels);
+    
     PixelData();
     ~PixelData();
     
