@@ -12,6 +12,8 @@
 #include "_useGL.h"
 #include "Component.h"
 
+class Game3DObject;
+
 class Camera : public IComponent {
     float fovy;
     float nearClip;
@@ -22,23 +24,26 @@ public:
      */
     Camera() : fovy(30.0f), nearClip(1.0f), farClip(100.0f) {}
     
-    void SetFov(float f) {
+    Camera *SetFov(float f) {
         if(f > 0) fovy = f;
+        return this;
     }
     
-    void SetNearClip(float nearClip) {
+    Camera *SetNearClip(float nearClip) {
         if(nearClip > 0) this->nearClip = nearClip;
+        return this;
     }
     
-    void SetFarClip(float farClip) {
+    Camera *SetFarClip(float farClip) {
         if(farClip > nearClip) this->farClip = farClip;
+        return this;
     }
     
     float GetFov() const        { return fovy; }
     float GetNearClip() const   { return nearClip; }
     float GetFarClip() const    { return farClip; }
     
-    void Update(const GLuint program, const CMatrix4 &vm, const CMatrix4 &pm);
+    void Update(const GLuint program, const Game3DObject *pObj);
 };
 
 #endif /* defined(CAMERA_H_) */
