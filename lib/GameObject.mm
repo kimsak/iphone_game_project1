@@ -33,7 +33,7 @@ size_t GameObject::RegisterChildObj(GameObject *pObj) {
 
 bool GameObject::UpdateObj() {
     // 自身のオブジェクトを更新
-    bool isAlive = this->Move();
+    if(obj_state == ACTIVE) this->Move();
     
     // 子オブジェクトの更新
     for (GameObjList::iterator it = objChildren.begin(); it != objChildren.end(); ) {
@@ -49,12 +49,12 @@ bool GameObject::UpdateObj() {
         ++it;
     }
     
-    return isAlive;
+    return obj_state != DEAD;       // オブジェクトの状態がDEADでは無ければtrueを返すようにする。
 }
 
 bool GameObject::DrawObj() {
     // 自身のオブジェクトの描画
-    this->Draw();
+    if(obj_state == ACTIVE) this->Draw();
     
     // 子オブジェクトの描画
     for (GameObjList::const_iterator it = objChildren.begin(); it != objChildren.end(); ++it) {

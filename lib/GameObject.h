@@ -27,16 +27,27 @@ protected:
     GameObjList objChildren;
     
 public:
+    enum ObjState {
+        DEAD = -1, ACTIVE = 0, NOT_ACTIVE = 1,
+    };
+    ObjState obj_state;
+    
     // コンストラクタ
-    GameObject(GameCore *gamePtr) : AbstractObject(), pGame(gamePtr) {}
+    GameObject(GameCore *gamePtr) : AbstractObject(), pGame(gamePtr), obj_state(ACTIVE) {}
     virtual ~GameObject() {}
     
     // @Override
-    virtual bool Init() { return true; }
+    virtual void Init() {}
     // @Override
-    virtual bool Move() { return true; }
+    virtual void Move() {}
     // @Override
-    virtual bool Draw() { return true; }
+    virtual void Draw() {}
+    
+    // @Override
+    virtual GameObject *SetName(std::string name) {
+        AbstractObject::SetName(name);
+        return this;
+    }
     
     /**
      *  オブジェクトの検索
@@ -72,7 +83,7 @@ public:
     }
     
     // プロパティの取得
-    IComponent *GetValue(std::string name) {
+    IComponent *GetValue(std::string name) const {
         std::map<std::string, IComponent *>::const_iterator it = propertyTable.find(name);
         return it != propertyTable.end() ? it->second : NULL;
     }

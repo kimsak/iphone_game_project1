@@ -20,15 +20,16 @@ public:
     // デストラクタ
     virtual ~AbstractObject() {}
     
-    virtual bool Init() = 0;
-    virtual bool Move() = 0;
-    virtual bool Draw() = 0;
+    virtual void Init() = 0;
+    virtual void Move() = 0;
+    virtual void Draw() = 0;
     
-    void SetName(std::string name) {
+    virtual AbstractObject *SetName(std::string name) {
         this->name = name;
+        return this;
     }
     
-    std::string GetName() const {
+    virtual std::string GetName() const {
         return name;
     }
 };

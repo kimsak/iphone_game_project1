@@ -30,7 +30,7 @@ public:
     
     // 描画メソッド
     // @Override
-    virtual bool Draw();
+    virtual void Draw();
     
     void SetTexture(CTexture *pTexture) {
         SetValue(TEXTURE_PROPERTY, pTexture);

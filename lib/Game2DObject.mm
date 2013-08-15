@@ -41,15 +41,15 @@ static float tex_coords[] = {
 };
 
 
-bool Game2DObject::Draw() {
+void Game2DObject::Draw() {
     // テクスチャの有無を確認
     if(!GetTexture()) {
-        return false;
+        return;
     }
     
     // シェーダー識別子の取得(Basic.vsh,fsh)
     GLuint programID = Get_pGame()->GetShaderMgr()->GetProgram("Basic");
-    if(programID == 0) return false; // 0（取得なし）であったら関数終了
+    if(programID == 0) return; // 0（取得なし）であったら関数終了
     
     // シェーダーの設定
     glUseProgram(programID);
@@ -114,6 +114,4 @@ bool Game2DObject::Draw() {
 	 *	シェーダーの解除
 	 */
 	glUseProgram(0);
-    
-    return true;
 }
