@@ -12,13 +12,13 @@
 		9420EBD617A36395007DC5E2 /* Sprite.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 94428C5817A2D4F800CED6E6 /* Sprite.vsh */; };
 		9420EBD717A36395007DC5E2 /* Sprite.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 94428C5A17A2D50A00CED6E6 /* Sprite.fsh */; };
 		9423A33B17BC809400B1FE3A /* PixelData.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9423A33A17BC809400B1FE3A /* PixelData.mm */; };
-		9423A33D17BC9CFC00B1FE3A /* MyShip.png in Resources */ = {isa = PBXBuildFile; fileRef = 9423A33C17BC9CFC00B1FE3A /* MyShip.png */; };
-		94261CA3176F472500A123A8 /* sampleImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 94261CA2176F472500A123A8 /* sampleImage.png */; };
 		94261CA5176F4D3700A123A8 /* Basic.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 942E8970176E06C700FEAF15 /* Basic.fsh */; };
 		94261CA6176F4D3700A123A8 /* Basic.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 942E8971176E06C700FEAF15 /* Basic.vsh */; };
 		94261CA7176F4D3700A123A8 /* Basic3D.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 942E8972176E06C700FEAF15 /* Basic3D.fsh */; };
 		94261CA8176F4D3700A123A8 /* Basic3D.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 942E8973176E06C700FEAF15 /* Basic3D.vsh */; };
-		942BC56517A551F400DC7881 /* sampleImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 942BC56417A551F400DC7881 /* sampleImage@2x.png */; };
+		942DFCFF17BDBDF50015F2A7 /* MyShip.png in Resources */ = {isa = PBXBuildFile; fileRef = 942DFCFC17BDBDF50015F2A7 /* MyShip.png */; };
+		942DFD0017BDBDF50015F2A7 /* sampleImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 942DFCFD17BDBDF50015F2A7 /* sampleImage.png */; };
+		942DFD0117BDBDF50015F2A7 /* sampleImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 942DFCFE17BDBDF50015F2A7 /* sampleImage@2x.png */; };
 		942E8924176C806400FEAF15 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942E8923176C806400FEAF15 /* UIKit.framework */; };
 		942E8926176C806400FEAF15 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942E8925176C806400FEAF15 /* Foundation.framework */; };
 		942E8928176C806400FEAF15 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942E8927176C806400FEAF15 /* CoreGraphics.framework */; };
@@ -56,9 +56,10 @@
 		9410BD321775F045003E6E16 /* ShaderManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ShaderManager.mm; sourceTree = "<group>"; };
 		9410BD331775F045003E6E16 /* ShaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderManager.h; sourceTree = "<group>"; };
 		9423A33A17BC809400B1FE3A /* PixelData.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PixelData.mm; sourceTree = "<group>"; };
-		9423A33C17BC9CFC00B1FE3A /* MyShip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MyShip.png; sourceTree = "<group>"; };
-		94261CA2176F472500A123A8 /* sampleImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sampleImage.png; sourceTree = "<group>"; };
-		942BC56417A551F400DC7881 /* sampleImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sampleImage@2x.png"; sourceTree = "<group>"; };
+		942DFCFC17BDBDF50015F2A7 /* MyShip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MyShip.png; sourceTree = "<group>"; };
+		942DFCFD17BDBDF50015F2A7 /* sampleImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sampleImage.png; sourceTree = "<group>"; };
+		942DFCFE17BDBDF50015F2A7 /* sampleImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sampleImage@2x.png"; sourceTree = "<group>"; };
+		942DFD0217BDBECF0015F2A7 /* DimensionRoot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DimensionRoot.h; sourceTree = "<group>"; };
 		942E8920176C806400FEAF15 /* KandataGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KandataGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		942E8923176C806400FEAF15 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		942E8925176C806400FEAF15 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -141,6 +142,7 @@
 		940DD655179117F700FAAA15 /* samples */ = {
 			isa = PBXGroup;
 			children = (
+				942DFD0217BDBECF0015F2A7 /* DimensionRoot.h */,
 				940DD6571791186800FAAA15 /* SceneSample.h */,
 				940DD6561791186800FAAA15 /* SceneSample.mm */,
 				944E0D0317919EB900464ACC /* ObjectSample.h */,
@@ -162,25 +164,33 @@
 			path = objC;
 			sourceTree = "<group>";
 		};
+		9423A33E17BCB99D00B1FE3A /* src */ = {
+			isa = PBXGroup;
+			children = (
+				942E894C176D781200FEAF15 /* entry */,
+				942E894D176D785100FEAF15 /* lib */,
+				942E896A176D9BA800FEAF15 /* main */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
 		94261CA1176F471400A123A8 /* res */ = {
 			isa = PBXGroup;
 			children = (
-				9423A33C17BC9CFC00B1FE3A /* MyShip.png */,
-				942BC56417A551F400DC7881 /* sampleImage@2x.png */,
-				94261CA2176F472500A123A8 /* sampleImage.png */,
+				942DFCFC17BDBDF50015F2A7 /* MyShip.png */,
+				942DFCFD17BDBDF50015F2A7 /* sampleImage.png */,
+				942DFCFE17BDBDF50015F2A7 /* sampleImage@2x.png */,
 			);
 			name = res;
+			path = ../res;
 			sourceTree = "<group>";
 		};
 		942E8917176C806400FEAF15 = {
 			isa = PBXGroup;
 			children = (
-				94261CA1176F471400A123A8 /* res */,
-				942E896F176E069500FEAF15 /* shaders */,
-				942E894D176D785100FEAF15 /* lib */,
-				942E8929176C806400FEAF15 /* KandataGame */,
 				942E8922176C806400FEAF15 /* Frameworks */,
 				942E8921176C806400FEAF15 /* Products */,
+				942E8929176C806400FEAF15 /* KandataGame */,
 			);
 			sourceTree = "<group>";
 		};
@@ -208,8 +218,9 @@
 			isa = PBXGroup;
 			children = (
 				942E892A176C806400FEAF15 /* Supporting Files */,
-				942E894C176D781200FEAF15 /* entry */,
-				942E896A176D9BA800FEAF15 /* main */,
+				94261CA1176F471400A123A8 /* res */,
+				942E896F176E069500FEAF15 /* shaders */,
+				9423A33E17BCB99D00B1FE3A /* src */,
 			);
 			path = KandataGame;
 			sourceTree = "<group>";
@@ -219,8 +230,6 @@
 			children = (
 				942E892B176C806400FEAF15 /* KandataGame-Info.plist */,
 				942E892C176C806400FEAF15 /* InfoPlist.strings */,
-				942E892F176C806400FEAF15 /* main.m */,
-				942E8931176C806400FEAF15 /* KandataGame-Prefix.pch */,
 				942E8935176C806400FEAF15 /* Default.png */,
 				942E8937176C806400FEAF15 /* Default@2x.png */,
 				942E8939176C806400FEAF15 /* Default-568h@2x.png */,
@@ -231,6 +240,8 @@
 		942E894C176D781200FEAF15 /* entry */ = {
 			isa = PBXGroup;
 			children = (
+				942E892F176C806400FEAF15 /* main.m */,
+				942E8931176C806400FEAF15 /* KandataGame-Prefix.pch */,
 				942E8932176C806400FEAF15 /* AppDelegate.h */,
 				942E8933176C806400FEAF15 /* AppDelegate.m */,
 				942E8949176C98D000FEAF15 /* GameView.h */,
@@ -269,7 +280,8 @@
 				943A301017B13B2200492BCF /* Camera.h */,
 				943A301217B13D1300492BCF /* Camera.mm */,
 			);
-			path = lib;
+			name = lib;
+			path = ../lib;
 			sourceTree = "<group>";
 		};
 		942E896A176D9BA800FEAF15 /* main */ = {
@@ -292,7 +304,8 @@
 				94428C5817A2D4F800CED6E6 /* Sprite.vsh */,
 				94428C5A17A2D50A00CED6E6 /* Sprite.fsh */,
 			);
-			path = shaders;
+			name = shaders;
+			path = ../shaders;
 			sourceTree = "<group>";
 		};
 		944FAF3F17AA972000676A6C /* Model */ = {
@@ -381,10 +394,10 @@
 				942E8938176C806400FEAF15 /* Default@2x.png in Resources */,
 				942E893A176C806400FEAF15 /* Default-568h@2x.png in Resources */,
 				942E8945176C825700FEAF15 /* GameController_iPhone.xib in Resources */,
-				94261CA3176F472500A123A8 /* sampleImage.png in Resources */,
-				942BC56517A551F400DC7881 /* sampleImage@2x.png in Resources */,
 				9472AA5817BA8D8100E2B125 /* GameController_iPad.xib in Resources */,
-				9423A33D17BC9CFC00B1FE3A /* MyShip.png in Resources */,
+				942DFCFF17BDBDF50015F2A7 /* MyShip.png in Resources */,
+				942DFD0017BDBDF50015F2A7 /* sampleImage.png in Resources */,
+				942DFD0117BDBDF50015F2A7 /* sampleImage@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

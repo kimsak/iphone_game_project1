@@ -9,14 +9,17 @@
 #ifndef __KandataGame__Camera3DSample__
 #define __KandataGame__Camera3DSample__
 #include "Game3DObject.h"
+#include "Camera.h"
 
-class SampleCamera {
+class SampleCamera : public Game3DObject {
 public:
     // コンストラクタ
+    SampleCamera(GameCore *pGame) : Game3DObject(pGame) {}
+    // デストラクタ
+    ~SampleCamera();
     
-    virtual bool Init();
-    virtual bool Move();
-    virtual bool Draw();
+    virtual void Init();
+    virtual void Move();
 };
 
 #endif /* defined(__KandataGame__Camera3DSample__) */

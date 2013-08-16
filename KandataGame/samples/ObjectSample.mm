@@ -9,18 +9,15 @@
 #include "ObjectSample.h"
 #include "Sprite.h"
 
-bool ObjectSample::Init() {
+void ObjectSample::Init() {
     // テクスチャの設定
     SetTexture( Get_pGame()->GetTextureMgr()->GetTexture("MyShip") );
+}
+
+void ObjectSample::Move() {
     
-    return true;
 }
 
-bool ObjectSample::Move() {
-    return true;
-}
-
-bool ObjectSample::Draw() {
-    CSprite(x, y, color).DrawRotScl(GetTexture(), sclX, sclY, rotation);
-    return true;
+void ObjectSample::Draw() {
+    CSprite(x+100, y+200, color).DrawRotScl(GetTexture(), sclX, sclY, rotation);
 }

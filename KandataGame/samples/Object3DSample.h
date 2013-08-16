@@ -21,9 +21,9 @@ public:
     ~Sample3DObj();
     
     // Override
-    virtual bool Init();
-    virtual bool Move();
-    virtual bool Draw();
+    virtual void Init();
+    virtual void Move();
+    virtual void Draw();
 };
 
 #endif /* defined(__KandataGame__Object3DSample__) */

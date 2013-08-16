@@ -9,21 +9,18 @@
 #include "Object3DSample.h"
 #include "CubeModel.h"
 
-bool Sample3DObj::Init() {
+void Sample3DObj::Init() {
     SetValue(MODEL_PROPERTY, new CubeModel);
-    return true;
 }
 
-bool Sample3DObj::Move() {
+void Sample3DObj::Move() {
     rotation *= CQuaternion(0.02f, AXIS_X);
-    return true;
 }
 
-bool Sample3DObj::Draw() {
+void Sample3DObj::Draw() {
     AbstractModel *pModel = (AbstractModel *)GetValue(MODEL_PROPERTY);
     if (pModel) pModel->Render(this);
     
-    return true;
 }
 
 Sample3DObj::~Sample3DObj() {

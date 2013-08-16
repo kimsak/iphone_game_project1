@@ -10,8 +10,10 @@
 #include "SceneSample.h"
 #include "GameCore.h"
 #include "Sprite.h"
+#include "DimensionRoot.h"
 #include "ObjectSample.h"
 #include "Object3DSample.h"
+#include "Camera3DSample.h"
 
 #include "Math.h"
 #include "_useGL.h"
@@ -47,35 +49,27 @@ void SceneSample::Init() {
     pRoot->SetName("Root");
     
     // 3D描画用ルートオブジェクトの生成＆Root下に登録
-    GameObject *p3D_root_obj = new GameObject(Get_pGame());
+    GameObject *p3D_root_obj = new DimensionRoot(Get_pGame());
     p3D_root_obj->SetName("3DRoot");
     pRoot->RegisterChildObj(p3D_root_obj);
     
     // 2D描画用ルートオブジェクトの生成＆Root下に登録
-    GameObject *p2D_root_obj = new GameObject(Get_pGame());
+    GameObject *p2D_root_obj = new DimensionRoot(Get_pGame());
     p2D_root_obj->SetName("2DRoot");
     pRoot->RegisterChildObj(p2D_root_obj);
     
     // 2D用サンプルオブジェクトの生成＆2DRoot下に登録
-    ObjectSample *p2DSample = new ObjectSample(Get_pGame());
-    p2D_root_obj->RegisterChildObj(p2DSample);
+    p2D_root_obj->RegisterChildObj( (new ObjectSample(Get_pGame()))->SetName("Sample1") );
     
     // 3Dサンプルオブジェクトの生成＆3DRoot下に登録
-    Sample3DObj *p3DSample = new Sample3DObj(Get_pGame());
-    p3D_root_obj->RegisterChildObj(p3DSample);
+    p3D_root_obj->RegisterChildObj(new Sample3DObj(Get_pGame()));
+    
+    // 3Dサンプルカメラの生成＆3DRoot下に登録
+    p3D_root_obj->RegisterChildObj(new SampleCamera(Get_pGame()));
 }
 
 void SceneSample::Update() {
     pRoot->UpdateObj();
-    
-    // 3Dカメラの更新
-    CMatrix4 view3DMat = CMatrix4::LookAt(AXIS_Z*10.0f,
-                                          VEC_ZERO,
-                                          AXIS_Y);
-    CMatrix4 proj3DMat = CMatrix4::Perspective(30.0f,
-                                               Get_pGame()->GetDisplayAspect(),
-                                               1.0f, 100.0f);
-    camera.Update(Get_pGame()->GetShaderMgr()->GetProgram("Basic3D"), view3DMat, proj3DMat);
 }
 
 void SceneSample::Draw() {
