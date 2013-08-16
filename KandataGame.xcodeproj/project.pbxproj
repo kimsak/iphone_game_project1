@@ -19,6 +19,7 @@
 		942DFCFF17BDBDF50015F2A7 /* MyShip.png in Resources */ = {isa = PBXBuildFile; fileRef = 942DFCFC17BDBDF50015F2A7 /* MyShip.png */; };
 		942DFD0017BDBDF50015F2A7 /* sampleImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 942DFCFD17BDBDF50015F2A7 /* sampleImage.png */; };
 		942DFD0117BDBDF50015F2A7 /* sampleImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 942DFCFE17BDBDF50015F2A7 /* sampleImage@2x.png */; };
+		942DFD0517BDCFDE0015F2A7 /* CubeModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 942DFD0417BDCFDE0015F2A7 /* CubeModel.mm */; };
 		942E8924176C806400FEAF15 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942E8923176C806400FEAF15 /* UIKit.framework */; };
 		942E8926176C806400FEAF15 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942E8925176C806400FEAF15 /* Foundation.framework */; };
 		942E8928176C806400FEAF15 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942E8927176C806400FEAF15 /* CoreGraphics.framework */; };
@@ -41,7 +42,6 @@
 		943A301317B13D1300492BCF /* Camera.mm in Sources */ = {isa = PBXBuildFile; fileRef = 943A301217B13D1300492BCF /* Camera.mm */; };
 		9440482217AE7E8900737FE3 /* TextSrcData_objc.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9440482017AE7E8900737FE3 /* TextSrcData_objc.mm */; };
 		944E0D0417919EB900464ACC /* ObjectSample.mm in Sources */ = {isa = PBXBuildFile; fileRef = 944E0D0217919EB900464ACC /* ObjectSample.mm */; };
-		944FAF4217AA978100676A6C /* CubeModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 944FAF4017AA978100676A6C /* CubeModel.mm */; };
 		945A9C8917ACD4C9008CC68A /* Object3DSample.mm in Sources */ = {isa = PBXBuildFile; fileRef = 945A9C8717ACD4C9008CC68A /* Object3DSample.mm */; };
 		9472AA5817BA8D8100E2B125 /* GameController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9472AA5717BA8D8100E2B125 /* GameController_iPad.xib */; };
 		94B8ED1B179BD9CC0021EA1C /* Game2DObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 94B8ED1A179BD9CC0021EA1C /* Game2DObject.mm */; };
@@ -60,6 +60,8 @@
 		942DFCFD17BDBDF50015F2A7 /* sampleImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sampleImage.png; sourceTree = "<group>"; };
 		942DFCFE17BDBDF50015F2A7 /* sampleImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sampleImage@2x.png"; sourceTree = "<group>"; };
 		942DFD0217BDBECF0015F2A7 /* DimensionRoot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DimensionRoot.h; sourceTree = "<group>"; };
+		942DFD0317BDCFDE0015F2A7 /* CubeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CubeModel.h; path = lib/CubeModel.h; sourceTree = "<group>"; };
+		942DFD0417BDCFDE0015F2A7 /* CubeModel.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CubeModel.mm; path = lib/CubeModel.mm; sourceTree = "<group>"; };
 		942E8920176C806400FEAF15 /* KandataGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KandataGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		942E8923176C806400FEAF15 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		942E8925176C806400FEAF15 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -111,8 +113,6 @@
 		94428C5A17A2D50A00CED6E6 /* Sprite.fsh */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; path = Sprite.fsh; sourceTree = "<group>"; };
 		944E0D0217919EB900464ACC /* ObjectSample.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ObjectSample.mm; sourceTree = "<group>"; };
 		944E0D0317919EB900464ACC /* ObjectSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectSample.h; sourceTree = "<group>"; };
-		944FAF4017AA978100676A6C /* CubeModel.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CubeModel.mm; sourceTree = "<group>"; };
-		944FAF4117AA978100676A6C /* CubeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubeModel.h; sourceTree = "<group>"; };
 		945A9C8717ACD4C9008CC68A /* Object3DSample.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Object3DSample.mm; sourceTree = "<group>"; };
 		945A9C8817ACD4C9008CC68A /* Object3DSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object3DSample.h; sourceTree = "<group>"; };
 		9472AA5717BA8D8100E2B125 /* GameController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameController_iPad.xib; sourceTree = "<group>"; };
@@ -311,9 +311,9 @@
 		944FAF3F17AA972000676A6C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				942DFD0317BDCFDE0015F2A7 /* CubeModel.h */,
+				942DFD0417BDCFDE0015F2A7 /* CubeModel.mm */,
 				9431BD7517A8056B00B31F15 /* AbstractModel.h */,
-				944FAF4017AA978100676A6C /* CubeModel.mm */,
-				944FAF4117AA978100676A6C /* CubeModel.h */,
 			);
 			name = Model;
 			path = ..;
@@ -421,13 +421,13 @@
 				940DD6581791186800FAAA15 /* SceneSample.mm in Sources */,
 				944E0D0417919EB900464ACC /* ObjectSample.mm in Sources */,
 				94B8ED1B179BD9CC0021EA1C /* Game2DObject.mm in Sources */,
-				944FAF4217AA978100676A6C /* CubeModel.mm in Sources */,
 				945A9C8917ACD4C9008CC68A /* Object3DSample.mm in Sources */,
 				9440482217AE7E8900737FE3 /* TextSrcData_objc.mm in Sources */,
 				943A301317B13D1300492BCF /* Camera.mm in Sources */,
 				94FFE6BA17B883D9003E74E2 /* GameObject.mm in Sources */,
 				94FFE6BD17B8CEC1003E74E2 /* Camera3DSample.mm in Sources */,
 				9423A33B17BC809400B1FE3A /* PixelData.mm in Sources */,
+				942DFD0517BDCFDE0015F2A7 /* CubeModel.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
