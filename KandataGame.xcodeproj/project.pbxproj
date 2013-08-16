@@ -16,10 +16,10 @@
 		94261CA6176F4D3700A123A8 /* Basic.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 942E8971176E06C700FEAF15 /* Basic.vsh */; };
 		94261CA7176F4D3700A123A8 /* Basic3D.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 942E8972176E06C700FEAF15 /* Basic3D.fsh */; };
 		94261CA8176F4D3700A123A8 /* Basic3D.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 942E8973176E06C700FEAF15 /* Basic3D.vsh */; };
-		942DFCFF17BDBDF50015F2A7 /* MyShip.png in Resources */ = {isa = PBXBuildFile; fileRef = 942DFCFC17BDBDF50015F2A7 /* MyShip.png */; };
-		942DFD0017BDBDF50015F2A7 /* sampleImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 942DFCFD17BDBDF50015F2A7 /* sampleImage.png */; };
-		942DFD0117BDBDF50015F2A7 /* sampleImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 942DFCFE17BDBDF50015F2A7 /* sampleImage@2x.png */; };
 		942DFD0517BDCFDE0015F2A7 /* CubeModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 942DFD0417BDCFDE0015F2A7 /* CubeModel.mm */; };
+		942DFD0917BDD1DB0015F2A7 /* MyShip.png in Resources */ = {isa = PBXBuildFile; fileRef = 942DFD0617BDD1DB0015F2A7 /* MyShip.png */; };
+		942DFD0A17BDD1DB0015F2A7 /* sampleImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 942DFD0717BDD1DB0015F2A7 /* sampleImage.png */; };
+		942DFD0B17BDD1DB0015F2A7 /* sampleImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 942DFD0817BDD1DB0015F2A7 /* sampleImage@2x.png */; };
 		942E8924176C806400FEAF15 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942E8923176C806400FEAF15 /* UIKit.framework */; };
 		942E8926176C806400FEAF15 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942E8925176C806400FEAF15 /* Foundation.framework */; };
 		942E8928176C806400FEAF15 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942E8927176C806400FEAF15 /* CoreGraphics.framework */; };
@@ -56,12 +56,12 @@
 		9410BD321775F045003E6E16 /* ShaderManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ShaderManager.mm; sourceTree = "<group>"; };
 		9410BD331775F045003E6E16 /* ShaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderManager.h; sourceTree = "<group>"; };
 		9423A33A17BC809400B1FE3A /* PixelData.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PixelData.mm; sourceTree = "<group>"; };
-		942DFCFC17BDBDF50015F2A7 /* MyShip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MyShip.png; sourceTree = "<group>"; };
-		942DFCFD17BDBDF50015F2A7 /* sampleImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sampleImage.png; sourceTree = "<group>"; };
-		942DFCFE17BDBDF50015F2A7 /* sampleImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sampleImage@2x.png"; sourceTree = "<group>"; };
 		942DFD0217BDBECF0015F2A7 /* DimensionRoot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DimensionRoot.h; sourceTree = "<group>"; };
 		942DFD0317BDCFDE0015F2A7 /* CubeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CubeModel.h; path = lib/CubeModel.h; sourceTree = "<group>"; };
 		942DFD0417BDCFDE0015F2A7 /* CubeModel.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CubeModel.mm; path = lib/CubeModel.mm; sourceTree = "<group>"; };
+		942DFD0617BDD1DB0015F2A7 /* MyShip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MyShip.png; sourceTree = "<group>"; };
+		942DFD0717BDD1DB0015F2A7 /* sampleImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sampleImage.png; sourceTree = "<group>"; };
+		942DFD0817BDD1DB0015F2A7 /* sampleImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sampleImage@2x.png"; sourceTree = "<group>"; };
 		942E8920176C806400FEAF15 /* KandataGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KandataGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		942E8923176C806400FEAF15 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		942E8925176C806400FEAF15 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -177,9 +177,9 @@
 		94261CA1176F471400A123A8 /* res */ = {
 			isa = PBXGroup;
 			children = (
-				942DFCFC17BDBDF50015F2A7 /* MyShip.png */,
-				942DFCFD17BDBDF50015F2A7 /* sampleImage.png */,
-				942DFCFE17BDBDF50015F2A7 /* sampleImage@2x.png */,
+				942DFD0617BDD1DB0015F2A7 /* MyShip.png */,
+				942DFD0717BDD1DB0015F2A7 /* sampleImage.png */,
+				942DFD0817BDD1DB0015F2A7 /* sampleImage@2x.png */,
 			);
 			name = res;
 			path = ../res;
@@ -395,9 +395,9 @@
 				942E893A176C806400FEAF15 /* Default-568h@2x.png in Resources */,
 				942E8945176C825700FEAF15 /* GameController_iPhone.xib in Resources */,
 				9472AA5817BA8D8100E2B125 /* GameController_iPad.xib in Resources */,
-				942DFCFF17BDBDF50015F2A7 /* MyShip.png in Resources */,
-				942DFD0017BDBDF50015F2A7 /* sampleImage.png in Resources */,
-				942DFD0117BDBDF50015F2A7 /* sampleImage@2x.png in Resources */,
+				942DFD0917BDD1DB0015F2A7 /* MyShip.png in Resources */,
+				942DFD0A17BDD1DB0015F2A7 /* sampleImage.png in Resources */,
+				942DFD0B17BDD1DB0015F2A7 /* sampleImage@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
