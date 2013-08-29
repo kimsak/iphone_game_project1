@@ -21,14 +21,14 @@ GameObject *GameObject::SearchObj(std::string name) {
     return NULL;
 }
 
-size_t GameObject::RegisterChildObj(GameObject *pObj) {
+GameObject *GameObject::RegisterChildObj(GameObject *pObj) {
     if(pObj) {
         pObj->Init();   // オブジェクトの初期化
         objChildren.push_back(pObj);
         
-        return sizeof(*pObj);
+        return pObj;
     }
-    return 0;
+    return NULL;
 }
 
 bool GameObject::UpdateObj() {

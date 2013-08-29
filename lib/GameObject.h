@@ -55,7 +55,7 @@ public:
     virtual GameObject *SearchObj(std::string name);
     
     // 子オブジェクトリストに新しいオブジェクトを登録
-    virtual size_t RegisterChildObj(GameObject *pObj);
+    virtual GameObject *RegisterChildObj(GameObject *pObj);
     
     virtual bool UpdateObj();
     virtual bool DrawObj();
