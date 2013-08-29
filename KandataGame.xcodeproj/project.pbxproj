@@ -57,7 +57,6 @@
 		9410BD321775F045003E6E16 /* ShaderManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ShaderManager.mm; sourceTree = "<group>"; };
 		9410BD331775F045003E6E16 /* ShaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderManager.h; sourceTree = "<group>"; };
 		9423A33A17BC809400B1FE3A /* PixelData.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PixelData.mm; sourceTree = "<group>"; };
-		942DFD0217BDBECF0015F2A7 /* DimensionRoot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DimensionRoot.h; sourceTree = "<group>"; };
 		942DFD0317BDCFDE0015F2A7 /* CubeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CubeModel.h; path = lib/CubeModel.h; sourceTree = "<group>"; };
 		942DFD0417BDCFDE0015F2A7 /* CubeModel.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CubeModel.mm; path = lib/CubeModel.mm; sourceTree = "<group>"; };
 		942DFD0617BDD1DB0015F2A7 /* MyShip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MyShip.png; sourceTree = "<group>"; };
@@ -144,7 +143,6 @@
 		940DD655179117F700FAAA15 /* samples */ = {
 			isa = PBXGroup;
 			children = (
-				942DFD0217BDBECF0015F2A7 /* DimensionRoot.h */,
 				940DD6571791186800FAAA15 /* SceneSample.h */,
 				940DD6561791186800FAAA15 /* SceneSample.mm */,
 				944E0D0317919EB900464ACC /* ObjectSample.h */,

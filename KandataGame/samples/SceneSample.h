@@ -20,11 +20,11 @@ public:
     /**
      *  コンストラクタ
      */
-    SceneSample(GameCore *pGame) : CScene(pGame) {}
+    SceneSample(GameCore *pGame) : CScene(pGame), pRoot(new GameObject(pGame)) {}
     
     // デストラクタ
     ~SceneSample() {
-        if(pRoot) pRoot->DestroyChildAll(), delete pRoot;
+        pRoot->DestroyChildAll(), delete pRoot;
     }
     
     virtual void LoadContents();

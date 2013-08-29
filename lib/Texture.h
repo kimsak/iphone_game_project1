@@ -13,6 +13,7 @@
 class CTexture : public IComponent {
     unsigned int textureID;
     int width, height;
+    int originalW, originalH;
 public:
     CTexture(int w=-1, int h=-1);
     ~CTexture();
@@ -26,6 +27,14 @@ public:
     int GetHeight() const { return height; }
     float GetAspect() const { return (float)width/height; }
     
+    void SetOriginalSize(int ow, int oh) {
+        originalW = ow, originalH = oh;
+    }
+    int GetOriginalW() const { return originalW; }
+    int GetOriginalH() const { return originalH; }
+    float GetOriginalAspect() const {
+        return (float)originalW/originalH;
+    }
 };
 
 

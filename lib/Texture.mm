@@ -12,6 +12,9 @@
 CTexture::CTexture(int w, int h) : textureID(0), width(w), height(h) {
     // テクスチャオブジェクトの作成
     glGenTextures(1, &textureID);
+    
+    originalW = w;
+    originalH = h;
 }
 
 CTexture::~CTexture() {

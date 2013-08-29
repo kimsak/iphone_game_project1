@@ -29,8 +29,11 @@ bool TextureManager::CreateTexture(std::string name, std::string filename, std::
     CTexture *pTexture = new CTexture(w, h);
     if( !LoadTexture(pNewPixelArr, w, h, pTexture) ) {
         if(pNewPixelArr) delete [] pNewPixelArr;
+        delete pTexture;    // ロード失敗なのでテクスチャの破棄
         return false;
     }
+    // オリジナルサイズを設定
+    pTexture->SetOriginalSize(pixels.GetWidth(), pixels.GetHeight());
     
     // テクスチャの登録
     texture_map[name] = pTexture;

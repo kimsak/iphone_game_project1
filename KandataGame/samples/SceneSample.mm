@@ -10,7 +10,6 @@
 #include "SceneSample.h"
 #include "GameCore.h"
 #include "Sprite.h"
-#include "DimensionRoot.h"
 #include "ObjectSample.h"
 #include "Object3DSample.h"
 #include "Camera3DSample.h"
@@ -44,28 +43,16 @@ void SceneSample::LoadContents() {
 }
 
 void SceneSample::Init() {
-    // ルートオブジェの生成
-    pRoot = new GameObject(Get_pGame());
-    pRoot->SetName("Root");
+    // 2D, 3DRootオブジェクトの生成
+    GameObject *p2D = pRoot->RegisterChildObj( (new GameObject(Get_pGame()))->SetName("2DRoot") );
+    GameObject *p3D = pRoot->RegisterChildObj( (new GameObject(Get_pGame()))->SetName("3DRoot") );
     
-    // 3D描画用ルートオブジェクトの生成＆Root下に登録
-    GameObject *p3D_root_obj = new DimensionRoot(Get_pGame());
-    p3D_root_obj->SetName("3DRoot");
-    pRoot->RegisterChildObj(p3D_root_obj);
-    
-    // 2D描画用ルートオブジェクトの生成＆Root下に登録
-    GameObject *p2D_root_obj = new DimensionRoot(Get_pGame());
-    p2D_root_obj->SetName("2DRoot");
-    pRoot->RegisterChildObj(p2D_root_obj);
-    
-    // 2D用サンプルオブジェクトの生成＆2DRoot下に登録
-    p2D_root_obj->RegisterChildObj( (new ObjectSample(Get_pGame()))->SetName("Sample1") );
-    
-    // 3Dサンプルオブジェクトの生成＆3DRoot下に登録
-    p3D_root_obj->RegisterChildObj(new Sample3DObj(Get_pGame()));
-    
-    // 3Dサンプルカメラの生成＆3DRoot下に登録
-    p3D_root_obj->RegisterChildObj(new SampleCamera(Get_pGame()));
+    // 2Dオブジェクトの生成
+    p2D->RegisterChildObj(new ObjectSample(Get_pGame()));
+    // 3Dオブジェクトの生成
+    p3D->RegisterChildObj(new Sample3DObj(Get_pGame()));
+    // 3Dサンプルカメラの生成
+    p3D->RegisterChildObj(new SampleCamera(Get_pGame()));
 }
 
 void SceneSample::Update() {
@@ -73,6 +60,8 @@ void SceneSample::Update() {
 }
 
 void SceneSample::Draw() {
-    pRoot->DrawObj();
+    pRoot->SearchObj("3DRoot")->DrawObj();
+    glClear(GL_DEPTH_BUFFER_BIT);
+    pRoot->SearchObj("2DRoot")->DrawObj();
 }
 

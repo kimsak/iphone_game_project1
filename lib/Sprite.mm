@@ -125,21 +125,16 @@ void CSprite::DrawRotScl(CTexture *texture, float sclX, float sclY, float rad) {
 	// modelViewProjectionMatrix
 	// 行列変換
 	GLuint mvpLoc = glGetUniformLocation(program, "modelViewProjectionMatrix");
-//	CMatrix4 mvpMat = CMatrix4::Scale(CVector(sclX*texture->GetWidth()/2.0f, sclY*texture->GetHeight()/2.0f, 1));
-//	mvpMat *= CMatrix4::Rotation(CQuaternion(rad/(2*GL_PI), CVector(0, 0, 1)));
-//	mvpMat *= CMatrix4::Translation(CVector(-device->GetWidth()/2.0f+x, device->GetHeight()/2.0f-y, 0));
-//	mvpMat *= CMatrix4::LookAt(CVector(0, 0, 10), CVector(), CVector(0, 1, 0));
-//	mvpMat *= CMatrix4::Orthof(-device->GetWidth()/2.0f, device->GetWidth()/2.0f, device->GetHeight()/2.0f, -device->GetHeight()/2.0f, 1, 100);
     
     // 変換行列の設定
-    float t_x = sclX * texture->GetWidth() / 2 - displayWidth / 2 + x,
-        t_y = -sclY * texture->GetHeight() / 2 + displayHeight / 2 - y;
+    float t_x = sclX * texture->GetOriginalW() / 2 - displayWidth / 2 + x,
+        t_y = -sclY * texture->GetOriginalH() / 2 + displayHeight / 2 - y;
     
 	CMatrix4 mvpMat;
-    mvpMat[0] = sclX * texture->GetWidth() * cosf(rad) / displayWidth;
-    mvpMat[1] = -sclX * texture->GetWidth() * sinf(rad) / displayHeight;
-    mvpMat[4] = sclY * texture->GetHeight() * sinf(rad) / displayWidth;
-    mvpMat[5] = sclY * texture->GetHeight() * cosf(rad) / displayHeight;
+    mvpMat[0] = sclX * texture->GetOriginalW() * cosf(rad) / displayWidth;
+    mvpMat[1] = -sclX * texture->GetOriginalW() * sinf(rad) / displayHeight;
+    mvpMat[4] = sclY * texture->GetOriginalH() * sinf(rad) / displayWidth;
+    mvpMat[5] = sclY * texture->GetOriginalH() * cosf(rad) / displayHeight;
     mvpMat[12] = 2 * t_x / displayWidth;
     mvpMat[13] = 2 * t_y / displayHeight;
 	
@@ -147,7 +142,9 @@ void CSprite::DrawRotScl(CTexture *texture, float sclX, float sclY, float rad) {
 	
 	// texMatrix
 	GLuint tmLoc = glGetUniformLocation(program, "texMatrix");
-	CMatrix4 tmMat = CMatrix4::Scale(CVector(srcRect.GetWidth(), srcRect.GetHeight(), 1));
+    float   sw = (float)texture->GetOriginalW()/texture->GetWidth(),
+            sh = (float)texture->GetOriginalH()/texture->GetHeight();
+	CMatrix4 tmMat = CMatrix4::Scale(CVector(sw, sh, 1));
     tmMat *= CMatrix4::Translation(CVector(srcRect.GetX(), srcRect.GetY(), 0));
 	glUniformMatrix4fv(tmLoc, 1, GL_FALSE, (const float *)&tmMat);
 	
