@@ -11,6 +11,7 @@
 #include "Texture.h"
 #include "ShaderManager.h"
 #include "TextureManager.h"
+#include "input/InputManager.h"
 
 typedef unsigned ShaderObject;
 
@@ -19,6 +20,8 @@ class GameCore {
     
     TextureManager      textureManager;
     ShaderManager       shaderManager;
+    InputManager        inputManager;
+    
 public:
     
     GameCore(int w = 1, int h = 1) : displayWidth(w), displayHeight(h) {}
