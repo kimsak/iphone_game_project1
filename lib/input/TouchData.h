@@ -9,6 +9,22 @@
 #ifndef TOUCH_DATA_H_
 #define TOUCH_DATA_H_
 
+// OS Determination macro
+#ifdef __APPLE__
+#include <UIKit/UIKit.h>
+typedef UITouch *TouchPointer;
+#else
+typedef void *TouchPointer;
+#endif
+
+enum KMTouchPhase {
+    KMTouchBegan,
+    KMTouchMoved,
+    KMTouchStationary,
+    KMTouchEnded,
+    KMTouchCancelled,
+};
+
 // xy座標を表す構造体
 struct KMPoint2D {
     float x;
@@ -16,11 +32,17 @@ struct KMPoint2D {
 };
 
 class TouchData {
+    const TouchPointer pTouch;
 public:
-    virtual KMPoint2D *GetCurrPos() = 0;
-    virtual KMPoint2D *GetPrevPos() = 0;
+    // コンストラクタ
+    TouchData(TouchPointer t) : pTouch(t) {}
     
-    virtual int GetPhase() = 0;
+    KMPoint2D GetCurrPos();
+    KMPoint2D GetPrevPos();
+    
+    KMTouchPhase GetPhase();
+    
+    int GetTapCount();
 };
 
 #endif /*defined(TOUCH_DATA_H_)*/
