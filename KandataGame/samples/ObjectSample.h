@@ -10,15 +10,20 @@
 #define __KandataGame__ObjectSample__
 
 #include "Game2DObject.h"
+#include "ITouchListener.h"
 
-class ObjectSample : public Game2DObject {
+class ObjectSample : public Game2DObject, public ITouchListener {
 public:
     // コンストラクタ
     ObjectSample(GameCore *pGame) : Game2DObject(pGame) {}
+    // デストラクタ
+    ~ObjectSample();
     
     virtual void Init();
     virtual void Move();
     virtual void Draw();
+    
+    virtual void OnTouchAction(const TouchData &touch);
 };
 
 #endif /* defined(__KandataGame__ObjectSample__) */

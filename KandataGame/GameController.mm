@@ -11,8 +11,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 #include "KandataGame.h"
-
-#include "TouchData_ObjCImpl.h"
+#include "InputManager.h"
 
 @interface GameController ()
 {
@@ -77,7 +76,20 @@
 * =================================================================================*/
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    
+    if(pMainGame) {
+        // InputManagerのポインタを取得
+        InputManager *pInput = pMainGame->GetGame()->GetInputMgr();
+        
+        // タッチデータ（マップ）の取得
+        TouchesMap *touches_map = pInput->GetTouches();
+        
+        for (UITouch *touch in touches) {
+            // touchデータのマップへの登録
+            (*touches_map)[touch] = new TouchData(touch);
+            
+            pInput->ForwardTouchEvent(TouchData(touch));
+        }
+    }
 }
 
 /**=================================================================================
@@ -86,7 +98,13 @@
 * =================================================================================*/
 - (void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    
+    if(pMainGame) {
+        InputManager *pInput = pMainGame->GetGame()->GetInputMgr();
+        
+        for (UITouch *touch in touches) {
+            pInput->ForwardTouchEvent(TouchData(touch));
+        }
+    }
 }
 
 /**=================================================================================
@@ -96,6 +114,21 @@
 - (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
 //    NSLog(@"Touch ended");
+    if(pMainGame) {
+        InputManager *pInput = pMainGame->GetGame()->GetInputMgr();
+        // タッチデータ（マップ）の取得
+        TouchesMap *touches_map = pInput->GetTouches();
+        
+        for (UITouch *touch in touches) pInput->ForwardTouchEvent(TouchData(touch));
+        
+        for (UITouch *touch in touches) {
+            TouchesMap::iterator it = touches_map->find(touch);
+            if(it != touches_map->end()) {
+                delete it->second;
+                touches_map->erase(it);
+            }
+        }
+    }
 }
 
 @end

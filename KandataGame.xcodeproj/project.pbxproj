@@ -42,6 +42,7 @@
 		942F4064177889C3002A63D9 /* PixelData_objc.mm in Sources */ = {isa = PBXBuildFile; fileRef = 942F4062177889C3002A63D9 /* PixelData_objc.mm */; };
 		943A301317B13D1300492BCF /* Camera.mm in Sources */ = {isa = PBXBuildFile; fileRef = 943A301217B13D1300492BCF /* Camera.mm */; };
 		9440482217AE7E8900737FE3 /* TextSrcData_objc.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9440482017AE7E8900737FE3 /* TextSrcData_objc.mm */; };
+		944AC6A917DAE44C00D7706C /* TouchData_ObjCImpl.mm in Sources */ = {isa = PBXBuildFile; fileRef = 944AC6A717DAE44C00D7706C /* TouchData_ObjCImpl.mm */; };
 		944E0D0417919EB900464ACC /* ObjectSample.mm in Sources */ = {isa = PBXBuildFile; fileRef = 944E0D0217919EB900464ACC /* ObjectSample.mm */; };
 		945A9C8917ACD4C9008CC68A /* Object3DSample.mm in Sources */ = {isa = PBXBuildFile; fileRef = 945A9C8717ACD4C9008CC68A /* Object3DSample.mm */; };
 		9472AA5817BA8D8100E2B125 /* GameController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9472AA5717BA8D8100E2B125 /* GameController_iPad.xib */; };
@@ -112,6 +113,10 @@
 		9440482017AE7E8900737FE3 /* TextSrcData_objc.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TextSrcData_objc.mm; sourceTree = "<group>"; };
 		94428C5817A2D4F800CED6E6 /* Sprite.vsh */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; path = Sprite.vsh; sourceTree = "<group>"; };
 		94428C5A17A2D50A00CED6E6 /* Sprite.fsh */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; path = Sprite.fsh; sourceTree = "<group>"; };
+		944AC6A617DAE44C00D7706C /* InputManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputManager.h; sourceTree = "<group>"; };
+		944AC6A717DAE44C00D7706C /* TouchData_ObjCImpl.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TouchData_ObjCImpl.mm; sourceTree = "<group>"; };
+		944AC6A817DAE44C00D7706C /* TouchData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchData.h; sourceTree = "<group>"; };
+		944AC6AA17DB6D2C00D7706C /* ITouchListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITouchListener.h; sourceTree = "<group>"; };
 		944E0D0217919EB900464ACC /* ObjectSample.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ObjectSample.mm; sourceTree = "<group>"; };
 		944E0D0317919EB900464ACC /* ObjectSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectSample.h; sourceTree = "<group>"; };
 		945A9C8717ACD4C9008CC68A /* Object3DSample.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Object3DSample.mm; sourceTree = "<group>"; };
@@ -153,6 +158,17 @@
 				94FFE6BB17B8CEC1003E74E2 /* Camera3DSample.mm */,
 			);
 			path = samples;
+			sourceTree = "<group>";
+		};
+		940DF74617D77743009533D1 /* input */ = {
+			isa = PBXGroup;
+			children = (
+				944AC6A617DAE44C00D7706C /* InputManager.h */,
+				944AC6A717DAE44C00D7706C /* TouchData_ObjCImpl.mm */,
+				944AC6A817DAE44C00D7706C /* TouchData.h */,
+				944AC6AA17DB6D2C00D7706C /* ITouchListener.h */,
+			);
+			path = input;
 			sourceTree = "<group>";
 		};
 		941EB6BD1776F342005EAD1A /* objC */ = {
@@ -261,6 +277,7 @@
 				941EB6BD1776F342005EAD1A /* objC */,
 				945A9C8417ACC9E7008CC68A /* GameObject */,
 				944FAF3F17AA972000676A6C /* Model */,
+				940DF74617D77743009533D1 /* input */,
 				942F405E17788116002A63D9 /* PixelData.h */,
 				9423A33A17BC809400B1FE3A /* PixelData.mm */,
 				9440481F17AE715300737FE3 /* TextSrcData.h */,
@@ -430,6 +447,7 @@
 				94FFE6BD17B8CEC1003E74E2 /* Camera3DSample.mm in Sources */,
 				9423A33B17BC809400B1FE3A /* PixelData.mm in Sources */,
 				942DFD0517BDCFDE0015F2A7 /* CubeModel.mm in Sources */,
+				944AC6A917DAE44C00D7706C /* TouchData_ObjCImpl.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,8 +20,8 @@ class GameCore {
     
     TextureManager      textureManager;
     ShaderManager       shaderManager;
-    InputManager        inputManager;
     
+    InputManager        inputManager;
 public:
     
     GameCore(int w = 1, int h = 1) : displayWidth(w), displayHeight(h) {}
@@ -52,6 +52,10 @@ public:
     
     CTexture *GetTexture(std::string name) const {
         return textureManager.GetTexture(name);
+    }
+    
+    InputManager *GetInputMgr() {
+        return &inputManager;
     }
 };
 

@@ -8,16 +8,38 @@
 
 #include "ObjectSample.h"
 #include "Sprite.h"
+#include "InputManager.h"
 
 void ObjectSample::Init() {
     // テクスチャの設定
     SetTexture( Get_pGame()->GetTextureMgr()->GetTexture("MyShip") );
+    
+    Get_pGame()->GetInputMgr()->AddTouchListener(this);
 }
 
 void ObjectSample::Move() {
-    
+//    TouchesMap *touches = Get_pGame()->GetInputMgr()->GetTouches();
+//    for (TouchesMap::const_iterator it = touches->begin(); it != touches->end(); it++) {
+//        TouchData *touch = it->second;
+//        
+//        KMPoint2D p = touch->GetCurrPos();
+//        x = p.x;
+//        y = p.y;
+//        break;
+//    }
 }
 
 void ObjectSample::Draw() {
-    CSprite(x+100, y+200, color).DrawRotScl(GetTexture(), sclX, sclY, rotation);
+    CSprite(x, y, color).DrawRotScl(GetTexture(), sclX, sclY, rotation);
+}
+
+ObjectSample::~ObjectSample() {
+    Get_pGame()->GetInputMgr()->RemoveTouchListener(this);
+}
+
+void ObjectSample::OnTouchAction(const TouchData &touch) {
+    if(touch.GetPhase() == KMTouchEnded) {
+        KMPoint2D p = touch.GetCurrPos();
+        x = p.x, y = p.y;
+    }
 }

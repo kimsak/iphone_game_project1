@@ -24,6 +24,10 @@ public:
     void Update();
     void Draw();
     void Finalize();
+    
+    GameCore *GetGame() {
+        return &game;
+    }
 };
 
 #endif /* defined(__KandataGame__KandataGame__) */

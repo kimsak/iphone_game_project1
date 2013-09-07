@@ -32,17 +32,17 @@ struct KMPoint2D {
 };
 
 class TouchData {
-    const TouchPointer pTouch;
+    TouchPointer pTouch;
 public:
     // コンストラクタ
     TouchData(TouchPointer t) : pTouch(t) {}
     
-    KMPoint2D GetCurrPos();
-    KMPoint2D GetPrevPos();
+    KMPoint2D GetCurrPos() const;
+    KMPoint2D GetPrevPos() const;
     
-    KMTouchPhase GetPhase();
+    KMTouchPhase GetPhase() const;
     
-    int GetTapCount();
+    int GetTapCount() const;
 };
 
 #endif /*defined(TOUCH_DATA_H_)*/
