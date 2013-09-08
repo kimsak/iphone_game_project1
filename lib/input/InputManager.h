@@ -29,11 +29,14 @@ public:
         return &touch_list;
     }
     
+    ////////////////////////////// TouchListener //////////////////////////////////////////
+    
     // タッチリスナーを追加する
     void AddTouchListener(ITouchListener *listener) {
         if(listener) touchlistener_list.push_back(listener);
     }
     
+    // タッチリスナーをリストから削除する（リスナーを実装したオブジェクトが破棄される場合）
     void RemoveTouchListener(ITouchListener *listener) {
         if(listener)
             for(std::list<ITouchListener *>::iterator it = touchlistener_list.begin();
@@ -46,6 +49,7 @@ public:
             }
     }
     
+    // リスナーを実装した各オブジェクトにタッチ情報を転送する
     void ForwardTouchEvent(const TouchData &touch) {
         for (std::list<ITouchListener *>::const_iterator it = touchlistener_list.begin();
                                     it != touchlistener_list.end(); ++it) {

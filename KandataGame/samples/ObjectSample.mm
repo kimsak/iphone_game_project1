@@ -18,15 +18,7 @@ void ObjectSample::Init() {
 }
 
 void ObjectSample::Move() {
-//    TouchesMap *touches = Get_pGame()->GetInputMgr()->GetTouches();
-//    for (TouchesMap::const_iterator it = touches->begin(); it != touches->end(); it++) {
-//        TouchData *touch = it->second;
-//        
-//        KMPoint2D p = touch->GetCurrPos();
-//        x = p.x;
-//        y = p.y;
-//        break;
-//    }
+
 }
 
 void ObjectSample::Draw() {

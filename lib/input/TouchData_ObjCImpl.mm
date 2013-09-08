@@ -11,14 +11,20 @@
 #ifdef __APPLE__
 
 KMPoint2D TouchData::GetCurrPos() const {
+    // Retina対応
+    float scale = [UIScreen mainScreen].scale;
+    
     CGPoint cp = [pTouch locationInView:nil];
-    KMPoint2D p = {cp.x, cp.y};
+    KMPoint2D p = {cp.x * scale, cp.y * scale};
     return p;
 }
 
 KMPoint2D TouchData::GetPrevPos() const {
+    // Retina対応
+    float scale = [UIScreen mainScreen].scale;
+    
     CGPoint cp = [pTouch previousLocationInView:nil];
-    KMPoint2D p = {cp.x, cp.y};
+    KMPoint2D p = {cp.x * scale, cp.y * scale};
     return p;
 }
 

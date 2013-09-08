@@ -86,9 +86,9 @@
         for (UITouch *touch in touches) {
             // touchデータのマップへの登録
             (*touches_map)[touch] = new TouchData(touch);
-            
-            pInput->ForwardTouchEvent(TouchData(touch));
         }
+        
+        for (UITouch *touch in touches) pInput->ForwardTouchEvent(TouchData(touch));
     }
 }
 
