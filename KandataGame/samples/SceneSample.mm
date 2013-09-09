@@ -10,7 +10,7 @@
 #include "SceneSample.h"
 #include "GameCore.h"
 #include "Sprite.h"
-#include "ObjectSample.h"
+#include "MyShip.h"
 #include "Object3DSample.h"
 #include "Camera3DSample.h"
 
@@ -48,7 +48,7 @@ void SceneSample::Init() {
     GameObject *p3D = pRoot->RegisterChildObj( (new GameObject(Get_pGame()))->SetName("3DRoot") );
     
     // 2Dオブジェクトの生成
-    p2D->RegisterChildObj(new ObjectSample(Get_pGame()));
+    p2D->RegisterChildObj(new MyShip(Get_pGame()));
     // 3Dオブジェクトの生成
     p3D->RegisterChildObj(new Sample3DObj(Get_pGame()));
     // 3Dサンプルカメラの生成

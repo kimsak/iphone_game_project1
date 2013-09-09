@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9403165D17DDF7F700B07D1E /* MyShip.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9403165B17DDF7F700B07D1E /* MyShip.mm */; };
 		940DD6581791186800FAAA15 /* SceneSample.mm in Sources */ = {isa = PBXBuildFile; fileRef = 940DD6561791186800FAAA15 /* SceneSample.mm */; };
 		9410BD341775F046003E6E16 /* ShaderManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9410BD321775F045003E6E16 /* ShaderManager.mm */; };
 		9420EBD617A36395007DC5E2 /* Sprite.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 94428C5817A2D4F800CED6E6 /* Sprite.vsh */; };
@@ -43,7 +44,6 @@
 		943A301317B13D1300492BCF /* Camera.mm in Sources */ = {isa = PBXBuildFile; fileRef = 943A301217B13D1300492BCF /* Camera.mm */; };
 		9440482217AE7E8900737FE3 /* TextSrcData_objc.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9440482017AE7E8900737FE3 /* TextSrcData_objc.mm */; };
 		944AC6A917DAE44C00D7706C /* TouchData_ObjCImpl.mm in Sources */ = {isa = PBXBuildFile; fileRef = 944AC6A717DAE44C00D7706C /* TouchData_ObjCImpl.mm */; };
-		944E0D0417919EB900464ACC /* ObjectSample.mm in Sources */ = {isa = PBXBuildFile; fileRef = 944E0D0217919EB900464ACC /* ObjectSample.mm */; };
 		945A9C8917ACD4C9008CC68A /* Object3DSample.mm in Sources */ = {isa = PBXBuildFile; fileRef = 945A9C8717ACD4C9008CC68A /* Object3DSample.mm */; };
 		9472AA5817BA8D8100E2B125 /* GameController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9472AA5717BA8D8100E2B125 /* GameController_iPad.xib */; };
 		94B8ED1B179BD9CC0021EA1C /* Game2DObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 94B8ED1A179BD9CC0021EA1C /* Game2DObject.mm */; };
@@ -53,6 +53,8 @@
 
 /* Begin PBXFileReference section */
 		94020D5317B6110F00B3D8D9 /* Component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Component.h; sourceTree = "<group>"; };
+		9403165B17DDF7F700B07D1E /* MyShip.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyShip.mm; sourceTree = "<group>"; };
+		9403165C17DDF7F700B07D1E /* MyShip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyShip.h; sourceTree = "<group>"; };
 		940DD6561791186800FAAA15 /* SceneSample.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SceneSample.mm; sourceTree = "<group>"; };
 		940DD6571791186800FAAA15 /* SceneSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneSample.h; sourceTree = "<group>"; };
 		9410BD321775F045003E6E16 /* ShaderManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ShaderManager.mm; sourceTree = "<group>"; };
@@ -117,8 +119,6 @@
 		944AC6A717DAE44C00D7706C /* TouchData_ObjCImpl.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TouchData_ObjCImpl.mm; sourceTree = "<group>"; };
 		944AC6A817DAE44C00D7706C /* TouchData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchData.h; sourceTree = "<group>"; };
 		944AC6AA17DB6D2C00D7706C /* ITouchListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITouchListener.h; sourceTree = "<group>"; };
-		944E0D0217919EB900464ACC /* ObjectSample.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ObjectSample.mm; sourceTree = "<group>"; };
-		944E0D0317919EB900464ACC /* ObjectSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectSample.h; sourceTree = "<group>"; };
 		945A9C8717ACD4C9008CC68A /* Object3DSample.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Object3DSample.mm; sourceTree = "<group>"; };
 		945A9C8817ACD4C9008CC68A /* Object3DSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object3DSample.h; sourceTree = "<group>"; };
 		9472AA5717BA8D8100E2B125 /* GameController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameController_iPad.xib; sourceTree = "<group>"; };
@@ -150,8 +150,8 @@
 			children = (
 				940DD6571791186800FAAA15 /* SceneSample.h */,
 				940DD6561791186800FAAA15 /* SceneSample.mm */,
-				944E0D0317919EB900464ACC /* ObjectSample.h */,
-				944E0D0217919EB900464ACC /* ObjectSample.mm */,
+				9403165C17DDF7F700B07D1E /* MyShip.h */,
+				9403165B17DDF7F700B07D1E /* MyShip.mm */,
 				945A9C8817ACD4C9008CC68A /* Object3DSample.h */,
 				945A9C8717ACD4C9008CC68A /* Object3DSample.mm */,
 				94FFE6BC17B8CEC1003E74E2 /* Camera3DSample.h */,
@@ -438,7 +438,6 @@
 				942F405D17787D91002A63D9 /* TextureManager.mm in Sources */,
 				942F4064177889C3002A63D9 /* PixelData_objc.mm in Sources */,
 				940DD6581791186800FAAA15 /* SceneSample.mm in Sources */,
-				944E0D0417919EB900464ACC /* ObjectSample.mm in Sources */,
 				94B8ED1B179BD9CC0021EA1C /* Game2DObject.mm in Sources */,
 				945A9C8917ACD4C9008CC68A /* Object3DSample.mm in Sources */,
 				9440482217AE7E8900737FE3 /* TextSrcData_objc.mm in Sources */,
@@ -448,6 +447,7 @@
 				9423A33B17BC809400B1FE3A /* PixelData.mm in Sources */,
 				942DFD0517BDCFDE0015F2A7 /* CubeModel.mm in Sources */,
 				944AC6A917DAE44C00D7706C /* TouchData_ObjCImpl.mm in Sources */,
+				9403165D17DDF7F700B07D1E /* MyShip.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
