@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9403165D17DDF7F700B07D1E /* MyShip.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9403165B17DDF7F700B07D1E /* MyShip.mm */; };
+		94037E4017E099570090410C /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94037E3F17E099570090410C /* CoreMotion.framework */; };
+		94037E4317E0A47A0090410C /* InputMotion_ObjCImpl.mm in Sources */ = {isa = PBXBuildFile; fileRef = 94037E4117E0A47A0090410C /* InputMotion_ObjCImpl.mm */; };
 		940DD6581791186800FAAA15 /* SceneSample.mm in Sources */ = {isa = PBXBuildFile; fileRef = 940DD6561791186800FAAA15 /* SceneSample.mm */; };
 		9410BD341775F046003E6E16 /* ShaderManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9410BD321775F045003E6E16 /* ShaderManager.mm */; };
 		9420EBD617A36395007DC5E2 /* Sprite.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 94428C5817A2D4F800CED6E6 /* Sprite.vsh */; };
@@ -55,6 +57,9 @@
 		94020D5317B6110F00B3D8D9 /* Component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Component.h; sourceTree = "<group>"; };
 		9403165B17DDF7F700B07D1E /* MyShip.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyShip.mm; sourceTree = "<group>"; };
 		9403165C17DDF7F700B07D1E /* MyShip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyShip.h; sourceTree = "<group>"; };
+		94037E3E17E0978C0090410C /* InputMotion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputMotion.h; sourceTree = "<group>"; };
+		94037E3F17E099570090410C /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		94037E4117E0A47A0090410C /* InputMotion_ObjCImpl.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = InputMotion_ObjCImpl.mm; sourceTree = "<group>"; };
 		940DD6561791186800FAAA15 /* SceneSample.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SceneSample.mm; sourceTree = "<group>"; };
 		940DD6571791186800FAAA15 /* SceneSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneSample.h; sourceTree = "<group>"; };
 		9410BD321775F045003E6E16 /* ShaderManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ShaderManager.mm; sourceTree = "<group>"; };
@@ -134,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94037E4017E099570090410C /* CoreMotion.framework in Frameworks */,
 				942E8943176C80B100FEAF15 /* QuartzCore.framework in Frameworks */,
 				942E8941176C80A300FEAF15 /* OpenGLES.framework in Frameworks */,
 				942E8924176C806400FEAF15 /* UIKit.framework in Frameworks */,
@@ -167,6 +173,8 @@
 				944AC6A717DAE44C00D7706C /* TouchData_ObjCImpl.mm */,
 				944AC6A817DAE44C00D7706C /* TouchData.h */,
 				944AC6AA17DB6D2C00D7706C /* ITouchListener.h */,
+				94037E3E17E0978C0090410C /* InputMotion.h */,
+				94037E4117E0A47A0090410C /* InputMotion_ObjCImpl.mm */,
 			);
 			path = input;
 			sourceTree = "<group>";
@@ -222,6 +230,7 @@
 		942E8922176C806400FEAF15 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				94037E3F17E099570090410C /* CoreMotion.framework */,
 				942E8942176C80B100FEAF15 /* QuartzCore.framework */,
 				942E8940176C80A300FEAF15 /* OpenGLES.framework */,
 				942E8923176C806400FEAF15 /* UIKit.framework */,
@@ -448,6 +457,7 @@
 				942DFD0517BDCFDE0015F2A7 /* CubeModel.mm in Sources */,
 				944AC6A917DAE44C00D7706C /* TouchData_ObjCImpl.mm in Sources */,
 				9403165D17DDF7F700B07D1E /* MyShip.mm in Sources */,
+				94037E4317E0A47A0090410C /* InputMotion_ObjCImpl.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

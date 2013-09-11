@@ -12,21 +12,32 @@
 #include <list>
 #include "TouchData.h"
 #include "ITouchListener.h"
+#include "InputMotion.h"
 
 typedef std::map<TouchPointer, TouchData *> TouchesMap;
 
 class InputManager {
+    //////////////////////////// Touch Data List ///////////////////////////////////////
+    
     // TouchData Map
     TouchesMap touch_list;
     
     // TouchListener List
     std::list<ITouchListener *> touchlistener_list;
     
+    // InputMotionデータ
+    InputMotion motion;
+    
 public:
     
     // タッチのマップデータ（参照）を取得する
     TouchesMap *GetTouches() {
         return &touch_list;
+    }
+    
+    // モーション管理データの参照を取得する
+    InputMotion *GetMotion() {
+        return &motion;
     }
     
     ////////////////////////////// TouchListener //////////////////////////////////////////
