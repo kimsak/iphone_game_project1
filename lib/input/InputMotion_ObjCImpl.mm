@@ -45,11 +45,11 @@ void InputMotion::StopAccelUpdate() {
 }
 
 bool InputMotion::IsAccelActive() {
-    return pManager.isAccelerometerActive;
+    return pManager.isAccelerometerAvailable==YES ? true : false;
 }
 
 bool InputMotion::IsAccelAvailable() {
-    return pManager.isAccelerometerAvailable;
+    return pManager.isAccelerometerAvailable==YES ? true : false;
 }
 
 void InputMotion::AcquireAccelData(CVector *pData) {
