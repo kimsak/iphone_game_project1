@@ -63,6 +63,11 @@
     // 更新
     if(pMainGame) pMainGame->Update();
     
+    // モーションデータの取得
+    CVector v;
+    pMainGame->GetGame()->GetInputMgr()->GetMotion()->AcquireAccelData(&v);
+    self.labelText.text = [NSString stringWithFormat:@"%f\n%f\n%f\n", v.X, v.Y, v.Z];
+    
     // 描画
     GameView *gameView = (GameView *)self.view;
     [gameView beginScene];

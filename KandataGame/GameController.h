@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface GameController : UIViewController
+@property (strong, nonatomic) IBOutlet UILabel *labelText;
 
 @end

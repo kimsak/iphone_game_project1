@@ -41,6 +41,10 @@ void KandataGame::Initialize() {
     CSprite::Initialize(&game);
 //    else NSLog(@"No Shader");
     
+    // モーションの有効化
+    game.GetInputMgr()->GetMotion()->StartAccelUpdate();
+    game.GetInputMgr()->GetMotion()->SetAccelUpdateInterval(0.1f);
+    
     /**
      *  シーンの作成
      */
@@ -54,12 +58,15 @@ void KandataGame::Update() {
 void KandataGame::Draw() {
     glViewport(0, 0, game.GetDisplayWidth(), game.GetDisplayHeight());
     
-    glClearColor(0, 0, 1, 1);
+    glClearColor(0.0f, 0.0f, 0.1f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
     if(pScene) pScene->Draw();
 }
 
 void KandataGame::Finalize() {
+    // モーションデータ更新停止
+    game.GetInputMgr()->GetMotion()->StopAccelUpdate();
+    
     if(pScene) delete pScene;
     game.Finalize();
 }
