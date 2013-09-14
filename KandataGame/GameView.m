@@ -48,6 +48,17 @@
 		CGRect frame = [UIScreen mainScreen].bounds;
 		frame.origin = CGPointZero;
 
+        /**
+         *  幅、高さの設定
+         *  （横向きか縦向きかで代入する値を入れ替える）
+         *  ※起動時はUIDeviceOrientationだとUIDeviceOrientationUnknownになるので、UIInterfaceOrientationを使おう。
+         */
+        UIInterfaceOrientation orient = [UIApplication sharedApplication].statusBarOrientation;
+        if( UIInterfaceOrientationIsLandscape(orient) ) {
+            const float tmpW = frame.size.width;
+            frame.size.width = frame.size.height;
+            frame.size.height = tmpW;
+        }
         layer.frame = frame;
         
         layer.opaque = YES;
@@ -57,7 +68,6 @@
          kEAGLColorFormatRGBA8, kEAGLDrawablePropertyColorFormat,
          nil];
         
-        // 幅、高さの設定
         self.Width = frame.size.width * scale;
         self.Height = frame.size.height * scale;
         

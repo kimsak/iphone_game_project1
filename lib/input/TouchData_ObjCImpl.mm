@@ -10,21 +10,50 @@
 
 #ifdef __APPLE__
 
+static void AdjustPositionByOrientation(KMPoint2D *pPos, UIDeviceOrientation orient) {
+    float tmpX = pPos->x, tmpY = pPos->y;
+    // デバイスの幅高さを取得
+    CGRect screenRect = [UIScreen mainScreen].bounds;
+    
+    switch (orient) {
+        case UIDeviceOrientationPortraitUpsideDown:
+            pPos->x = screenRect.size.width - tmpX;
+            pPos->y = screenRect.size.height - tmpY;
+            break;
+        case UIDeviceOrientationLandscapeLeft:
+            pPos->x = tmpY;
+            pPos->y = screenRect.size.width - tmpX;
+            break;
+        case UIDeviceOrientationLandscapeRight:
+            pPos->x = screenRect.size.height - tmpY;
+            pPos->y = tmpX;
+            break;
+        default:
+            break;
+    }
+}
+
 KMPoint2D TouchData::GetCurrPos() const {
     // Retina対応
     float scale = [UIScreen mainScreen].scale;
+    // 画面の向きを取得する
+    UIDeviceOrientation orient = [UIDevice currentDevice].orientation;
     
     CGPoint cp = [pTouch locationInView:nil];
     KMPoint2D p = {cp.x * scale, cp.y * scale};
+    AdjustPositionByOrientation(&p, orient);
     return p;
 }
 
 KMPoint2D TouchData::GetPrevPos() const {
     // Retina対応
     float scale = [UIScreen mainScreen].scale;
+    // 画面の向きを取得する
+    UIDeviceOrientation orient = [UIDevice currentDevice].orientation;
     
     CGPoint cp = [pTouch previousLocationInView:nil];
     KMPoint2D p = {cp.x * scale, cp.y * scale};
+    AdjustPositionByOrientation(&p, orient);
     return p;
 }
 
