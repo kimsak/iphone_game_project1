@@ -131,4 +131,26 @@
     }
 }
 
+/**=================================================================================
+ *   イベントハンドラ
+ *   外部のシステムから割り込まれる際に呼び出されるメソッド（コールバック）
+ * =================================================================================*/
+- (void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    if(pMainGame) {
+        InputManager *pInput = pMainGame->GetGame()->GetInputMgr();
+        TouchesMap *touches_map = pInput->GetTouches();
+        
+        for (UITouch *touch in touches) pInput->ForwardTouchEvent(TouchData(touch));
+        
+        for (UITouch *touch in touches) {
+            TouchesMap::iterator it = touches_map->find(touch);
+            if(it != touches_map->end()) {
+                delete it->second;
+                touches_map->erase(it);
+            }
+        }
+    }
+}
+
 @end
