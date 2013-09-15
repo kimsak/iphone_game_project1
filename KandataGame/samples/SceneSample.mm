@@ -44,8 +44,10 @@ void SceneSample::LoadContents() {
 
 void SceneSample::Init() {
     // 2D, 3DRootオブジェクトの生成
-    GameObject *p2D = pRoot->RegisterChildObj( (new GameObject(Get_pGame()))->SetName("2DRoot") );
-    GameObject *p3D = pRoot->RegisterChildObj( (new GameObject(Get_pGame()))->SetName("3DRoot") );
+    GameObject *p2D = pRoot->RegisterChildObj( (new GameObject(Get_pGame())) );
+    p2D->SetName("2DRoot");
+    GameObject *p3D = pRoot->RegisterChildObj( (new GameObject(Get_pGame())) );
+    p3D->SetName("3DRoot");
     
     // 2Dオブジェクトの生成
     p2D->RegisterChildObj(new MyShip(Get_pGame()));
