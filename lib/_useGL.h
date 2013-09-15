@@ -8,11 +8,15 @@
 #ifndef USEGL_H_
 #define USEGL_H_
 
-//#include <GLES/gl.h>
-//#include <GLES/glext.h>
+#if defined(__ANDROID__)
+#include <GLES/gl.h>
+#include <GLES/glext.h>
 
+#elif defined(__APPLE__)
 #include <OpenGLES/ES2/gl.h>
 #include <OpenGLES/ES2/glext.h>
+
+#endif
 
 #ifndef NULL
 #define NULL	(0)
