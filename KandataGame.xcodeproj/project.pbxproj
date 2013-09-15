@@ -23,7 +23,6 @@
 		942DFD0917BDD1DB0015F2A7 /* MyShip.png in Resources */ = {isa = PBXBuildFile; fileRef = 942DFD0617BDD1DB0015F2A7 /* MyShip.png */; };
 		942DFD0A17BDD1DB0015F2A7 /* sampleImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 942DFD0717BDD1DB0015F2A7 /* sampleImage.png */; };
 		942DFD0B17BDD1DB0015F2A7 /* sampleImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 942DFD0817BDD1DB0015F2A7 /* sampleImage@2x.png */; };
-		942DFD0D17BDD2A90015F2A7 /* empty in Resources */ = {isa = PBXBuildFile; fileRef = 942DFD0C17BDD2A90015F2A7 /* empty */; };
 		942E8924176C806400FEAF15 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942E8923176C806400FEAF15 /* UIKit.framework */; };
 		942E8926176C806400FEAF15 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942E8925176C806400FEAF15 /* Foundation.framework */; };
 		942E8928176C806400FEAF15 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942E8927176C806400FEAF15 /* CoreGraphics.framework */; };
@@ -49,6 +48,8 @@
 		945A9C8917ACD4C9008CC68A /* Object3DSample.mm in Sources */ = {isa = PBXBuildFile; fileRef = 945A9C8717ACD4C9008CC68A /* Object3DSample.mm */; };
 		9472AA5817BA8D8100E2B125 /* GameController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9472AA5717BA8D8100E2B125 /* GameController_iPad.xib */; };
 		94B8ED1B179BD9CC0021EA1C /* Game2DObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 94B8ED1A179BD9CC0021EA1C /* Game2DObject.mm */; };
+		94C4C7B417E6037300414360 /* Effect.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C4C7B317E6037300414360 /* Effect.png */; };
+		94C4C7B617E604D000414360 /* Enemy.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C4C7B517E604D000414360 /* Enemy.png */; };
 		94FFE6BA17B883D9003E74E2 /* GameObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 94FFE6B917B883D9003E74E2 /* GameObject.mm */; };
 		94FFE6BD17B8CEC1003E74E2 /* Camera3DSample.mm in Sources */ = {isa = PBXBuildFile; fileRef = 94FFE6BB17B8CEC1003E74E2 /* Camera3DSample.mm */; };
 /* End PBXBuildFile section */
@@ -70,7 +71,6 @@
 		942DFD0617BDD1DB0015F2A7 /* MyShip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MyShip.png; sourceTree = "<group>"; };
 		942DFD0717BDD1DB0015F2A7 /* sampleImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sampleImage.png; sourceTree = "<group>"; };
 		942DFD0817BDD1DB0015F2A7 /* sampleImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sampleImage@2x.png"; sourceTree = "<group>"; };
-		942DFD0C17BDD2A90015F2A7 /* empty */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = empty; sourceTree = "<group>"; };
 		942E8920176C806400FEAF15 /* KandataGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KandataGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		942E8923176C806400FEAF15 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		942E8925176C806400FEAF15 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -128,6 +128,8 @@
 		945A9C8817ACD4C9008CC68A /* Object3DSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object3DSample.h; sourceTree = "<group>"; };
 		9472AA5717BA8D8100E2B125 /* GameController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameController_iPad.xib; sourceTree = "<group>"; };
 		94B8ED1A179BD9CC0021EA1C /* Game2DObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Game2DObject.mm; sourceTree = "<group>"; };
+		94C4C7B317E6037300414360 /* Effect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Effect.png; sourceTree = "<group>"; };
+		94C4C7B517E604D000414360 /* Enemy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Enemy.png; sourceTree = "<group>"; };
 		94FFE6B517B8615A003E74E2 /* AbstractObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractObject.h; sourceTree = "<group>"; };
 		94FFE6B917B883D9003E74E2 /* GameObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameObject.mm; sourceTree = "<group>"; };
 		94FFE6BB17B8CEC1003E74E2 /* Camera3DSample.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Camera3DSample.mm; sourceTree = "<group>"; };
@@ -201,10 +203,11 @@
 		94261CA1176F471400A123A8 /* res */ = {
 			isa = PBXGroup;
 			children = (
+				94C4C7B517E604D000414360 /* Enemy.png */,
+				94C4C7B317E6037300414360 /* Effect.png */,
 				942DFD0617BDD1DB0015F2A7 /* MyShip.png */,
 				942DFD0717BDD1DB0015F2A7 /* sampleImage.png */,
 				942DFD0817BDD1DB0015F2A7 /* sampleImage@2x.png */,
-				942DFD0C17BDD2A90015F2A7 /* empty */,
 			);
 			name = res;
 			path = ../res;
@@ -425,7 +428,8 @@
 				942DFD0917BDD1DB0015F2A7 /* MyShip.png in Resources */,
 				942DFD0A17BDD1DB0015F2A7 /* sampleImage.png in Resources */,
 				942DFD0B17BDD1DB0015F2A7 /* sampleImage@2x.png in Resources */,
-				942DFD0D17BDD2A90015F2A7 /* empty in Resources */,
+				94C4C7B417E6037300414360 /* Effect.png in Resources */,
+				94C4C7B617E604D000414360 /* Enemy.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
