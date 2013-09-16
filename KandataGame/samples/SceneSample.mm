@@ -23,6 +23,8 @@ void SceneSample::LoadContents() {
      */
     Get_pGame()->GetTextureMgr()->CreateTexture("sampleImage", "sampleImage", "png");
     Get_pGame()->GetTextureMgr()->CreateTexture("MyShip", "MyShip", "png");
+    Get_pGame()->GetTextureMgr()->CreateTexture("Effect", "Effect", "png");
+    Get_pGame()->GetTextureMgr()->CreateTexture("Enemy", "Enemy", "png");
     
     /**
      *  Basicシェーダーの設定
@@ -50,7 +52,12 @@ void SceneSample::Init() {
     p3D->SetName("3DRoot");
     
     // 2Dオブジェクトの生成
-    p2D->RegisterChildObj(new MyShip(Get_pGame()));
+    for(int i = 0; i < 50; i++) {
+        float x = rand()%800;
+        float y = rand()%500;
+        
+        p2D->RegisterChildObj(new MyShip(Get_pGame(), x, y));
+    }
     // 3Dオブジェクトの生成
     p3D->RegisterChildObj(new Sample3DObj(Get_pGame()));
     // 3Dサンプルカメラの生成
@@ -58,6 +65,9 @@ void SceneSample::Init() {
 }
 
 void SceneSample::Update() {
+    
+    
+    // オブジェクトの更新
     pRoot->UpdateObj();
 }
 

@@ -16,8 +16,9 @@ void KandataGame::Initialize() {
     /**
      *  GLの初期化
      */
-    glEnable(GL_TEXTURE_2D);
-	glEnable(GL_DEPTH_TEST);
+    glEnable(GL_TEXTURE_2D);        // 2Dテクスチャの有効
+	glEnable(GL_DEPTH_TEST);        // 深度バッファの有効
+    glDepthFunc(GL_LEQUAL);
 	
 	// アルファブレンドの設定
 	glEnable(GL_BLEND);
@@ -55,7 +56,7 @@ void KandataGame::Update() {
 void KandataGame::Draw() {
     glViewport(0, 0, game.GetDisplayWidth(), game.GetDisplayHeight());
     
-    glClearColor(0, 0, 0.5f, 1);
+    glClearColor(0, 0, 0.9f, 1);
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
     if(pScene) pScene->Draw();
 }

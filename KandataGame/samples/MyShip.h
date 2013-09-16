@@ -14,16 +14,24 @@
 
 class MyShip : public Game2DObject, public ITouchListener {
     KMPoint2D targetPos;
+    TouchKey keyTouch;
+    
+    // MyShipの状態を表す変数
+    enum {
+        STATE_FREE = 0, STATE_DRAGGED,
+    } state;
 public:
     // コンストラクタ
-    MyShip(GameCore *pGame) : Game2DObject(pGame) {
+    MyShip(GameCore *pGame, float initX = 0.0f, float initY = 0.0f) : Game2DObject(pGame), keyTouch(NO_TOUCH_KEY) {
+        x = initX, y = initY;
+        state = STATE_FREE;
+        
         // タッチリスナーの登録
         pGame->GetInputMgr()->AddTouchListener(this);
     }
     
     // デストラクタ
     virtual ~MyShip() {
-        // タッチリスナーの解除
         Get_pGame()->GetInputMgr()->RemoveTouchListener(this);
     }
     
