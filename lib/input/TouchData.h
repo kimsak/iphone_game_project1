@@ -12,9 +12,13 @@
 // OS Determination macro
 #ifdef __APPLE__
 #include <UIKit/UIKit.h>
-typedef UITouch *TouchPointer;
+typedef __weak UITouch *TouchPointer;
+typedef __weak const UITouch *ConstTouchPtr;
+#define TOUCHPTR_NULL  (nil)
 #else
 typedef void *TouchPointer;
+typedef const void *ConstTouchPtr;
+#define TOUCHPTR_NULL  (NULL)
 #endif
 
 enum KMTouchPhase {
@@ -44,7 +48,7 @@ public:
     
     int GetTapCount() const;
     
-    const TouchPointer GetTouchPtr() const {
+    ConstTouchPtr GetTouchPtr() const {
         return pTouch;
     }
 };

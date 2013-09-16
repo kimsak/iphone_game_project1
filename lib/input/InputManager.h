@@ -14,13 +14,16 @@
 #include "ITouchListener.h"
 #include "InputMotion.h"
 
-typedef std::map<TouchPointer, TouchData *> TouchesMap;
+typedef ConstTouchPtr TouchKey;
+
+typedef std::map<TouchKey, TouchData *> TouchesMap;
+typedef TouchesMap *TouchesMapPtr;
 
 class InputManager {
     //////////////////////////// Touch Data List ///////////////////////////////////////
     
     // TouchData Map
-    TouchesMap touch_list;
+    TouchesMap touch_map;
     
     // TouchListener List
     std::list<ITouchListener *> touchlistener_list;
@@ -32,7 +35,12 @@ public:
     
     // タッチのマップデータ（参照）を取得する
     TouchesMap *GetTouches() {
-        return &touch_list;
+        return &touch_map;
+    }
+    
+    const TouchData *GetTouchData(TouchKey pTouch) {
+        auto it = touch_map.find(pTouch);
+        return it != touch_map.end() ? it->second : NULL;
     }
     
     // モーション管理データの参照を取得する
@@ -50,8 +58,7 @@ public:
     // タッチリスナーをリストから削除する（リスナーを実装したオブジェクトが破棄される場合）
     void RemoveTouchListener(ITouchListener *listener) {
         if(listener)
-            for(std::list<ITouchListener *>::iterator it = touchlistener_list.begin();
-                                    it != touchlistener_list.end(); ) {
+            for(auto it = touchlistener_list.begin(); it != touchlistener_list.end(); ) {
                 if(*it == listener) {
                     touchlistener_list.erase(it);
                     break;
@@ -62,7 +69,7 @@ public:
     
     // リスナーを実装した各オブジェクトにタッチ情報を転送する
     void ForwardTouchEvent(const TouchData &touch) {
-        for (std::list<ITouchListener *>::const_iterator it = touchlistener_list.begin();
+        for (auto it = touchlistener_list.begin();
                                     it != touchlistener_list.end(); ++it) {
             (*it)->OnTouchAction(touch);
         }
