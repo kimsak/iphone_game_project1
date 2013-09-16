@@ -8,6 +8,7 @@
 
 #include "TextureManager.h"
 #include "PixelData.h"
+#include <cassert>
 
 // テクスチャの作成
 bool TextureManager::CreateTexture(std::string name, std::string filename, std::string type_name) {
@@ -44,7 +45,10 @@ bool TextureManager::CreateTexture(std::string name, std::string filename, std::
 
 // テクスチャの取得
 CTexture *TextureManager::GetTexture(std::string name) const {
-    return texture_map.find(name) != texture_map.end() ? texture_map.at(name) : NULL;
+    auto it = texture_map.find(name);
+    
+    assert(it != texture_map.end());
+    return it != texture_map.end() ? it->second : NULL;
 }
 
 // テクスチャの破棄
