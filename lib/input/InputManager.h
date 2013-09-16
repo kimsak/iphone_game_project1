@@ -15,6 +15,7 @@
 #include "InputMotion.h"
 
 typedef ConstTouchPtr TouchKey;
+#define NO_TOUCH_KEY TOUCHPTR_NULL
 
 typedef std::map<TouchKey, TouchData *> TouchesMap;
 typedef TouchesMap *TouchesMapPtr;
