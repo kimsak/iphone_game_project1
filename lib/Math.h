@@ -72,9 +72,13 @@ public:
     
     // 除算処理
     CVector operator /(float d) const {
-        if(d==0.0) return *this;
-        else return CVector(this->X/d, this->Y/d, this->Z/d);
-            }
+        if(d==0.0) {
+            return *this;
+        }
+        else {
+            return CVector(this->X/d, this->Y/d, this->Z/d);
+        }
+    }
     
     // 単項マイナス
     CVector operator -() const {
