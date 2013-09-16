@@ -47,7 +47,6 @@ bool TextureManager::CreateTexture(std::string name, std::string filename, std::
 CTexture *TextureManager::GetTexture(std::string name) const {
     auto it = texture_map.find(name);
     
-    assert(it != texture_map.end());
     return it != texture_map.end() ? it->second : NULL;
 }
 

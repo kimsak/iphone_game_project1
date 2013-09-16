@@ -119,7 +119,7 @@ bool ShaderManager::CompileShader(GLenum shader_type, const char *src, unsigned 
         fprintf(stderr, "Compile Error!\n");
         // ログの出力
         {
-            int length, logSize;
+            int length = 0, logSize = 0;
             glGetShaderiv(*pShaderObj, GL_INFO_LOG_LENGTH, &logSize);
             if(logSize>1) {
                 char buf[LOG_BUF_SIZE];
