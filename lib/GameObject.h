@@ -42,6 +42,8 @@ public:
     virtual void Move() {}
     // @Override
     virtual void Draw() {}
+    // @Override
+    virtual void Term() {}
     
     // @Override
     virtual GameObject *SetName(std::string name) {

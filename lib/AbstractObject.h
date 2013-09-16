@@ -23,6 +23,7 @@ public:
     virtual void Init() = 0;
     virtual void Move() = 0;
     virtual void Draw() = 0;
+    virtual void Term() = 0;
     
     virtual AbstractObject *SetName(std::string name) {
         this->name = name;
