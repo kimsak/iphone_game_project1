@@ -38,6 +38,9 @@ bool GameObject::UpdateObj() {
     // 子オブジェクトの更新
     for (GameObjList::iterator it = objChildren.begin(); it != objChildren.end(); ) {
         if ( (*it)->UpdateObj() == false ) {
+            // オブジェクトの終了前処理
+            (*it)->Term();
+            
             // 子オブジェクトの中身を親が引き継ぐ
             UnderTake(*it);
             
@@ -77,6 +80,7 @@ void GameObject::UnderTake(GameObject *pObj) {
 void GameObject::DestroyChildAll() {
     for (GameObjList::const_iterator it = objChildren.begin(); it != objChildren.end(); ++it) {
         (*it)->DestroyChildAll();
+        (*it)->Term();      // オブジェクトの終了前処理
         delete *it;
     }
     objChildren.clear();
