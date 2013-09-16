@@ -43,6 +43,10 @@ public:
     KMTouchPhase GetPhase() const;
     
     int GetTapCount() const;
+    
+    const TouchPointer GetTouchPtr() const {
+        return pTouch;
+    }
 };
 
 #endif /*defined(TOUCH_DATA_H_)*/
