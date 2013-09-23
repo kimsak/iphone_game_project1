@@ -17,7 +17,7 @@ class TouchData;
 class ITouchListener {
 public:
     // 仮想デストラクタ
-    ~ITouchListener() {}
+    virtual ~ITouchListener() {}
     
     virtual void OnTouchAction(const TouchData &touch) = 0;
 };
