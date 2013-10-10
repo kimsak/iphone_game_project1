@@ -13,7 +13,8 @@
  *  iOS用のImageDataクラスの定義
  */
 #ifdef __APPLE__
-#include <UIKit/UIKit.h>
+#include <Foundation/NSString.h>
+#include <Foundation/NSBundle.h>
 
 bool TextSrcData::LoadContentFromFile(const char *filename, const char *extension_name) {
     if(!filename || !extension_name) return false;
