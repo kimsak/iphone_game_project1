@@ -12,6 +12,7 @@
 		94037E4317E0A47A0090410C /* InputMotion_ObjCImpl.mm in Sources */ = {isa = PBXBuildFile; fileRef = 94037E4117E0A47A0090410C /* InputMotion_ObjCImpl.mm */; };
 		940DD6581791186800FAAA15 /* SceneSample.mm in Sources */ = {isa = PBXBuildFile; fileRef = 940DD6561791186800FAAA15 /* SceneSample.mm */; };
 		9410BD341775F046003E6E16 /* ShaderManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9410BD321775F045003E6E16 /* ShaderManager.mm */; };
+		9419A4E61806D09F008C7E49 /* Shader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9419A4E41806D09F008C7E49 /* Shader.mm */; };
 		9420EBD617A36395007DC5E2 /* Sprite.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 94428C5817A2D4F800CED6E6 /* Sprite.vsh */; };
 		9420EBD717A36395007DC5E2 /* Sprite.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 94428C5A17A2D50A00CED6E6 /* Sprite.fsh */; };
 		9423A33B17BC809400B1FE3A /* PixelData.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9423A33A17BC809400B1FE3A /* PixelData.mm */; };
@@ -65,6 +66,8 @@
 		940DD6571791186800FAAA15 /* SceneSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneSample.h; sourceTree = "<group>"; };
 		9410BD321775F045003E6E16 /* ShaderManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ShaderManager.mm; sourceTree = "<group>"; };
 		9410BD331775F045003E6E16 /* ShaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderManager.h; sourceTree = "<group>"; };
+		9419A4E41806D09F008C7E49 /* Shader.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Shader.mm; sourceTree = "<group>"; };
+		9419A4E51806D09F008C7E49 /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
 		9423A33A17BC809400B1FE3A /* PixelData.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PixelData.mm; sourceTree = "<group>"; };
 		942DFD0317BDCFDE0015F2A7 /* CubeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CubeModel.h; path = lib/CubeModel.h; sourceTree = "<group>"; };
 		942DFD0417BDCFDE0015F2A7 /* CubeModel.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CubeModel.mm; path = lib/CubeModel.mm; sourceTree = "<group>"; };
@@ -309,6 +312,8 @@
 				942F405B17787D91002A63D9 /* TextureManager.mm */,
 				943A301017B13B2200492BCF /* Camera.h */,
 				943A301217B13D1300492BCF /* Camera.mm */,
+				9419A4E51806D09F008C7E49 /* Shader.h */,
+				9419A4E41806D09F008C7E49 /* Shader.mm */,
 			);
 			name = lib;
 			path = ../lib;
@@ -440,6 +445,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9419A4E61806D09F008C7E49 /* Shader.mm in Sources */,
 				942E8930176C806400FEAF15 /* main.m in Sources */,
 				942E8934176C806400FEAF15 /* AppDelegate.m in Sources */,
 				942E8948176C82E600FEAF15 /* GameController.mm in Sources */,
